@@ -27,7 +27,7 @@ const user: User = {
 }
 const navigation: NavItem[] = [
   { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
+  { name: 'Team', href: '#team', current: false },
   { name: 'Projects', href: '#', current: false },
   { name: 'Calendar', href: '#', current: false },
   { name: 'Reports', href: '#', current: false },
@@ -53,8 +53,8 @@ export default function Example(): React.ReactElement {
         <body class="h-full">
         ```
       */}
-      <div className="min-h-full">
-        <Disclosure as="nav" className="bg-gray-800">
+      <div className="h-screen">
+        <Disclosure as="nav" className="bg-gray-800 sticky top-0 z-50">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex h-16 items-center justify-between">
               <div className="flex items-center justify-center grow">
@@ -184,14 +184,22 @@ export default function Example(): React.ReactElement {
           </DisclosurePanel>
         </Disclosure>
 
-        <header className="relative bg-white shadow-sm">
+        <header className="relative bg-white shadow-sm" id="dashboard">
           <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
             <h1 className="text-3xl font-bold tracking-tight text-gray-900">Dashboard</h1>
           </div>
         </header>
-        <main>
+        <main className="h-256">
           <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">{/* Your content */}</div>
         </main>
+        <header className="relative bg-white shadow-sm" id="team">
+          <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+            <h1 className="text-3xl font-bold tracking-tight text-gray-900">Team</h1>
+          </div>
+        </header>
+        <main className="h-64">
+          <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">{/* Your content */}</div>
+        </main>     
       </div>
     </>
   )
