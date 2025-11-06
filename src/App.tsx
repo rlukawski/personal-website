@@ -57,12 +57,12 @@ export default function Example(): React.ReactElement {
   const [currentHash, setCurrentHash] = useState<string>(
     typeof window !== "undefined" && window.location.hash
       ? window.location.hash
-      : "#dashboard"
+      : "#home"
   );
 
   useEffect(() => {
     const handler = () => {
-      setCurrentHash(window.location.hash || "#dashboard");
+      setCurrentHash(window.location.hash || "#home");
     };
     window.addEventListener("hashchange", handler);
     return () => window.removeEventListener("hashchange", handler);
@@ -152,6 +152,16 @@ export default function Example(): React.ReactElement {
     };
   }, []);
 
+  const smoothScrollTo = (hash: string) => (event: React.MouseEvent) => {
+    // Prevent default jump, then smoothly scroll to the section.
+    event.preventDefault();
+    const id = hash.replace("#", "");
+    const el = document.getElementById(id);
+    if (!el) return;
+    // Let the IntersectionObserver update the hash while we scroll.
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <div className="min-h-screen bg-gray-700">
       <Disclosure as="nav" className="bg-transparent sticky top-0 z-50">
@@ -166,6 +176,7 @@ export default function Example(): React.ReactElement {
                     <a
                       key={item.name}
                       href={item.href}
+                      onClick={smoothScrollTo(item.href)}
                       aria-current={isCurrent ? "page" : undefined}
                       className={classNames(
                         isCurrent
@@ -240,6 +251,7 @@ export default function Example(): React.ReactElement {
                   key={item.name}
                   as="a"
                   href={item.href}
+                  onClick={smoothScrollTo(item.href)}
                   aria-current={isCurrent ? "page" : undefined}
                   className={classNames(
                     isCurrent
