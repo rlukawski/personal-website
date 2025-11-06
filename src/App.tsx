@@ -166,7 +166,7 @@ export default function Example(): React.ReactElement {
 
   return (
     <div className="min-h-screen bg-gray-900 p-0 md:p-4">
-      <Disclosure as="nav" className="bg-transparent sticky top-0 z-50">
+      <Disclosure as="nav" className="backdrop-blur-sm sticky top-0 z-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center justify-center grow">
