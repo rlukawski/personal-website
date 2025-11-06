@@ -9,6 +9,7 @@ import {
 } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import type React from "react";
+import { useEffect, useState } from "react";
 import { Dashboard } from "./components/Dashboard";
 import { Team } from "./components/Team";
 
@@ -21,7 +22,6 @@ type User = {
 type NavItem = {
   name: string;
   href: string;
-  current: boolean;
 };
 
 type UserNavItem = {
@@ -36,11 +36,11 @@ const user: User = {
     "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
 };
 const navigation: NavItem[] = [
-  { name: "Dashboard", href: "#", current: true },
-  { name: "Team", href: "#team", current: false },
-  { name: "Projects", href: "#", current: false },
-  { name: "Calendar", href: "#", current: false },
-  { name: "Reports", href: "#", current: false },
+  { name: "Dashboard", href: "#dashboard" },
+  { name: "Team", href: "#team" },
+  { name: "Projects", href: "#projects" },
+  { name: "Calendar", href: "#calendar" },
+  { name: "Reports", href: "#reports" },
 ];
 const userNavigation: UserNavItem[] = [
   { name: "Your profile", href: "#" },
@@ -55,21 +55,37 @@ function classNames(
 }
 
 export default function Example(): React.ReactElement {
+  const [currentHash, setCurrentHash] = useState<string>(
+    typeof window !== "undefined" && window.location.hash
+      ? window.location.hash
+      : "#dashboard"
+  );
+
+  useEffect(() => {
+    const handler = () => {
+      setCurrentHash(window.location.hash || "#dashboard");
+    };
+    window.addEventListener("hashchange", handler);
+    return () => window.removeEventListener("hashchange", handler);
+  }, []);
+
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gray-700">
       <Disclosure as="nav" className="bg-transparent sticky top-0 z-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center justify-center grow">
-              <div className="hidden md:block border border-blue-500 p-2 bg-gray-500 rounded-xl">
+              <div className="hidden md:block p-2 bg-gray-500 rounded-xl">
                 <div className="mx-10 flex items-baseline space-x-4">
-                  {navigation.map((item) => (
+                  {navigation.map((item) => {
+                    const isCurrent = item.href === currentHash || (!currentHash && item.href === "#dashboard");
+                    return (
                     <a
                       key={item.name}
                       href={item.href}
-                      aria-current={item.current ? "page" : undefined}
+                      aria-current={isCurrent ? "page" : undefined}
                       className={classNames(
-                        item.current
+                        isCurrent
                           ? "bg-gray-900 text-white"
                           : "text-gray-300 hover:bg-white/5 hover:text-white",
                         "rounded-md px-3 py-2 text-sm font-medium"
@@ -77,7 +93,8 @@ export default function Example(): React.ReactElement {
                     >
                       {item.name}
                     </a>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
             </div>
@@ -133,22 +150,25 @@ export default function Example(): React.ReactElement {
 
         <DisclosurePanel className="md:hidden">
           <div className="space-y-1 px-2 pt-2 pb-3 sm:px-3">
-            {navigation.map((item) => (
-              <DisclosureButton
-                key={item.name}
-                as="a"
-                href={item.href}
-                aria-current={item.current ? "page" : undefined}
-                className={classNames(
-                  item.current
-                    ? "bg-gray-900 text-white"
-                    : "text-gray-300 hover:bg-white/5 hover:text-white",
-                  "block rounded-md px-3 py-2 text-base font-medium"
-                )}
-              >
-                {item.name}
-              </DisclosureButton>
-            ))}
+            {navigation.map((item) => {
+              const isCurrent = item.href === currentHash || (!currentHash && item.href === "#dashboard");
+              return (
+                <DisclosureButton
+                  key={item.name}
+                  as="a"
+                  href={item.href}
+                  aria-current={isCurrent ? "page" : undefined}
+                  className={classNames(
+                    isCurrent
+                      ? "bg-gray-900 text-white"
+                      : "text-gray-300 hover:bg-white/5 hover:text-white",
+                    "block rounded-md px-3 py-2 text-base font-medium"
+                  )}
+                >
+                  {item.name}
+                </DisclosureButton>
+              );
+            })}
           </div>
           <div className="border-t border-white/10 pt-4 pb-3">
             <div className="flex items-center px-5">
