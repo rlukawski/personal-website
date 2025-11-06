@@ -3,3 +3,14 @@
 html {
   scroll-behavior: smooth;
 }
+
+
+@layer components {
+  .text-header {
+    @apply text-gray-200;
+  }
+
+  .text-body {
+    @apply text-gray-300;
+  }
+}
