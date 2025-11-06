@@ -165,12 +165,12 @@ export default function Example(): React.ReactElement {
   };
 
   return (
-    <div className="min-h-screen bg-gray-700">
+    <div className="min-h-screen bg-gray-900 p-0 md:p-4">
       <Disclosure as="nav" className="bg-transparent sticky top-0 z-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center justify-center grow">
-              <div className="hidden md:block p-2 bg-gray-500 rounded-xl">
+              <div className="hidden md:block p-2 bg-gray-700 rounded-xl">
                 <div className="mx-10 flex items-baseline space-x-4">
                   {navigation.map((item) => {
                     const isCurrent = item.href === currentHash || (!currentHash && item.href === "#dashboard");
