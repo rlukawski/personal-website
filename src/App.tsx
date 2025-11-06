@@ -62,7 +62,7 @@ export default function Example(): React.ReactElement {
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center justify-center grow">
               <div className="hidden md:block border border-blue-500 p-2 bg-gray-500 rounded-xl">
-                <div className="ml-10 flex items-baseline space-x-4">
+                <div className="mx-10 flex items-baseline space-x-4">
                   {navigation.map((item) => (
                     <a
                       key={item.name}
