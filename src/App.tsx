@@ -45,12 +45,12 @@ function classNames(...classes: Array<string | false | null | undefined>): strin
 export default function Example(): React.ReactElement {
   return (
     <>
-      <div className="h-screen">
-        <Disclosure as="nav" className="bg-gray-800 sticky top-0 z-50">
+      <div className="h-screen bg-gray-100">
+        <Disclosure as="nav" className="bg-transparent sticky top-0 z-50">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex h-16 items-center justify-between">
               <div className="flex items-center justify-center grow">
-                <div className="hidden md:block">
+                <div className="hidden md:block border border-blue-500 p-2 bg-gray-500 rounded-xl">
                   <div className="ml-10 flex items-baseline space-x-4">
                     {navigation.map((item) => (
                       <a
@@ -167,7 +167,7 @@ export default function Example(): React.ReactElement {
           </DisclosurePanel>
         </Disclosure>
 
-        <header className="relative bg-white shadow-sm" id="dashboard">
+        <header className="relative shadow-sm" id="dashboard">
           <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
             <h1 className="text-3xl font-bold tracking-tight text-gray-900">Dashboard</h1>
           </div>
@@ -175,7 +175,7 @@ export default function Example(): React.ReactElement {
         <main className="h-256">
           <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">{/* Your content */}</div>
         </main>
-        <header className="relative bg-white shadow-sm" id="team">
+        <header className="relative shadow-sm" id="team">
           <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
             <h1 className="text-3xl font-bold tracking-tight text-gray-900">Team</h1>
           </div>
