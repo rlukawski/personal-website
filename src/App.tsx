@@ -68,6 +68,90 @@ export default function Example(): React.ReactElement {
     return () => window.removeEventListener("hashchange", handler);
   }, []);
 
+  // Observe sections and update currentHash on manual scroll
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const ids = navigation.map((n) => n.href.replace("#", ""));
+    const sections = ids
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => Boolean(el));
+
+    if (sections.length === 0) return;
+
+    let activeId = (window.location.hash || "").replace("#", "");
+
+    const updateUrlHash = (newId: string) => {
+      if (!newId) return;
+      if (activeId === newId) return;
+      activeId = newId;
+      const newHash = `#${newId}`;
+      setCurrentHash(newHash);
+      // Avoid triggering native hashchange scroll/jump
+      if (window.location.hash !== newHash) {
+        history.replaceState(null, "", newHash);
+      }
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        // Determine the most prominently visible section
+        let bestEntry: IntersectionObserverEntry | null = null;
+        for (const entry of entries) {
+          if (!bestEntry) {
+            bestEntry = entry;
+            continue;
+          }
+          if (entry.isIntersecting && !bestEntry.isIntersecting) {
+            bestEntry = entry;
+            continue;
+          }
+          if (entry.isIntersecting && bestEntry.isIntersecting) {
+            if (entry.intersectionRatio > bestEntry.intersectionRatio) {
+              bestEntry = entry;
+            } else if (entry.intersectionRatio === bestEntry.intersectionRatio) {
+              // Fallback to which is closer to the top
+              if (entry.boundingClientRect.top < bestEntry.boundingClientRect.top) {
+                bestEntry = entry;
+              }
+            }
+          }
+        }
+        if (bestEntry && (bestEntry.isIntersecting || bestEntry.intersectionRatio > 0)) {
+          updateUrlHash((bestEntry.target as HTMLElement).id);
+        }
+      },
+      {
+        // Account for sticky nav and prefer the section near the top
+        root: null,
+        rootMargin: "0px 0px -70% 0px",
+        threshold: [0, 0.1, 0.25, 0.5, 0.75, 1],
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    // Ensure Home becomes active when at top of the page
+    const onScrollTopCheck = () => {
+      if (window.scrollY <= 2) {
+        const homeEl = document.getElementById("home");
+        if (homeEl) updateUrlHash("home");
+      }
+    };
+    window.addEventListener("scroll", onScrollTopCheck, { passive: true });
+
+    // Initial sync on mount in case we're in the middle of a section
+    const initial = sections
+      .map((el) => ({ el, top: Math.abs(el.getBoundingClientRect().top) }))
+      .sort((a, b) => a.top - b.top)[0];
+    if (initial) updateUrlHash(initial.el.id);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", onScrollTopCheck);
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-700">
       <Disclosure as="nav" className="bg-transparent sticky top-0 z-50">
