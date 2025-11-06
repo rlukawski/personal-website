@@ -16,11 +16,13 @@ export const Home = () => {
             software development lifecycle—from system architecture through
             implementation to production deployment. Leading cross-functional
             teams and delivering robust, scalable solutions gives me as much
-            satisfaction as writing clean, maintainable code. Google Cloud
-            Professional Architect (2024) | Professional Scrum Master | Built
-            systems for millions of users at Onet.pl | Led telecommunications
-            projects at TP.SA | Currently developing complex React applications
-            and mentoring developers at EGZOTech.
+            satisfaction as writing clean, maintainable code.
+          </p>
+          <p className="mt-2">
+            Google Cloud Professional Architect (2024) | Professional Scrum
+            Master | Built systems for millions of users at Onet.pl | Led
+            telecommunications projects at TP.SA | Currently developing complex
+            React applications and mentoring developers at EGZOTech.
           </p>
         </div>
       </main>
