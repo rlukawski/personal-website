@@ -11,6 +11,8 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import type React from "react";
 import { useEffect, useState } from "react";
 import { Home, Experience, About } from "./components";
+import { Skills } from "./components/Skills";
+import { Contact } from "./components/Contact";
 
 type User = {
   name: string;
@@ -309,6 +311,8 @@ export default function Example(): React.ReactElement {
       <Home />
       <About />
       <Experience />
+      <Skills />
+      <Contact />
     </div>
   );
 }
