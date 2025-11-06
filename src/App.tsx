@@ -10,8 +10,7 @@ import {
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import type React from "react";
 import { useEffect, useState } from "react";
-import { Dashboard } from "./components/Dashboard";
-import { Team } from "./components/Team";
+import { Home, Experience, About } from "./components";
 
 type User = {
   name: string;
@@ -36,11 +35,11 @@ const user: User = {
     "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
 };
 const navigation: NavItem[] = [
-  { name: "Dashboard", href: "#dashboard" },
-  { name: "Team", href: "#team" },
-  { name: "Projects", href: "#projects" },
-  { name: "Calendar", href: "#calendar" },
-  { name: "Reports", href: "#reports" },
+  { name: "Home", href: "#home" },
+  { name: "About", href: "#about" },
+  { name: "Experience", href: "#experience" },
+  { name: "Skills", href: "#skills" },
+  { name: "Contact", href: "#contact" },
 ];
 const userNavigation: UserNavItem[] = [
   { name: "Your profile", href: "#" },
@@ -211,8 +210,9 @@ export default function Example(): React.ReactElement {
           </div>
         </DisclosurePanel>
       </Disclosure>
-      <Dashboard />
-      <Team />
+      <Home />
+      <About />
+      <Experience />
     </div>
   );
 }
