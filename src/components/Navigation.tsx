@@ -8,8 +8,12 @@ export const Navigation = () => {
         <li>Experience</li>
         <li>Skills</li>
         <li>Projects</li>
+        <li>Contact</li>
       </ul>
-      <p className="text-gray-800 text-xl font-bold">Contact</p>
+      <ul className="flex gap-2">
+        <li>PL</li>
+        <li>EN</li>
+      </ul>
     </div>
   );
 };
