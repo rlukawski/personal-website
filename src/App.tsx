@@ -1,12 +1,15 @@
 import type React from "react";
 
-import { Home, Navigation } from "./components";
+import { About, Home, Navigation } from "./components";
 
 export default function Example(): React.ReactElement {
   return (
     <>
       <Navigation />
-      <Home />
+      <div className="flex flex-col gap-16 px-12">
+        <Home />
+        <About />
+      </div>
     </>
   );
 }
