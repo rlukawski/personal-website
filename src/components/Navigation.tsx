@@ -7,7 +7,7 @@ export const Navigation = () => {
         <li>About</li>
         <li>Experience</li>
         <li>Skills</li>
-        <li>Contact</li>
+        <li>Projects</li>
       </ul>
       <p className="text-gray-800 text-xl font-bold">Contact</p>
     </div>
