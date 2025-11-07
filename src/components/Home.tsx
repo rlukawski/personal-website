@@ -12,7 +12,7 @@ export const Home = () => {
           </div>
         </div>
         <div className="w-64">
-          <img src={authorImg} alt="Rafał Łukawski" className="rounded-xl" />
+          <img src={authorImg} alt="Rafał Łukawski" className="rounded-3xl" />
         </div>
       </div>
     </main>
