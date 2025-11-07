@@ -6,16 +6,16 @@ html {
 
 
 @layer components {
-  .text-header {
-    @apply text-gray-200;
+  .header-text {
+    @apply text-gray-200 text-3xl font-bold;
   }
 
-  .text-body {
+  .body-text {
     @apply text-gray-300;
   }
 
   .header-box {
-    @apply scroll-mt-16 text-gray-100 text-3xl font-bold px-8 pt-6 pb-4
+    @apply scroll-mt-16  px-8 pt-6 pb-4
   }
 
   .content-box {

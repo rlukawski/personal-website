@@ -1,10 +1,8 @@
 export const Home = () => {
   return (
     <>
-      <header className="header-box" id="home">
-        <h1>Home</h1>
-      </header>
-      <main className="h-128 content-box">
+      <header id="home" className="header-box" />
+      <main className="h-192 header-text">
         <p>I create software that evolves with you</p>
       </main>
     </>
