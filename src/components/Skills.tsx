@@ -1,4 +1,6 @@
 import * as simpleIcons from 'simple-icons';
+import zustandIcon from '../assets/zustand.svg';
+import gorseIcon from '../assets/gorse-logo.png';
 
 const technologies = [
   { name: 'Typescript', description: 'Language', iconSlug: 'typescript' },
@@ -11,9 +13,9 @@ const technologies = [
   { name: 'PostgreSQL', description: 'Database', iconSlug: 'postgresql' },
   { name: 'Node.js', description: 'Backend runtime', iconSlug: 'nodedotjs' },
   { name: 'Github Actions', description: 'CI / CD', iconSlug: 'githubactions' },
-  { name: 'Gorse', description: 'Recommendation system', iconSlug: 'go' },
-  { name: 'Signals', description: 'State management', iconSlug: 'angular' },
-  { name: 'Zustand', description: 'State management', iconSlug: 'react' },
+  { name: 'Gorse', description: 'Recommendation system', customIcon: gorseIcon },
+  { name: 'Signals', description: 'State management', iconSlug: 'preact' },
+  { name: 'Zustand', description: 'State management', customIcon: zustandIcon },
   { name: 'Cypress', description: 'Testing', iconSlug: 'cypress' },
   { name: 'PHP', description: 'Language', iconSlug: 'php' },
 ];
@@ -32,7 +34,7 @@ export const Skills = () => {
       <div className="border border-gray-200 p-8 rounded-xl bg-transparent backdrop-blur-sm mt-2">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {technologies.map((tech) => {
-            const icon = getIcon(tech.iconSlug);
+            const icon = tech.customIcon ? null : getIcon(tech.iconSlug || '');
             
             return (
               <div
@@ -41,7 +43,9 @@ export const Skills = () => {
               >
                 <div className="flex items-center gap-4 mb-3">
                   <div className="w-12 h-12 rounded-lg bg-gray-100 flex items-center justify-center overflow-hidden p-2">
-                    {icon ? (
+                    {tech.customIcon ? (
+                      <img src={tech.customIcon} alt={tech.name} className="w-full h-full object-contain" />
+                    ) : icon ? (
                       <svg
                         role="img"
                         viewBox="0 0 24 24"
