@@ -7,7 +7,7 @@ export default function Example(): React.ReactElement {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <div className="flex flex-col gap-16 px-12">
+      <div className="flex flex-col gap-2 px-12">
         <Home />
         <About />
         <Experience />
