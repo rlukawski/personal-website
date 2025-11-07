@@ -1,7 +1,7 @@
 export const About = () => {
   return (
     <div 
-      className="border border-gray-200 p-8 rounded-xl bg-transparent backdrop-blur-md"
+      className="border border-gray-200 p-8 rounded-xl bg-transparent backdrop-blur-sm"
       
     >
       <p className="mb-4">
