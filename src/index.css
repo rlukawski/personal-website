@@ -4,7 +4,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 @layer components {
   .header-text {
     @apply text-gray-200 text-3xl font-bold;
@@ -15,10 +14,10 @@ html {
   }
 
   .header-box {
-    @apply scroll-mt-16  px-8 pt-6 pb-4
+    @apply scroll-mt-16  px-8 pt-6 pb-4 text-gray-200 text-3xl font-bold;
   }
 
   .content-box {
-    @apply mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 bg-gray-700 rounded-xl text-gray-300
+    @apply mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 bg-gray-700 rounded-xl text-gray-300;
   }
 }
