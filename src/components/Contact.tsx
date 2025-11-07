@@ -4,7 +4,7 @@ export const Contact = () => {
       <header className="header-box" id="contact">
         <h1>Contact</h1>
       </header>
-      <main className="h-128 content-box">
+      <main className="h-256 content-box">
         Contact
       </main>
     </>
