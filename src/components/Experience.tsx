@@ -1,6 +1,6 @@
 export const Experience = () => {
   return (
-    <section id="experience" className="mt-8">
+    <section id="experience" className="mt-8 scroll-mt-24">
       <h2 className="text-2xl font-bold">Experience</h2>
 
       <div className="border border-gray-200 p-8 rounded-xl bg-transparent backdrop-blur-sm mt-2">
