@@ -9,7 +9,7 @@ import {
 } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import type React from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Home, Experience, About } from "./components";
 import { Skills } from "./components/Skills";
 import { Contact } from "./components/Contact";
@@ -61,6 +61,8 @@ export default function Example(): React.ReactElement {
       ? window.location.hash
       : "#home"
   );
+  const observerRef = useRef<IntersectionObserver | null>(null);
+  const sectionsRef = useRef<HTMLElement[]>([]);
 
   useEffect(() => {
     const handler = () => {
@@ -80,16 +82,12 @@ export default function Example(): React.ReactElement {
       .filter((el): el is HTMLElement => Boolean(el));
 
     if (sections.length === 0) return;
-
-    let activeId = (window.location.hash || "").replace("#", "");
+    sectionsRef.current = sections;
 
     const updateUrlHash = (newId: string) => {
       if (!newId) return;
-      if (activeId === newId) return;
-      activeId = newId;
       const newHash = `#${newId}`;
       setCurrentHash(newHash);
-      // Avoid triggering native hashchange scroll/jump
       if (window.location.hash !== newHash) {
         history.replaceState(null, "", newHash);
       }
@@ -97,71 +95,61 @@ export default function Example(): React.ReactElement {
 
     const observer = new IntersectionObserver(
       (entries) => {
-        // Determine the most prominently visible section
-        let bestEntry: IntersectionObserverEntry | null = null;
-        for (const entry of entries) {
-          if (!bestEntry) {
-            bestEntry = entry;
-            continue;
-          }
-          if (entry.isIntersecting && !bestEntry.isIntersecting) {
-            bestEntry = entry;
-            continue;
-          }
-          if (entry.isIntersecting && bestEntry.isIntersecting) {
-            if (entry.intersectionRatio > bestEntry.intersectionRatio) {
-              bestEntry = entry;
-            } else if (entry.intersectionRatio === bestEntry.intersectionRatio) {
-              // Fallback to which is closer to the top
-              if (entry.boundingClientRect.top < bestEntry.boundingClientRect.top) {
-                bestEntry = entry;
-              }
-            }
-          }
-        }
-        if (bestEntry && (bestEntry.isIntersecting || bestEntry.intersectionRatio > 0)) {
-          updateUrlHash((bestEntry.target as HTMLElement).id);
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => Math.abs(a.boundingClientRect.top) - Math.abs(b.boundingClientRect.top));
+
+        if (visible.length > 0) {
+          const topSection = visible[0].target as HTMLElement;
+          updateUrlHash(topSection.id);
         }
       },
       {
-        // Account for sticky nav and prefer the section near the top
         root: null,
-        rootMargin: "0px 0px -70% 0px",
-        threshold: [0, 0.1, 0.25, 0.5, 0.75, 1],
+        rootMargin: "-20% 0px -70% 0px",
+        threshold: [0, 0.25, 0.5, 0.75, 1],
       }
     );
 
+    observerRef.current = observer;
     sections.forEach((section) => observer.observe(section));
 
-    // Ensure Home becomes active when at top of the page
-    const onScrollTopCheck = () => {
+    const onScroll = () => {
       if (window.scrollY <= 2) {
-        const homeEl = document.getElementById("home");
-        if (homeEl) updateUrlHash("home");
+        updateUrlHash("home");
       }
     };
-    window.addEventListener("scroll", onScrollTopCheck, { passive: true });
 
-    // Initial sync on mount in case we're in the middle of a section
-    const initial = sections
-      .map((el) => ({ el, top: Math.abs(el.getBoundingClientRect().top) }))
-      .sort((a, b) => a.top - b.top)[0];
-    if (initial) updateUrlHash(initial.el.id);
+    window.addEventListener("scroll", onScroll, { passive: true });
 
     return () => {
       observer.disconnect();
-      window.removeEventListener("scroll", onScrollTopCheck);
+      window.removeEventListener("scroll", onScroll);
     };
   }, []);
 
   const smoothScrollTo = (hash: string) => (event: React.MouseEvent) => {
-    // Prevent default jump, then smoothly scroll to the section.
     event.preventDefault();
     const id = hash.replace("#", "");
     const el = document.getElementById(id);
     if (!el) return;
-    // Let the IntersectionObserver update the hash while we scroll.
+    
+    if (observerRef.current) {
+      observerRef.current.disconnect();
+    }
+    
+    setCurrentHash(hash);
+    history.replaceState(null, "", hash);
+    
     el.scrollIntoView({ behavior: "smooth", block: "start" });
+    
+    setTimeout(() => {
+      if (observerRef.current && sectionsRef.current.length > 0) {
+        sectionsRef.current.forEach((section) => {
+          observerRef.current?.observe(section);
+        });
+      }
+    }, 1000);
   };
 
   return (
