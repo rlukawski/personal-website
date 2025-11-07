@@ -31,8 +31,8 @@ export const Skills = () => {
   return (
     <section id="skills" className="mt-8 scroll-mt-24">
       <h2 className="text-2xl font-bold">Skills</h2>
-      <div className="border border-gray-200 p-8 rounded-xl bg-transparent backdrop-blur-sm mt-2">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="border border-gray-200 p-6 rounded-xl bg-transparent backdrop-blur-sm mt-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
           {technologies.map((tech) => {
             const icon = tech.customIcon ? null : getIcon(tech.iconSlug || '');
             
@@ -41,7 +41,7 @@ export const Skills = () => {
                 key={tech.name}
                 className="border border-gray-200 p-4 rounded-lg bg-white/50 backdrop-blur-sm hover:shadow-md transition-shadow"
               >
-                <div className="flex items-center gap-4 mb-3">
+                <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-lg bg-gray-100 flex items-center justify-center overflow-hidden p-2">
                     {tech.customIcon ? (
                       <img src={tech.customIcon} alt={tech.name} className="w-full h-full object-contain" />
