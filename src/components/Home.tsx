@@ -2,7 +2,7 @@ import authorImg from "../assets/author.jpg";
 
 export const Home = () => {
   return (
-    <main id="home" className="mt-16 scroll-mt-24">
+    <main id="home" className="mt-16 scroll-mt-32">
       <div className="flex w-full justify-evenly items-center">
         <div className="h-full flex flex-col gap-2">
           <p className="text-gray-600 text-2xl font-bold">A full-stack developer and IT Project Manager</p>
