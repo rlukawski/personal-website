@@ -1,6 +1,7 @@
 import type React from "react";
 
 import { About, Home, Navigation } from "./components";
+import { Experience } from "./components/Experience";
 
 export default function Example(): React.ReactElement {
   return (
@@ -9,6 +10,7 @@ export default function Example(): React.ReactElement {
       <div className="flex flex-col gap-16 px-12">
         <Home />
         <About />
+        <Experience />
       </div>
     </div>
   );
