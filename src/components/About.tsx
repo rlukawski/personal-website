@@ -1,6 +1,9 @@
 export const About = () => {
   return (
-    <div className="border border-gray-200 p-8 rounded-xl bg-gray-100 background-blur-md">
+    <div 
+      className="border border-gray-200 p-8 rounded-xl bg-transparent backdrop-blur-md"
+      
+    >
       <p className="mb-4">
         A full-stack developer with 5+ years of modern frontend/backend
         experience and 20+ years in IT. I'm passionate about the entire software

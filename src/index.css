@@ -4,6 +4,34 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #ffffff;
+  background-image: 
+    linear-gradient(
+      45deg,
+      transparent 49%,
+      rgba(209, 213, 219, 0.4) 50%,
+      transparent 51%
+    ),
+    linear-gradient(
+      -45deg,
+      transparent 49%,
+      rgba(209, 213, 219, 0.4) 50%,
+      transparent 51%
+    );
+  background-size: 80px 80px;
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
+
 @layer components {
   .header-text {
     @apply text-gray-600 text-3xl font-bold;

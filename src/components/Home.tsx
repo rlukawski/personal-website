@@ -11,7 +11,7 @@ export const Home = () => {
             <p className="text-gray-600 text-lg font-bold">Let's build products that matter!</p>
           </div>
         </div>
-        <div className="w-64">
+        <div className="w-64 ">
           <img src={authorImg} alt="Rafał Łukawski" className="rounded-3xl" />
         </div>
       </div>
