@@ -14,7 +14,7 @@ const experienceData = [
       "Manage CI/CD environment based on GitHub Actions",
       "Enhance existing Angular + NestJS application",
     ],
-    product: (
+    project: (
       <>
         ExoClinic (software) on multiple devices used by EGZOTech:{" "}
         <b>Stella BIO</b>, <b>Sidra LEG</b>, <b>Meissa OT</b>
@@ -32,7 +32,7 @@ const experienceData = [
       "Development of web projects mainly based on React framework for Upwork clients.",
       "Working on my own project using React and Next.js framework",
     ],
-    product: (
+    project: (
       <>
         <a
           href="https://generator-paskow.pl"
@@ -57,7 +57,7 @@ const experienceData = [
       "Architect, Team Manager, and Senior Developer for the multibenefit.pl project - implemented and maintained until 2016.",
     ],
     technologies: "PHP, CakePHP, MySQL, Percona Cluster, HTML/CSS, JS",
-    product: (
+    project: (
       <>
         <a
           href="https://web.archive.org/web/20150207000901/http://multibenefit.pl/"
@@ -77,7 +77,7 @@ const experienceData = [
     company: "LukTronik.pl (e-commerce)",
     descriptions: [],
     technologies: "PHP, MySQL, HTML/CSS/JS",
-    product: (
+    project: (
       <a
         href="https://web.archive.org/web/20120111092738/http://luktronik.pl/"
         target="_blank"
@@ -103,7 +103,7 @@ const experienceData = [
     title: "Technical Product Manager",
     company: "Air Bites Polska",
     descriptions: ["Technical Product Manager for VoIP services in Poland"],
-    product: "VoIP telephony solution for online customers",
+    project: "VoIP telephony solution for online customers",
   },
   {
     startDate: "2000.01",
@@ -141,14 +141,14 @@ export const Experience = () => {
                 </p>
                 {(exp.descriptions.length > 0 ||
                   exp.technologies ||
-                  exp.product) && (
+                  exp.project) && (
                   <ul className="list-disc list-outside pl-6 space-y-0 text-gray-700 text-sm leading-relaxed mt-2">
                     {exp.descriptions.map((desc, descIndex) => (
                       <li key={descIndex}>{desc}</li>
                     ))}
-                    {exp.product && (
+                    {exp.project && (
                       <li>
-                        <b>Product</b>: {exp.product}
+                        <b>Project</b>: {exp.project}
                       </li>
                     )}
                     {exp.technologies && (
