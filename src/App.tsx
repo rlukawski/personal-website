@@ -1,6 +1,6 @@
 import type React from "react";
 
-import { About, Home, Navigation, Skills, Projects, Contact } from "./components";
+import { About, Home, Navigation, Skills, Contact, Certificates } from "./components";
 import { Experience } from "./components/Experience";
 
 export default function Example(): React.ReactElement {
@@ -12,7 +12,7 @@ export default function Example(): React.ReactElement {
         <About />
         <Experience />
         <Skills />
-        <Projects />
+        <Certificates />
         <Contact />
       </div>
     </div>
