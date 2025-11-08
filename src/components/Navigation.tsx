@@ -1,15 +1,17 @@
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const navItems = [
-  { label: 'Home', id: 'home' },
-  { label: 'About', id: 'about' },
-  { label: 'Experience', id: 'experience' },
-  { label: 'Skills', id: 'skills' },
-  { label: 'Certificates', id: 'certificates' },
-  { label: 'Contact', id: 'contact' },
+  { labelKey: 'nav.home', id: 'home' },
+  { labelKey: 'nav.about', id: 'about' },
+  { labelKey: 'nav.experience', id: 'experience' },
+  { labelKey: 'nav.skills', id: 'skills' },
+  { labelKey: 'nav.certificates', id: 'certificates' },
+  { labelKey: 'nav.contact', id: 'contact' },
 ];
 
 export const Navigation = () => {
+  const { t, i18n } = useTranslation();
   const [currentSection, setCurrentSection] = useState<string>('home');
 
   const scrollToSection = (sectionId: string) => {
@@ -61,22 +63,36 @@ export const Navigation = () => {
               onClick={() => scrollToSection(item.id)}
             >
               <span className="invisible font-bold" aria-hidden="true">
-                {item.label}
+                {t(item.labelKey)}
               </span>
               <span
                 className={`absolute left-0 top-0 ${
                   isCurrent ? 'font-bold' : ''
                 }`}
               >
-                {item.label}
+                {t(item.labelKey)}
               </span>
             </li>
           );
         })}
       </ul>
       <ul className="flex gap-2">
-        <li>PL</li>
-        <li>EN</li>
+        <li
+          className={`cursor-pointer hover:text-gray-600 transition-colors ${
+            i18n.language === 'pl' ? 'font-bold' : ''
+          }`}
+          onClick={() => i18n.changeLanguage('pl')}
+        >
+          PL
+        </li>
+        <li
+          className={`cursor-pointer hover:text-gray-600 transition-colors ${
+            i18n.language === 'en' ? 'font-bold' : ''
+          }`}
+          onClick={() => i18n.changeLanguage('en')}
+        >
+          EN
+        </li>
       </ul>
     </div>
   );

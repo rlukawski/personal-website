@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { FaEnvelope, FaPhone, FaLinkedin } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 export const Contact = () => {
+  const { t } = useTranslation();
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -33,12 +35,12 @@ export const Contact = () => {
 
   return (
     <section id="contact" className="mt-8 scroll-mt-24">
-      <h2 className="text-2xl font-bold">Contact</h2>
+      <h2 className="text-2xl font-bold">{t('contact.title')}</h2>
       <div className="border border-gray-200 p-8 rounded-xl bg-transparent backdrop-blur-sm mt-2">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Contact Information */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">Get in Touch</h3>
+            <h3 className="text-xl font-semibold mb-4">{t('contact.getInTouch')}</h3>
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <FaEnvelope className="w-6 h-6 text-gray-600 flex-shrink-0" />
@@ -66,7 +68,7 @@ export const Contact = () => {
                   rel="noopener noreferrer"
                   className="text-blue-600 hover:underline"
                 >
-                  LinkedIn Profile
+                  {t('contact.linkedinProfile')}
                 </a>
               </div>
             </div>
@@ -74,11 +76,11 @@ export const Contact = () => {
 
           {/* Contact Form */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">Send a Message</h3>
+            <h3 className="text-xl font-semibold mb-4">{t('contact.sendMessage')}</h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                  Name
+                  {t('contact.name')}
                 </label>
                 <input
                   type="text"
@@ -90,7 +92,7 @@ export const Contact = () => {
               </div>
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                  Email
+                  {t('contact.email')}
                 </label>
                 <input
                   type="email"
@@ -102,7 +104,7 @@ export const Contact = () => {
               </div>
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                  Message
+                  {t('contact.message')}
                 </label>
                 <textarea
                   id="message"
@@ -118,19 +120,19 @@ export const Contact = () => {
                 className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {status === "submitting"
-                  ? "Sending..."
+                  ? t('contact.sending')
                   : status === "success"
-                  ? "Message Sent!"
+                  ? t('contact.sent')
                   : status === "error"
-                  ? "Error - Try Again"
-                  : "Send Message"}
+                  ? t('contact.error')
+                  : t('contact.send')}
               </button>
               {status === "success" && (
-                <p className="text-green-600 text-sm">Thank you! Your message has been sent.</p>
+                <p className="text-green-600 text-sm">{t('contact.successMessage')}</p>
               )}
               {status === "error" && (
                 <p className="text-red-600 text-sm">
-                  There was an error sending your message. Please try again.
+                  {t('contact.errorMessage')}
                 </p>
               )}
             </form>

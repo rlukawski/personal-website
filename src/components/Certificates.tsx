@@ -1,6 +1,7 @@
 import React from "react";
 import googleCloudArchitectLogo from "../assets/google-cloud-architect.png";
 import scrumMasterLogo from "../assets/scrum-master-psm1.png";
+import { useTranslation } from "react-i18next";
 
 const certificatesData = [
   {
@@ -20,9 +21,10 @@ const certificatesData = [
 ];
 
 export const Certificates = () => {
+  const { t } = useTranslation();
   return (
     <section id="certificates" className="mt-8 scroll-mt-24">
-      <h2 className="text-2xl font-bold">Certificates</h2>
+      <h2 className="text-2xl font-bold">{t('certificates.title')}</h2>
 
       <div className="border border-gray-200 p-8 rounded-xl bg-transparent backdrop-blur-sm mt-2">
         <div className="grid grid-cols-[auto_1fr] gap-4 text-sm">
@@ -55,7 +57,7 @@ export const Certificates = () => {
                         rel="noopener noreferrer"
                         className="text-blue-600 hover:underline text-sm"
                       >
-                        Show credentials
+                        {t('certificates.showCredentials')}
                       </a>
                     </p>
                   )}

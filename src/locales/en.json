@@ -1,0 +1,90 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "skills": "Skills",
+    "certificates": "Certificates",
+    "contact": "Contact"
+  },
+  "home": {
+    "subtitle": "A full-stack developer and IT Project Manager",
+    "tagline": "Let's build products that matter!"
+  },
+  "about": {
+    "title": "About",
+    "paragraph1": "A full-stack developer with 5+ years of modern frontend/backend experience and 20+ years in IT. I'm passionate about the entire software development lifecycle—from system architecture through implementation to production deployment. Leading cross-functional teams and delivering robust, scalable solutions gives me as much satisfaction as writing clean, maintainable code.",
+    "paragraph2": "Google Cloud Professional Architect (2024) | Professional Scrum Master | Built systems for millions of users at Onet.pl | Led telecommunications projects at TP.SA | Currently developing complex React applications and mentoring developers at EGZOTech."
+  },
+  "experience": {
+    "title": "Experience",
+    "present": "present",
+    "project": "Project",
+    "technologies": "Technologies",
+    "exp0": {
+      "title": "Senior Software Developer",
+      "desc0": "Conduct code reviews and mentor junior developers",
+      "desc1": "Develop React components with Chakra-UI and Styled Components",
+      "desc2": "Conduct integration testing with Cypress",
+      "desc3": "Create and maintain TypeScript libraries controlling complex processes and performing logical operations",
+      "desc4": "Manage CI/CD environment based on GitHub Actions",
+      "desc5": "Enhance existing Angular + NestJS application",
+      "project": "EGZOClinic (software) on multiple devices used by EGZOTech:"
+    },
+    "exp1": {
+      "title": "Full-Stack Developer",
+      "desc0": "Development of web projects mainly based on React framework for Upwork clients.",
+      "desc1": "Working on my own project using React and Next.js framework",
+      "project": "- a meme generator for popular TV programs."
+    },
+    "exp2": {
+      "title": "Volunteer",
+      "desc0": "Translation volunteer supporting wellbeing and personal development content for the Isha Foundation's global community."
+    },
+    "exp3": {
+      "title": "Project Manager / Senior Developer",
+      "desc0": "Architect, Team Manager, and Senior Developer for the multibenefit.pl project - implemented and maintained until 2016."
+    },
+    "exp4": {
+      "title": "Owner"
+    },
+    "exp5": {
+      "title": "Project Manager",
+      "desc0": "Managing telecommunications projects at TP.SA. Successfully completed 3 editions of software development for Order Management and BPM - 8.3 - 9.2 - for the internal systems of the partner"
+    },
+    "exp6": {
+      "title": "Technical Product Manager",
+      "desc0": "Technical Product Manager for VoIP services in Poland",
+      "project": "VoIP telephony solution for online customers"
+    },
+    "exp7": {
+      "title": "Software Developer / Architect / Manager",
+      "desc0": "Project manager and developer in portal projects",
+      "desc1": "Design and implementation of architectural solutions used by other development teams"
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "subtitle": "Essential Tools I use"
+  },
+  "certificates": {
+    "title": "Certificates",
+    "showCredentials": "Show credentials"
+  },
+  "contact": {
+    "title": "Contact",
+    "getInTouch": "Get in Touch",
+    "linkedinProfile": "LinkedIn Profile",
+    "sendMessage": "Send a Message",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "sent": "Message Sent!",
+    "error": "Error - Try Again",
+    "successMessage": "Thank you! Your message has been sent.",
+    "errorMessage": "There was an error sending your message. Please try again."
+  }
+}
+
