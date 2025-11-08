@@ -16,8 +16,8 @@ const experienceData = [
     ],
     product: (
       <>
-        ExoClinic (software) on multiple devices used by EGZOTech for instance:{" "}
-        <b>Stella BIO</b>, <b>Sidra LEG</b>, <b>Meissa OT</b> and more
+        ExoClinic (software) on multiple devices used by EGZOTech:{" "}
+        <b>Stella BIO</b>, <b>Sidra LEG</b>, <b>Meissa OT</b>
       </>
     ),
     technologies:
@@ -30,8 +30,21 @@ const experienceData = [
     company: "Freelance",
     descriptions: [
       "Development of web projects mainly based on React framework for Upwork clients.",
-      "Working on my own project - generator-paskow.pl - a meme generator for popular TV programs.",
+      "Working on my own project using React and Next.js framework",
     ],
+    product: (
+      <>
+        <a
+          href="https://generator-paskow.pl"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 hover:underline"
+        >
+          generator-paskow.pl
+        </a>{" "}
+        - a meme generator for popular TV programs.
+      </>
+    ),
     technologies:
       "React, Zustand, TS/JS, Next.js, SCSS, PostgreSQL, Trpc, REST, Docker",
   },
@@ -52,7 +65,7 @@ const experienceData = [
           rel="noopener noreferrer"
           className="text-blue-600 hover:underline"
         >
-          https://multibenefit.pl (webarchive)
+          multibenefit.pl (webarchive)
         </a>
       </>
     ),
@@ -71,7 +84,7 @@ const experienceData = [
         rel="noopener noreferrer"
         className="text-blue-600 hover:underline"
       >
-        https://luktronik.pl (webarchive)
+        luktronik.pl (webarchive)
       </a>
     ),
   },
