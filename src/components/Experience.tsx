@@ -48,6 +48,16 @@ const experienceData = [
     technologies:
       "React, Zustand, TS/JS, Next.js, SCSS, PostgreSQL, Trpc, REST, Docker",
   },
+
+  {
+    startDate: "2016.09",
+    endDate: "2021.12",
+    title: "Volunteer",
+    company: "Isha Foundation",
+    descriptions: [
+      "Translation volunteer supporting wellbeing and personal development content for the Isha Foundation's global community.",
+    ],
+  },
   {
     startDate: "2013.01",
     endDate: "2016.10",
