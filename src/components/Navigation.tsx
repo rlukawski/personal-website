@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const navItems = [
-  { labelKey: 'nav.home', id: 'home' },
   { labelKey: 'nav.about', id: 'about' },
   { labelKey: 'nav.experience', id: 'experience' },
   { labelKey: 'nav.skills', id: 'skills' },
@@ -52,7 +51,7 @@ export const Navigation = () => {
       >
         Rafał Łukawski
       </p>
-      <ul className="flex gap-6 text-lg">
+      <ul className="flex gap-4 text-lg">
         {navItems.map((item) => {
           const isCurrent = currentSection === item.id;
           
