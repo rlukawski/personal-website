@@ -1,11 +1,24 @@
 import React from "react";
+import egzotechLogo from "../assets/egzotech-logo.png";
 
-const experienceData = [
+interface ExperienceItem {
+  startDate: string;
+  endDate: string;
+  title: string;
+  company: string;
+  customIcon?: string;
+  descriptions: string[];
+  technologies?: string;
+  project?: React.ReactNode;
+}
+
+const experienceData: ExperienceItem[] = [
   {
     startDate: "2022.01",
     endDate: "present",
     title: "Senior Software Developer",
     company: "EGZOTech",
+    customIcon: egzotechLogo,
     descriptions: [
       "Conduct code reviews and mentor junior developers",
       "Develop React components with Chakra-UI and Styled Components",
@@ -137,18 +150,25 @@ export const Experience = () => {
         <div className="grid grid-cols-[auto_1fr] gap-4 text-sm">
           {experienceData.map((exp, index) => (
             <React.Fragment key={index}>
-              <div>
-                <p>
-                  {exp.startDate} -<br />
-                  {exp.endDate}
-                </p>
+              <div className="w-10 h-10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                {exp.customIcon && (
+                  <img
+                    src={exp.customIcon}
+                    alt={exp.company}
+                    className="w-full h-full object-contain"
+                  />
+                )}
               </div>
+
               <div>
-                <p>
-                  <b>{exp.title}</b>
-                  <br />
-                  {exp.company}
-                </p>
+                <div className="flex items-start gap-2 mb-1">
+                  <p>
+                    <b>{exp.title}</b>
+                    <br />
+                    {exp.company} <br />
+                    <span className="text-gray-500">{exp.startDate} - {exp.endDate}</span>
+                  </p>
+                </div>
                 {(exp.descriptions.length > 0 ||
                   exp.technologies ||
                   exp.project) && (
