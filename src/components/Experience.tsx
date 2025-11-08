@@ -16,7 +16,7 @@ const experienceData = [
     ],
     project: (
       <>
-        ExoClinic (software) on multiple devices used by EGZOTech:{" "}
+        EGZOClinic (software) on multiple devices used by EGZOTech:{" "}
         <b>Stella BIO</b>, <b>Sidra LEG</b>, <b>Meissa OT</b>
       </>
     ),
