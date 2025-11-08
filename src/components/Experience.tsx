@@ -4,7 +4,7 @@ export const Experience = () => {
       <h2 className="text-2xl font-bold">Experience</h2>
 
       <div className="border border-gray-200 p-8 rounded-xl bg-transparent backdrop-blur-sm mt-2">
-        <div className="grid grid-cols-[auto_1fr] gap-4">
+        <div className="grid grid-cols-[auto_1fr] gap-4 text-sm">
           <div>
             <p>
               2022.01 -<br />
@@ -20,7 +20,7 @@ export const Experience = () => {
           </div>
           <div />
           <div>
-            <ul className="list-disc list-inside space-y-0 text-gray-700 text-sm leading-relaxed">
+            <ul className="list-disc list-outside pl-6 space-y-0 text-gray-700 text-sm leading-relaxed">
               <li>Conduct code reviews and mentor junior developers</li>
               <li>
                 Develop React components with Chakra-UI and Styled Components
@@ -33,13 +33,14 @@ export const Experience = () => {
               <li>Manage CI/CD environment based on GitHub Actions</li>
               <li>Enhance existing Angular + NestJS application</li>
               <li>
-                Technologies: React, Redux, Signals, Typescript, Cypress,
+                <b>Product</b>: ExoClinic (software) on multiple devices used by
+                EGZOTech for instance: Stella BIO, Sidra LEG, Meissa OT and more
+              </li>              
+              <li>
+                <b>Technologies</b>: React, Redux, Signals, Typescript, Cypress,
                 Websocket, REST, Docker, CI/CD, MySQL
               </li>
-              <li>
-                Product: ExoClinic (software) on multiple devices used by
-                EGZOTech for instance: Stella BIO, Sidra LEG, Meissa OT and more
-              </li>
+
             </ul>
           </div>
           <div>
@@ -71,7 +72,7 @@ export const Experience = () => {
           </div>
           <div />
           <div>
-            <ul className="list-disc list-inside space-y-0 text-gray-700 text-sm leading-relaxed">
+            <ul className="list-disc list-outside pl-6 space-y-0 text-gray-700 text-sm leading-relaxed">
               <li>
                 Architect, Team Manager, and Senior Developer for the
                 multibenefit.pl project - implemented and maintained until 2016.
@@ -91,7 +92,7 @@ export const Experience = () => {
           </div>
           <div />
           <div>
-            <ul className="list-disc list-inside space-y-0 text-gray-700 text-sm leading-relaxed">
+            <ul className="list-disc list-outside pl-6 space-y-0 text-gray-700 text-sm leading-relaxed">
               <li>Technologies: PHP, MySQL, HTML/CSS/JS</li>
               <li>Product https://luktro.pl</li>
             </ul>
@@ -107,7 +108,7 @@ export const Experience = () => {
           </div>
           <div />
           <div>
-            <ul className="list-disc list-inside space-y-0 text-gray-700 text-sm leading-relaxed">
+            <ul className="list-disc list-outside pl-6 space-y-0 text-gray-700 text-sm leading-relaxed">
               <li>
                 Managing telecommunications projects at TP.SA. Successfully
                 completed 3 editions of software development for Order
@@ -127,7 +128,7 @@ export const Experience = () => {
           </div>
           <div />
           <div>
-            <ul className="list-disc list-inside space-y-0 text-gray-700 text-sm leading-relaxed">
+            <ul className="list-disc list-outside pl-6 space-y-0 text-gray-700 text-sm leading-relaxed">
               <li>Technical Product Manager for VoIP services in Poland</li>
               <li>
                 Product: Working VoIP telephony setup for nearby customers
@@ -145,7 +146,7 @@ export const Experience = () => {
           </div>
           <div />
           <div>
-            <ul className="list-disc list-inside space-y-0 text-gray-700 text-sm leading-relaxed">
+            <ul className="list-disc list-outside pl-6 space-y-0 text-gray-700 text-sm leading-relaxed">
               <li>Project manager and developer in portal projects</li>
               <li>
                 Design and implementation of architectural solutions used by
