@@ -1,12 +1,18 @@
 import React from "react";
+import { BriefcaseIcon } from "@heroicons/react/24/solid";
 import egzotechLogo from "../assets/egzotech-logo.png";
+import ishaFoundationLogo from "../assets/isha-foundation-logo.png";
+import nonstopLogo from "../assets/nonstop-logo.png";
+import infovideMatrixLogo from "../assets/infovide-matrix-logo.png";
+import airBitesLogo from "../assets/air-bites-logo.png";
+import onetLogo from "../assets/onet-logo.png";
 
 interface ExperienceItem {
   startDate: string;
   endDate: string;
   title: string;
   company: string;
-  customIcon?: string;
+  customIcon?: string | React.ComponentType<{ className?: string }>;
   descriptions: string[];
   technologies?: string;
   project?: React.ReactNode;
@@ -41,6 +47,7 @@ const experienceData: ExperienceItem[] = [
     endDate: "present",
     title: "Full-Stack Developer",
     company: "Freelance",
+    customIcon: BriefcaseIcon,
     descriptions: [
       "Development of web projects mainly based on React framework for Upwork clients.",
       "Working on my own project using React and Next.js framework",
@@ -67,6 +74,7 @@ const experienceData: ExperienceItem[] = [
     endDate: "2021.12",
     title: "Volunteer",
     company: "Isha Foundation",
+    customIcon: ishaFoundationLogo,
     descriptions: [
       "Translation volunteer supporting wellbeing and personal development content for the Isha Foundation's global community.",
     ],
@@ -76,6 +84,7 @@ const experienceData: ExperienceItem[] = [
     endDate: "2016.10",
     title: "Project Manager / Senior Developer",
     company: "Nonstop sp. j.",
+    customIcon: nonstopLogo,
     descriptions: [
       "Architect, Team Manager, and Senior Developer for the multibenefit.pl project - implemented and maintained until 2016.",
     ],
@@ -98,6 +107,7 @@ const experienceData: ExperienceItem[] = [
     endDate: "2012.12",
     title: "Owner",
     company: "LukTronik.pl (e-commerce)",
+    customIcon: BriefcaseIcon,
     descriptions: [],
     technologies: "PHP, MySQL, HTML/CSS/JS",
     project: (
@@ -116,6 +126,7 @@ const experienceData: ExperienceItem[] = [
     endDate: "2009.12",
     title: "Project Manager",
     company: "Infovide-Matrix",
+    customIcon: infovideMatrixLogo,
     descriptions: [
       "Managing telecommunications projects at TP.SA. Successfully completed 3 editions of software development for Order Management and BPM - 8.3 - 9.2 - for the internal systems of the partner",
     ],
@@ -125,6 +136,7 @@ const experienceData: ExperienceItem[] = [
     endDate: "2008.08",
     title: "Technical Product Manager",
     company: "Air Bites Polska",
+    customIcon: airBitesLogo,
     descriptions: ["Technical Product Manager for VoIP services in Poland"],
     project: "VoIP telephony solution for online customers",
   },
@@ -133,6 +145,7 @@ const experienceData: ExperienceItem[] = [
     endDate: "2007.03",
     title: "Software Developer / Architect / Manager",
     company: "Onet.pl",
+    customIcon: onetLogo,
     descriptions: [
       "Project manager and developer in portal projects",
       "Design and implementation of architectural solutions used by other development teams",
@@ -152,11 +165,15 @@ export const Experience = () => {
             <React.Fragment key={index}>
               <div className="w-10 h-10 flex items-center justify-center flex-shrink-0 mt-0.5">
                 {exp.customIcon && (
-                  <img
-                    src={exp.customIcon}
-                    alt={exp.company}
-                    className="w-full h-full object-contain"
-                  />
+                  typeof exp.customIcon === "string" ? (
+                    <img
+                      src={exp.customIcon}
+                      alt={exp.company}
+                      className="w-full h-full object-contain"
+                    />
+                  ) : (
+                    <exp.customIcon className="w-full h-full text-gray-600" />
+                  )
                 )}
               </div>
 
