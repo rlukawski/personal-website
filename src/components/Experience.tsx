@@ -1,5 +1,5 @@
 import React from "react";
-import { FaBriefcase } from "react-icons/fa";
+import { PiBriefcaseLight } from "react-icons/pi";
 import egzotechLogo from "../assets/egzotech-logo.png";
 import ishaFoundationLogo from "../assets/isha-foundation-logo.png";
 import nonstopLogo from "../assets/nonstop-logo.png";
@@ -47,7 +47,7 @@ const experienceData: ExperienceItem[] = [
     endDate: "present",
     title: "Full-Stack Developer",
     company: "Freelance",
-    customIcon: FaBriefcase,
+    customIcon: PiBriefcaseLight,
     descriptions: [
       "Development of web projects mainly based on React framework for Upwork clients.",
       "Working on my own project using React and Next.js framework",
@@ -107,7 +107,7 @@ const experienceData: ExperienceItem[] = [
     endDate: "2012.12",
     title: "Owner",
     company: "LukTronik.pl (e-commerce)",
-    customIcon: FaBriefcase,
+    customIcon: PiBriefcaseLight,
     descriptions: [],
     technologies: "PHP, MySQL, HTML/CSS/JS",
     project: (
