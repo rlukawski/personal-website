@@ -31,6 +31,7 @@ export const Skills = () => {
   return (
     <section id="skills" className="mt-8 scroll-mt-24">
       <h2 className="text-2xl font-bold">Skills</h2>
+      <h4>Essential Tools I use</h4>
       <div className="border border-gray-200 p-6 rounded-xl bg-transparent backdrop-blur-sm mt-2">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
           {technologies.map((tech) => {
