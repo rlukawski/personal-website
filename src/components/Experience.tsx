@@ -142,7 +142,7 @@ const experienceData: ExperienceItem[] = [
   },
   {
     startDate: "2000.01",
-    endDate: "2007.03",
+    endDate: "2007.05",
     title: "Software Developer / Architect / Manager",
     company: "Onet.pl",
     customIcon: onetLogo,
