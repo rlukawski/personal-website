@@ -82,7 +82,7 @@ const getExperienceData = (): ExperienceItem[] => [
     titleKey: "experience.exp3.title",
     company: "Nonstop sp. j.",
     customIcon: nonstopLogo,
-    descriptionKeys: ["experience.exp3.desc0"],
+    descriptionKeys: ["experience.exp3.desc0", "experience.exp3.desc1"],
     technologies: "PHP, CakePHP, MySQL, Percona Cluster, HTML/CSS, JS",
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     projectComponent: (_t) => (
