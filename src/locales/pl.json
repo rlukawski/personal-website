@@ -24,7 +24,7 @@
     "project": "Projekt",
     "technologies": "Technologie",
     "exp0": {
-      "title": "Senior Software Developer",
+      "title": "Programista Frontend",
       "desc0": "Przeprowadzanie przeglądów kodu i mentoring młodszych programistów",
       "desc1": "Rozwój komponentów React z Chakra-UI i Styled Components",
       "desc2": "Przeprowadzanie testów integracyjnych z Cypress",
@@ -44,7 +44,7 @@
       "desc0": "Wolontariusz tłumaczeń wspierający treści dotyczące dobrostanu i rozwoju osobistego dla globalnej społeczności Fundacji Isha."
     },
     "exp3": {
-      "title": "Project Manager / Senior Developer",
+      "title": "Kierownik Projektów / Programista",
       "desc0": "Architekt, Team Manager i Senior Developer projektu multibenefit.pl - wdrożonego i utrzymywanego do 2016 roku."
     },
     "exp4": {
@@ -55,8 +55,8 @@
       "desc0": "Zarządzanie projektami telekomunikacyjnymi w TP.SA. Pomyślnie ukończono 3 edycje rozwoju oprogramowania dla Order Management i BPM - 8.3 - 9.2 - dla systemów wewnętrznych partnera"
     },
     "exp6": {
-      "title": "Technical Product Manager",
-      "desc0": "Technical Product Manager dla usług VoIP w Polsce",
+      "title": "Techniczny Menedżer Produktu",
+      "desc0": "Techniczny menedżer produktu dla usług VoIP w Polsce",
       "project": "Rozwiązanie telefoniczne VoIP dla klientów online"
     },
     "exp7": {

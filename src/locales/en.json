@@ -24,7 +24,7 @@
     "project": "Project",
     "technologies": "Technologies",
     "exp0": {
-      "title": "Senior Software Developer",
+      "title": "Frontend Developer",
       "desc0": "Conduct code reviews and mentor junior developers",
       "desc1": "Develop React components with Chakra-UI and Styled Components",
       "desc2": "Conduct integration testing with Cypress",
@@ -44,7 +44,7 @@
       "desc0": "Translation volunteer supporting wellbeing and personal development content for the Isha Foundation's global community."
     },
     "exp3": {
-      "title": "Project Manager / Senior Developer",
+      "title": "Project Manager / Software Developer",
       "desc0": "Architect, Team Manager, and Senior Developer for the multibenefit.pl project - implemented and maintained until 2016."
     },
     "exp4": {
@@ -60,7 +60,7 @@
       "project": "VoIP telephony solution for online customers"
     },
     "exp7": {
-      "title": "Project Manager / Developer",
+      "title": "Project Manager / Software Developer",
       "desc0": "Project manager and developer in portal projects",
       "desc1": "Design and implementation of architectural solutions used by other development teams"
     }
