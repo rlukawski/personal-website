@@ -6,11 +6,11 @@ export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="mt-48 mb-8 px-12">
+    <footer className="mt-48 mb-8">
       {/* Horizontal line */}
-      <div className="border-t border-gray-300 pt-8 pb-8">
+      <div className="border-t border-gray-300 pt-8 pb-8 px-4">
         <div className="content-container">
-          <div className="flex flex-row gap-12 justify-between width-full px-8">
+          <div className="flex flex-col sm:flex-row gap-12 justify-between width-full px-8">
             {/* Call to Action Section */}
             <FooterCTA />
             <FooterSitemap />
