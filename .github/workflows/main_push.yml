@@ -82,7 +82,7 @@ jobs:
             set -e
             cd ./personal-website
             echo "${{ secrets.OWNER_PAT }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-            docker stack deploy personal-website --resolve-image always --with-registry-auth
+            docker stack deploy --compose-file=docker-compose.yml personal-website --resolve-image always --with-registry-auth
             docker system prune -f
 
       - name: Wait for services to stabilize
