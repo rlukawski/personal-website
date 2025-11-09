@@ -155,7 +155,7 @@ export const Experience = () => {
       <h2 className="heading-2">{t("experience.title")}</h2>
 
       <div className="container-body mt-2">
-        <div className="grid grid-cols-[auto_1fr] gap-4 text-sm">
+        <div className="grid grid-cols-[auto_1fr] gap-4 body-small">
           {experienceData.map((exp, index) => (
             <React.Fragment key={index}>
               <div className="w-10 h-10 flex items-center justify-center flex-shrink-0 mt-0.5">
