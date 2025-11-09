@@ -40,12 +40,4 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
-
-  .header-text {
-    @apply text-gray-600 text-3xl font-bold;
-  }
-
-  .body-text {
-    @apply text-gray-600 text-xl font-bold;
-  }
 }
