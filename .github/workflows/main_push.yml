@@ -25,13 +25,13 @@ jobs:
       - name: Check out repo
         uses: actions/checkout@v2
 
-      - name: Bump patch version
-        uses: phips28/gh-action-bump-version@v11.0.7
-        with:
-          default: patch
-          tag-prefix: "v"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Bump patch version
+      #   uses: phips28/gh-action-bump-version@v11.0.7
+      #   with:
+      #     default: patch
+      #     tag-prefix: "v"
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build web
         run: |
