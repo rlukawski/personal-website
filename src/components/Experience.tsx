@@ -151,10 +151,10 @@ export const Experience = () => {
   const experienceData = getExperienceData();
 
   return (
-    <section id="experience" className="mt-8 scroll-mt-24 content-container">
+    <section id="experience" className="mt-8 scroll-mt-24 container-width">
       <h2 className="heading-2">{t("experience.title")}</h2>
 
-      <div className="border border-gray-200 px-4 md:px-8 py-8 rounded-xl bg-transparent backdrop-blur-sm mt-2">
+      <div className="container-body mt-2">
         <div className="grid grid-cols-[auto_1fr] gap-4 text-sm">
           {experienceData.map((exp, index) => (
             <React.Fragment key={index}>

@@ -16,7 +16,7 @@ body {
 
 body {
   min-height: 100vh;
-  background-color: #ffffff;
+  background-color: #f2f2f2;
   background-image: linear-gradient(
       45deg,
       transparent 49%,
@@ -35,10 +35,14 @@ body {
 }
 
 @layer components {
-  .content-container {
+  .container-width {
     max-width: var(--content-max-width);
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .container-body { 
+    @apply border border-gray-200 p-8 rounded-xl bg-transparent bg-white shadow-md hover:shadow-lg transition-shadow;
   }
 
   /* Heading Styles */

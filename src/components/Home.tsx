@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 export const Home = () => {
   const { t } = useTranslation();
   return (
-    <main id="home" className="mt-16 scroll-mt-32 content-container w-full">
+    <main id="home" className="mt-16 scroll-mt-32 container-width w-full">
       <div className="flex w-full justify-evenly items-center">
         <div className="h-full flex flex-col gap-2">
           <p className="heading-2">{t('home.subtitle')}</p>

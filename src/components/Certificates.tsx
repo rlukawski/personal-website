@@ -23,10 +23,10 @@ const certificatesData = [
 export const Certificates = () => {
   const { t } = useTranslation();
   return (
-    <section id="certificates" className="mt-8 scroll-mt-24 content-container w-full">
+    <section id="certificates" className="mt-8 scroll-mt-24 container-width w-full">
       <h2 className="heading-2">{t('certificates.title')}</h2>
 
-      <div className="border border-gray-200 p-8 rounded-xl bg-transparent backdrop-blur-sm mt-2">
+      <div className="container-body mt-2">
         <div className="grid grid-cols-[auto_1fr] gap-4 text-sm">
           {certificatesData.map((cert, index) => (
             <React.Fragment key={index}>
