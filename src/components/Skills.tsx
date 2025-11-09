@@ -35,7 +35,7 @@ export const Skills = () => {
       <h2 className="heading-2">{t('skills.title')}</h2>
       <h4 className="body-normal">{t('skills.subtitle')}</h4>
       <div className="border border-gray-200 p-6 rounded-xl bg-transparent backdrop-blur-sm mt-2">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
           {technologies.map((tech) => {
             const icon = tech.customIcon ? null : getIcon(tech.iconSlug || '');
             
