@@ -34,7 +34,7 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="mt-8 scroll-mt-24">
+    <section id="contact" className="mt-8 scroll-mt-24 content-container w-full">
       <h2 className="text-2xl font-bold">{t('contact.title')}</h2>
       <div className="border border-gray-200 p-8 rounded-xl bg-transparent backdrop-blur-sm mt-2">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

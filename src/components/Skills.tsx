@@ -31,7 +31,7 @@ const getIcon = (slug: string) => {
 export const Skills = () => {
   const { t } = useTranslation();
   return (
-    <section id="skills" className="mt-8 scroll-mt-24">
+    <section id="skills" className="mt-8 scroll-mt-24 content-container w-full">
       <h2 className="text-2xl font-bold">{t('skills.title')}</h2>
       <h4>{t('skills.subtitle')}</h4>
       <div className="border border-gray-200 p-6 rounded-xl bg-transparent backdrop-blur-sm mt-2">

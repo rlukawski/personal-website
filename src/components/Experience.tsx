@@ -151,7 +151,7 @@ export const Experience = () => {
   const experienceData = getExperienceData();
 
   return (
-    <section id="experience" className="mt-8 scroll-mt-24">
+    <section id="experience" className="mt-8 scroll-mt-24 content-container">
       <h2 className="text-2xl font-bold">{t("experience.title")}</h2>
 
       <div className="border border-gray-200 p-8 rounded-xl bg-transparent backdrop-blur-sm mt-2">
