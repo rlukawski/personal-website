@@ -43,11 +43,6 @@ jobs:
         with:
           path: |
             docker-compose.yml
-            # .env.production
-            # .env.production.local
-            # google-credentials.json
-            # services/gorse/config.toml
-            # scripts/
           key: build-files-${{ github.run_id }}
 
   deploy:
@@ -59,12 +54,6 @@ jobs:
         with:
           path: |
             docker-compose.yml
-            # docker-compose-production-traefik.yml
-            # .env.production
-            # .env.production.local
-            # google-credentials.json
-            # services/gorse/config.toml
-            # scripts/
           key: build-files-${{ github.run_id }}
 
       - name: Login to GitHub Container Registry
