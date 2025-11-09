@@ -1,1 +1,123 @@
 @import "tailwindcss";
+
+:root {
+  --content-max-width: 1280px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #ffffff;
+  background-image: linear-gradient(
+      45deg,
+      transparent 49%,
+      rgba(209, 213, 219, 0.4) 50%,
+      transparent 51%
+    ),
+    linear-gradient(
+      -45deg,
+      transparent 49%,
+      rgba(209, 213, 219, 0.4) 50%,
+      transparent 51%
+    );
+  background-size: 80px 80px;
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
+@layer components {
+  .content-container {
+    max-width: var(--content-max-width);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Heading Styles */
+  .heading-1 {
+    @apply text-3xl font-bold text-gray-900;
+  }
+  
+  .heading-2 {
+    @apply text-2xl font-bold text-gray-800;
+  }
+  
+  .heading-3 {
+    @apply text-xl font-semibold text-gray-800;
+  }
+
+  .heading-4 {
+    @apply text-lg font-semibold text-gray-800;
+  }
+
+  /* Body Text Styles */
+  .body-large {
+    @apply text-lg text-gray-700 leading-relaxed;
+  }
+  
+  .body-normal {
+    @apply text-base text-gray-600 leading-relaxed;
+  }
+  
+  .body-small {
+    @apply text-sm text-gray-600;
+  }
+
+  .body-extra-small {
+    @apply text-xs text-gray-500;
+  }
+
+  /* Specialized Text Styles */
+  .text-muted {
+    @apply text-gray-500;
+  }
+
+  .text-emphasis {
+    @apply text-gray-700;
+  }
+
+  .text-subtle {
+    @apply text-gray-400;
+  }
+
+  /* Label Styles */
+  .label {
+    @apply block text-sm font-medium text-gray-700;
+  }
+
+  .label-required {
+    @apply block text-sm font-medium text-gray-700;
+  }
+
+  /* Link Styles */
+  .link-primary {
+    @apply text-blue-600 hover:underline;
+  }
+
+  /* Status Text Styles */
+  .text-success {
+    @apply text-green-600 text-sm;
+  }
+
+  .text-error {
+    @apply text-red-600 text-sm;
+  }
+
+  /* Card Title */
+  .card-title {
+    @apply font-bold text-gray-800;
+  }
+
+  /* List Text */
+  .list-text {
+    @apply text-gray-700 text-sm leading-relaxed;
+  }
+}

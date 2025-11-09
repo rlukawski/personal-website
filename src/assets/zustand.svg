@@ -1,0 +1,19 @@
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <title>Zustand</title>
+  <!-- Bear head shape -->
+  <ellipse cx="12" cy="10" rx="8" ry="7" fill="#443f37"/>
+  <!-- Bear ears -->
+  <circle cx="7" cy="6" r="2.5" fill="#443f37"/>
+  <circle cx="17" cy="6" r="2.5" fill="#443f37"/>
+  <!-- Inner ears -->
+  <circle cx="7" cy="6" r="1.2" fill="#6b6357"/>
+  <circle cx="17" cy="6" r="1.2" fill="#6b6357"/>
+  <!-- Eyes -->
+  <circle cx="9.5" cy="9" r="1" fill="#fff"/>
+  <circle cx="14.5" cy="9" r="1" fill="#fff"/>
+  <!-- Nose -->
+  <ellipse cx="12" cy="11.5" rx="1" ry="1.2" fill="#6b6357"/>
+  <!-- Mouth -->
+  <path d="M10 13 Q12 14.5 14 13" stroke="#6b6357" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+</svg>
+

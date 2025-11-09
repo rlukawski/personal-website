@@ -1,0 +1,215 @@
+import React from "react";
+import { PiBriefcaseLight } from "react-icons/pi";
+import egzotechLogo from "../assets/egzotech-logo.png";
+import ishaFoundationLogo from "../assets/isha-foundation-logo.png";
+import nonstopLogo from "../assets/nonstop-logo.png";
+import infovideMatrixLogo from "../assets/infovide-matrix-logo.png";
+import airBitesLogo from "../assets/air-bites-logo.png";
+import onetLogo from "../assets/onet-logo.png";
+import { useTranslation } from "react-i18next";
+
+interface ExperienceItem {
+  startDate: string;
+  endDateKey?: string;
+  endDate?: string;
+  titleKey: string;
+  company: string;
+  customIcon?: string | React.ComponentType<{ className?: string }>;
+  descriptionKeys: string[];
+  technologies?: string;
+  projectKey?: string;
+  projectComponent?: (t: (key: string) => string) => React.ReactNode;
+}
+
+const getExperienceData = (): ExperienceItem[] => [
+  {
+    startDate: "2022.01",
+    endDateKey: "experience.present",
+    titleKey: "experience.exp0.title",
+    company: "EGZOTech",
+    customIcon: egzotechLogo,
+    descriptionKeys: [
+      "experience.exp0.desc0",
+      "experience.exp0.desc1",
+      "experience.exp0.desc2",
+      "experience.exp0.desc3",
+      "experience.exp0.desc4",
+      "experience.exp0.desc5",
+    ],
+    projectComponent: (t) => (
+      <>
+        {t("experience.exp0.project")}{" "}
+        <b>Stella BIO</b>, <b>Sidra LEG</b>, <b>Meissa OT</b>
+      </>
+    ),
+    technologies:
+      "React, Redux, Signals, Typescript, Cypress, Websocket, REST, Docker, CI/CD, MySQL",
+  },
+  {
+    startDate: "2020.09",
+    endDateKey: "experience.present",
+    titleKey: "experience.exp1.title",
+    company: "Freelance",
+    customIcon: PiBriefcaseLight,
+    descriptionKeys: ["experience.exp1.desc0", "experience.exp1.desc1"],
+    projectComponent: (t) => (
+      <>
+        <a
+          href="https://generator-paskow.pl"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="link-primary"
+        >
+          generator-paskow.pl
+        </a>{" "}
+        {t("experience.exp1.project")}
+      </>
+    ),
+    technologies:
+      "React, Zustand, TS/JS, Next.js, SCSS, PostgreSQL, Trpc, REST, Docker",
+  },
+  {
+    startDate: "2020.01",
+    endDate: "2021.12",
+    titleKey: "experience.exp2.title",
+    company: "Isha Foundation",
+    customIcon: ishaFoundationLogo,
+    descriptionKeys: ["experience.exp2.desc0"],
+  },
+  {
+    startDate: "2013.01",
+    endDate: "2016.10",
+    titleKey: "experience.exp3.title",
+    company: "Nonstop sp. j.",
+    customIcon: nonstopLogo,
+    descriptionKeys: ["experience.exp3.desc0"],
+    technologies: "PHP, CakePHP, MySQL, Percona Cluster, HTML/CSS, JS",
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    projectComponent: (_t) => (
+      <>
+        <a
+          href="https://web.archive.org/web/20150207000901/http://multibenefit.pl/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="link-primary"
+        >
+          multibenefit.pl (webarchive)
+        </a>
+      </>
+    ),
+  },
+  {
+    startDate: "2010.01",
+    endDate: "2012.12",
+    titleKey: "experience.exp4.title",
+    company: "LukTronik.pl (e-commerce)",
+    customIcon: PiBriefcaseLight,
+    descriptionKeys: [],
+    technologies: "PHP, MySQL, HTML/CSS/JS",
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    projectComponent: (_t) => (
+      <a
+        href="https://web.archive.org/web/20120111092738/http://luktronik.pl/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="link-primary"
+      >
+        luktronik.pl (webarchive)
+      </a>
+    ),
+  },
+  {
+    startDate: "2008.09",
+    endDate: "2009.12",
+    titleKey: "experience.exp5.title",
+    company: "Infovide-Matrix",
+    customIcon: infovideMatrixLogo,
+    descriptionKeys: ["experience.exp5.desc0"],
+  },
+  {
+    startDate: "2007.06",
+    endDate: "2008.08",
+    titleKey: "experience.exp6.title",
+    company: "Air Bites Polska",
+    customIcon: airBitesLogo,
+    descriptionKeys: ["experience.exp6.desc0"],
+    projectKey: "experience.exp6.project",
+  },
+  {
+    startDate: "2000.01",
+    endDate: "2007.05",
+    titleKey: "experience.exp7.title",
+    company: "Onet.pl",
+    customIcon: onetLogo,
+    descriptionKeys: ["experience.exp7.desc0", "experience.exp7.desc1"],
+    technologies: "PHP, Perl, MySQL, HTML/CSS/JS",
+  },
+];
+
+export const Experience = () => {
+  const { t } = useTranslation();
+  const experienceData = getExperienceData();
+
+  return (
+    <section id="experience" className="mt-8 scroll-mt-24 content-container">
+      <h2 className="heading-2">{t("experience.title")}</h2>
+
+      <div className="border border-gray-200 p-8 rounded-xl bg-transparent backdrop-blur-sm mt-2">
+        <div className="grid grid-cols-[auto_1fr] gap-4 text-sm">
+          {experienceData.map((exp, index) => (
+            <React.Fragment key={index}>
+              <div className="w-10 h-10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                {exp.customIcon &&
+                  (typeof exp.customIcon === "string" ? (
+                    <img
+                      src={exp.customIcon}
+                      alt={exp.company}
+                      className="w-full h-full object-contain"
+                    />
+                  ) : (
+                    <exp.customIcon className="w-full h-full text-gray-600" />
+                  ))}
+              </div>
+
+              <div>
+                <div className="flex items-start gap-2 mb-1">
+                  <p>
+                    <b>{t(exp.titleKey)}</b>
+                    <br />
+                    {exp.company} <br />
+                    <span className="text-muted">
+                      {exp.startDate} - {exp.endDateKey ? t(exp.endDateKey) : (exp.endDate || '')}
+                    </span>
+                  </p>
+                </div>
+                {(exp.descriptionKeys.length > 0 ||
+                  exp.technologies ||
+                  exp.projectKey ||
+                  exp.projectComponent) && (
+                  <ul className="list-disc list-outside pl-6 space-y-0 list-text mt-2">
+                    {exp.descriptionKeys.map((descKey, descIndex) => (
+                      <li key={descIndex}>{t(descKey)}</li>
+                    ))}
+                    {(exp.projectKey || exp.projectComponent) && (
+                      <li>
+                        <b>{t("experience.project")}</b>:{" "}
+                        {exp.projectComponent
+                          ? exp.projectComponent(t)
+                          : t(exp.projectKey!)}
+                      </li>
+                    )}
+                    {exp.technologies && (
+                      <li>
+                        <b>{t("experience.technologies")}</b>: {exp.technologies}
+                      </li>
+                    )}
+                  </ul>
+                )}
+              </div>
+            </React.Fragment>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};

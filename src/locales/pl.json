@@ -1,0 +1,99 @@
+{
+  "nav": {
+    "about": "O mnie",
+    "experience": "Doświadczenie",
+    "skills": "Umiejętności",
+    "certificates": "Certyfikaty",
+    "contact": "Kontakt"
+  },
+  "home": {
+    "subtitle": "Programista full-stack i IT Project Manager",
+    "tagline": "Budujmy produkty, które mają znaczenie!"
+  },
+  "about": {
+    "title": "O mnie",
+    "paragraph1": "Witaj, nazywam się Rafał Łukawski. Jestem programistą full-stack z ponad 5-letnim doświadczeniem w nowoczesnym frontendzie/backendzie i ponad 20-letnim doświadczeniem w IT. Pasjonuję się całym cyklem życia oprogramowania – od architektury systemu, przez implementację, po wdrożenie produkcyjne.",
+
+    "paragraph2": "Google Cloud Professional Architect (2024) | Professional Scrum Master | Budowałem systemy dla milionów użytkowników w Onet.pl | Prowadziłem projekty telekomunikacyjne w TP.SA | Obecnie rozwijam złożone aplikacje React/Next.js i mentoruję programistów."
+
+
+  },
+  "experience": {
+    "title": "Doświadczenie",
+    "present": "obecnie",
+    "project": "Projekt",
+    "technologies": "Technologie",
+    "exp0": {
+      "title": "Senior Software Developer",
+      "desc0": "Przeprowadzanie przeglądów kodu i mentoring młodszych programistów",
+      "desc1": "Rozwój komponentów React z Chakra-UI i Styled Components",
+      "desc2": "Przeprowadzanie testów integracyjnych z Cypress",
+      "desc3": "Tworzenie i utrzymanie bibliotek TypeScript kontrolujących złożone procesy i wykonujących operacje logiczne",
+      "desc4": "Zarządzanie środowiskiem CI/CD opartym na GitHub Actions",
+      "desc5": "Ulepszanie istniejącej aplikacji Angular + NestJS",
+      "project": "EGZOClinic (oprogramowanie) na wielu urządzeniach używanych przez EGZOTech:"
+    },
+    "exp1": {
+      "title": "Programista Full-Stack",
+      "desc0": "Rozwój projektów internetowych głównie opartych na frameworku React dla klientów Upwork.",
+      "desc1": "Praca nad własnym projektem wykorzystującym framework React i Next.js",
+      "project": "- generator memów dla popularnych programów telewizyjnych."
+    },
+    "exp2": {
+      "title": "Wolontariusz",
+      "desc0": "Wolontariusz tłumaczeń wspierający treści dotyczące dobrostanu i rozwoju osobistego dla globalnej społeczności Fundacji Isha."
+    },
+    "exp3": {
+      "title": "Project Manager / Senior Developer",
+      "desc0": "Architekt, Team Manager i Senior Developer projektu multibenefit.pl - wdrożonego i utrzymywanego do 2016 roku."
+    },
+    "exp4": {
+      "title": "Właściciel"
+    },
+    "exp5": {
+      "title": "Kierownik Projektów",
+      "desc0": "Zarządzanie projektami telekomunikacyjnymi w TP.SA. Pomyślnie ukończono 3 edycje rozwoju oprogramowania dla Order Management i BPM - 8.3 - 9.2 - dla systemów wewnętrznych partnera"
+    },
+    "exp6": {
+      "title": "Technical Product Manager",
+      "desc0": "Technical Product Manager dla usług VoIP w Polsce",
+      "project": "Rozwiązanie telefoniczne VoIP dla klientów online"
+    },
+    "exp7": {
+      "title": "Kierownik Projektów / Programista",
+      "desc0": "Project manager i programista w projektach portali",
+      "desc1": "Projektowanie i implementacja rozwiązań architektonicznych używanych przez inne zespoły deweloperskie"
+    }
+  },
+  "skills": {
+    "title": "Umiejętności",
+    "subtitle": "Niezbędne narzędzia, których używam"
+  },
+  "certificates": {
+    "title": "Certyfikaty",
+    "showCredentials": "Pokaż poświadczenia"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "getInTouch": "Skontaktuj się",
+    "linkedinProfile": "Profil LinkedIn",
+    "sendMessage": "Wyślij wiadomość",
+    "name": "Imię",
+    "email": "Email",
+    "message": "Wiadomość",
+    "send": "Wyślij wiadomość",
+    "sending": "Wysyłanie...",
+    "sent": "Wiadomość wysłana!",
+    "error": "Błąd - Spróbuj ponownie",
+    "successMessage": "Dziękuję! Twoja wiadomość została wysłana.",
+    "errorMessage": "Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie."
+  },
+  "footer": {
+    "cta": "Stwórzmy",
+    "ctaHighlight": "coś razem!",
+    "startProject": "Rozpocznij projekt",
+    "sitemap": "Mapa strony",
+    "socials": "Sociale",
+    "home": "Strona główna"
+  }
+}
