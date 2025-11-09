@@ -10,7 +10,7 @@ export const Footer = () => {
       {/* Horizontal line */}
       <div className="border-t border-gray-300 pt-8 pb-8 px-4">
         <div className="content-container">
-          <div className="flex flex-col sm:flex-row gap-12 justify-between width-full px-8">
+          <div className="flex flex-col sm:flex-row gap-10 md:gap-16 justify-center width-full px-8">
             {/* Call to Action Section */}
             <FooterCTA />
             <FooterSitemap />
