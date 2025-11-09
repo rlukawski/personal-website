@@ -19,7 +19,7 @@ const technologies = [
   { name: 'Zustand', description: 'State management', customIcon: zustandIcon, years: '2+' },
   { name: 'Redux', description: 'State management', iconSlug: 'redux', years: '3+' },
   { name: 'Cypress', description: 'Testing', iconSlug: 'cypress', years: '3+' },
-  { name: 'PHP', description: 'Language', iconSlug: 'php', years: '15+' },
+  { name: 'PHP', description: 'Language', iconSlug: 'php', years: '10+' },
 ];
 
 const getIcon = (slug: string) => {
