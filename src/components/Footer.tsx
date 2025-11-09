@@ -19,7 +19,7 @@ export const Footer = () => {
           </div>
 
           <div className="flex flex-row width-full justify-end">
-            <div className="text-center text-gray-600 text-sm pt-4">
+            <div className="text-center body-small pt-4">
               <p>© {currentYear} Rafał Łukawski</p>
             </div>
           </div>

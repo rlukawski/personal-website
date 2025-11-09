@@ -8,9 +8,9 @@ export const FooterCTA = () => {
   return (
     <div className="flex flex-col items-start justify-start gap-4">
       <div className="flex flex-col">
-        <h3 className="text-2xl md:text-3xl font-bold text-gray-800">
+        <h3 className="heading-1">
           {t('footer.cta')}{' '}
-          <span className="text-gray-600">{t('footer.ctaHighlight')}</span>
+          <span className="text-muted">{t('footer.ctaHighlight')}</span>
         </h3>
       </div>
       <button

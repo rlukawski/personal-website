@@ -24,7 +24,7 @@ export const Certificates = () => {
   const { t } = useTranslation();
   return (
     <section id="certificates" className="mt-8 scroll-mt-24 content-container w-full">
-      <h2 className="text-2xl font-bold">{t('certificates.title')}</h2>
+      <h2 className="heading-2">{t('certificates.title')}</h2>
 
       <div className="border border-gray-200 p-8 rounded-xl bg-transparent backdrop-blur-sm mt-2">
         <div className="grid grid-cols-[auto_1fr] gap-4 text-sm">
@@ -55,7 +55,7 @@ export const Certificates = () => {
                         href={cert.validationLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-blue-600 hover:underline text-sm"
+                        className="link-primary body-small"
                       >
                         {t('certificates.showCredentials')}
                       </a>

@@ -58,7 +58,7 @@ const getExperienceData = (): ExperienceItem[] => [
           href="https://generator-paskow.pl"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline"
+          className="link-primary"
         >
           generator-paskow.pl
         </a>{" "}
@@ -91,7 +91,7 @@ const getExperienceData = (): ExperienceItem[] => [
           href="https://web.archive.org/web/20150207000901/http://multibenefit.pl/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline"
+          className="link-primary"
         >
           multibenefit.pl (webarchive)
         </a>
@@ -112,7 +112,7 @@ const getExperienceData = (): ExperienceItem[] => [
         href="https://web.archive.org/web/20120111092738/http://luktronik.pl/"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-blue-600 hover:underline"
+        className="link-primary"
       >
         luktronik.pl (webarchive)
       </a>
@@ -152,7 +152,7 @@ export const Experience = () => {
 
   return (
     <section id="experience" className="mt-8 scroll-mt-24 content-container">
-      <h2 className="text-2xl font-bold">{t("experience.title")}</h2>
+      <h2 className="heading-2">{t("experience.title")}</h2>
 
       <div className="border border-gray-200 p-8 rounded-xl bg-transparent backdrop-blur-sm mt-2">
         <div className="grid grid-cols-[auto_1fr] gap-4 text-sm">
@@ -177,7 +177,7 @@ export const Experience = () => {
                     <b>{t(exp.titleKey)}</b>
                     <br />
                     {exp.company} <br />
-                    <span className="text-gray-500">
+                    <span className="text-muted">
                       {exp.startDate} - {exp.endDateKey ? t(exp.endDateKey) : (exp.endDate || '')}
                     </span>
                   </p>
@@ -186,7 +186,7 @@ export const Experience = () => {
                   exp.technologies ||
                   exp.projectKey ||
                   exp.projectComponent) && (
-                  <ul className="list-disc list-outside pl-6 space-y-0 text-gray-700 text-sm leading-relaxed mt-2">
+                  <ul className="list-disc list-outside pl-6 space-y-0 list-text mt-2">
                     {exp.descriptionKeys.map((descKey, descIndex) => (
                       <li key={descIndex}>{t(descKey)}</li>
                     ))}

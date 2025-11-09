@@ -35,18 +35,18 @@ export const Contact = () => {
 
   return (
     <section id="contact" className="mt-8 scroll-mt-24 content-container w-full">
-      <h2 className="text-2xl font-bold">{t('contact.title')}</h2>
+      <h2 className="heading-2">{t('contact.title')}</h2>
       <div className="border border-gray-200 p-8 rounded-xl bg-transparent backdrop-blur-sm mt-2">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Contact Information */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">{t('contact.getInTouch')}</h3>
+            <h3 className="heading-3 mb-4">{t('contact.getInTouch')}</h3>
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <FaEnvelope className="w-6 h-6 text-gray-600 flex-shrink-0" />
                 <a
                   href="mailto:rs.lukawski@gmail.com"
-                  className="text-blue-600 hover:underline"
+                  className="link-primary"
                 >
                   rs.lukawski@gmail.com
                 </a>
@@ -55,7 +55,7 @@ export const Contact = () => {
                 <FaPhone className="w-6 h-6 text-gray-600 flex-shrink-0" />
                 <a
                   href="tel:+48737340926"
-                  className="text-blue-600 hover:underline"
+                  className="link-primary"
                 >
                   +48 737 340 926
                 </a>
@@ -66,7 +66,7 @@ export const Contact = () => {
                   href="https://www.linkedin.com/in/rafal-lukawski/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-600 hover:underline"
+                  className="link-primary"
                 >
                   {t('contact.linkedinProfile')}
                 </a>
@@ -76,10 +76,10 @@ export const Contact = () => {
 
           {/* Contact Form */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">{t('contact.sendMessage')}</h3>
+            <h3 className="heading-3 mb-4">{t('contact.sendMessage')}</h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                <label htmlFor="name" className="label mb-1">
                   {t('contact.name')}
                 </label>
                 <input
@@ -91,7 +91,7 @@ export const Contact = () => {
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                <label htmlFor="email" className="label mb-1">
                   {t('contact.email')}
                 </label>
                 <input
@@ -103,7 +103,7 @@ export const Contact = () => {
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                <label htmlFor="message" className="label mb-1">
                   {t('contact.message')}
                 </label>
                 <textarea
@@ -128,10 +128,10 @@ export const Contact = () => {
                   : t('contact.send')}
               </button>
               {status === "success" && (
-                <p className="text-green-600 text-sm">{t('contact.successMessage')}</p>
+                <p className="text-success">{t('contact.successMessage')}</p>
               )}
               {status === "error" && (
-                <p className="text-red-600 text-sm">
+                <p className="text-error">
                   {t('contact.errorMessage')}
                 </p>
               )}

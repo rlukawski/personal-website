@@ -24,7 +24,7 @@ export const FooterSocials = () => {
 
   return (
     <div>
-      <h4 className="text-lg font-semibold text-gray-800 mb-4">
+      <h4 className="heading-4 mb-2">
         {t('footer.socials')}
       </h4>
       <ul className="flex flex-col gap-2">
@@ -36,7 +36,7 @@ export const FooterSocials = () => {
                 href={social.url}
                 target={social.url.startsWith("mailto:") ? undefined : "_blank"}
                 rel={social.url.startsWith("mailto:") ? undefined : "noopener noreferrer"}
-                className="flex items-center gap-2 text-gray-600 hover:text-gray-800 transition-colors duration-200"
+                className="flex items-center gap-2 body-small hover:text-gray-800 transition-colors duration-200"
               >
                 <Icon className="w-4 h-4" />
                 <span>{social.name}</span>

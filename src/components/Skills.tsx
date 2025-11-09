@@ -32,8 +32,8 @@ export const Skills = () => {
   const { t } = useTranslation();
   return (
     <section id="skills" className="mt-8 scroll-mt-24 content-container w-full">
-      <h2 className="text-2xl font-bold">{t('skills.title')}</h2>
-      <h4>{t('skills.subtitle')}</h4>
+      <h2 className="heading-2">{t('skills.title')}</h2>
+      <h4 className="body-normal">{t('skills.subtitle')}</h4>
       <div className="border border-gray-200 p-6 rounded-xl bg-transparent backdrop-blur-sm mt-2">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
           {technologies.map((tech) => {
@@ -60,12 +60,12 @@ export const Skills = () => {
                         <path d={icon.path} />
                       </svg>
                     ) : (
-                      <span className="text-gray-400 text-xs">{tech.name.charAt(0)}</span>
+                      <span className="text-subtle body-extra-small">{tech.name.charAt(0)}</span>
                     )}
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-800">{tech.name}</h3>
-                    <p className="text-sm text-gray-600">{tech.description}</p>
+                    <h3 className="card-title">{tech.name}</h3>
+                    <p className="body-small">{tech.description}</p>
                   </div>
                 </div>
               </div>
