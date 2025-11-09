@@ -69,7 +69,7 @@ const getExperienceData = (): ExperienceItem[] => [
       "React, Zustand, TS/JS, Next.js, SCSS, PostgreSQL, Trpc, REST, Docker",
   },
   {
-    startDate: "2016.09",
+    startDate: "2020.01",
     endDate: "2021.12",
     titleKey: "experience.exp2.title",
     company: "Isha Foundation",
