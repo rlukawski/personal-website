@@ -1,6 +1,47 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Dialog, DialogPanel, DialogBackdrop } from '@headlessui/react';
 import { navItems, scrollToSection } from '../utils/navigation';
+
+// Single breakpoint configuration for mobile menu
+// Change this to 'sm' | 'md' | 'lg' | 'xl' | '2xl' to adjust when mobile menu appears
+const MOBILE_BREAKPOINT = 'lg' as const;
+
+// Tailwind requires complete class names to be present in source code
+const breakpointClasses = {
+  sm: {
+    navHidden: 'hidden sm:flex',
+    menuButton: 'sm:hidden',
+    dialog: 'sm:hidden',
+    padding: 'px-4 sm:px-12',
+  },
+  md: {
+    navHidden: 'hidden md:flex',
+    menuButton: 'md:hidden',
+    dialog: 'md:hidden',
+    padding: 'px-4 md:px-12',
+  },
+  lg: {
+    navHidden: 'hidden lg:flex',
+    menuButton: 'lg:hidden',
+    dialog: 'lg:hidden',
+    padding: 'px-4 lg:px-12',
+  },
+  xl: {
+    navHidden: 'hidden xl:flex',
+    menuButton: 'xl:hidden',
+    dialog: 'xl:hidden',
+    padding: 'px-4 xl:px-12',
+  },
+  '2xl': {
+    navHidden: 'hidden 2xl:flex',
+    menuButton: '2xl:hidden',
+    dialog: '2xl:hidden',
+    padding: 'px-4 2xl:px-12',
+  },
+} as const;
+
+const classes = breakpointClasses[MOBILE_BREAKPOINT];
 
 export const Navigation = () => {
   const { t, i18n } = useTranslation();
@@ -11,7 +52,6 @@ export const Navigation = () => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 150;
       
-      // Find the section that's currently in view
       for (let i = navItems.length - 1; i >= 0; i--) {
         const element = document.getElementById(navItems[i].id);
         if (element && element.offsetTop <= scrollPosition) {
@@ -21,27 +61,10 @@ export const Navigation = () => {
       }
     };
 
-    // Set initial section
     handleScroll();
     window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  // Prevent body scroll when mobile menu is open
-  useEffect(() => {
-    if (isMobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-
-    return () => {
-      document.body.style.overflow = 'unset';
-    };
-  }, [isMobileMenuOpen]);
 
   const handleNavClick = (sectionId: string) => {
     scrollToSection(sectionId);
@@ -50,7 +73,7 @@ export const Navigation = () => {
 
   return (
     <>
-      <div className="w-full flex items-center justify-between px-4 md:px-12 py-2 sticky top-0 z-10 bg-transparent backdrop-blur-sm shadow-sm">
+      <div className={`w-full flex items-center justify-between ${classes.padding} py-2 sticky top-0 z-10 bg-transparent backdrop-blur-sm shadow-sm`}>
         <p 
           className="heading-1 cursor-pointer"
           onClick={() => scrollToSection('home')}
@@ -59,24 +82,19 @@ export const Navigation = () => {
         </p>
         
         {/* Desktop Navigation */}
-        <ul className="hidden md:flex gap-4 text-lg">
+        <ul className={`${classes.navHidden} gap-4 text-lg`}>
           {navItems.map((item) => {
             const isCurrent = currentSection === item.id;
-            
             return (
               <li
                 key={item.id}
                 className="cursor-pointer hover:text-gray-600 transition-colors relative inline-block"
                 onClick={() => scrollToSection(item.id)}
               >
-                <span className="invisible font-bold" aria-hidden="true">
+                <span className="invisible font-bold whitespace-nowrap" aria-hidden="true">
                   {t(item.labelKey)}
                 </span>
-                <span
-                  className={`absolute left-0 top-0 ${
-                    isCurrent ? 'font-bold' : ''
-                  }`}
-                >
+                <span className={`absolute left-0 top-0 whitespace-nowrap ${isCurrent ? 'font-bold' : ''}`}>
                   {t(item.labelKey)}
                 </span>
               </li>
@@ -85,19 +103,15 @@ export const Navigation = () => {
         </ul>
 
         {/* Language Switcher */}
-        <ul className="hidden md:flex gap-2">
+        <ul className={`${classes.navHidden} gap-2`}>
           <li
-            className={`cursor-pointer hover:text-gray-600 transition-colors ${
-              i18n.language === 'pl' ? 'font-bold' : ''
-            }`}
+            className={`cursor-pointer hover:text-gray-600 transition-colors ${i18n.language === 'pl' ? 'font-bold' : ''}`}
             onClick={() => i18n.changeLanguage('pl')}
           >
             PL
           </li>
           <li
-            className={`cursor-pointer hover:text-gray-600 transition-colors ${
-              i18n.language === 'en' ? 'font-bold' : ''
-            }`}
+            className={`cursor-pointer hover:text-gray-600 transition-colors ${i18n.language === 'en' ? 'font-bold' : ''}`}
             onClick={() => i18n.changeLanguage('en')}
           >
             EN
@@ -106,85 +120,76 @@ export const Navigation = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden flex flex-col gap-1.5 p-2"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Toggle menu"
+          className={`${classes.menuButton} flex flex-col gap-1.5 p-2`}
+          onClick={() => setIsMobileMenuOpen(true)}
+          aria-label="Open menu"
         >
-          <span className={`block w-6 h-0.5 bg-gray-900 transition-transform ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-          <span className={`block w-6 h-0.5 bg-gray-900 transition-opacity ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
-          <span className={`block w-6 h-0.5 bg-gray-900 transition-transform ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+          <span className="block w-6 h-0.5 bg-gray-900" />
+          <span className="block w-6 h-0.5 bg-gray-900" />
+          <span className="block w-6 h-0.5 bg-gray-900" />
         </button>
       </div>
 
-      {/* Mobile Menu Overlay */}
-      {isMobileMenuOpen && (
-        <div 
-          className="fixed inset-0 bg-black bg-opacity-50 z-20 md:hidden"
-          onClick={() => setIsMobileMenuOpen(false)}
-        />
-      )}
-
-      {/* Mobile Menu Drawer */}
-      <div
-        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-30 transform transition-transform duration-300 ease-in-out md:hidden ${
-          isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
-        }`}
+      {/* Mobile Menu Dialog */}
+      <Dialog 
+        open={isMobileMenuOpen} 
+        onClose={setIsMobileMenuOpen}
+        className={`relative z-50 ${classes.dialog}`}
       >
-        <div className="flex flex-col h-full p-6">
-          {/* Close Button */}
-          <button
-            className="self-end mb-8 p-2"
-            onClick={() => setIsMobileMenuOpen(false)}
-            aria-label="Close menu"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-
-          {/* Mobile Navigation Items */}
-          <ul className="flex flex-col gap-6">
-            {navItems.map((item) => {
-              const isCurrent = currentSection === item.id;
-              
-              return (
-                <li
-                  key={item.id}
-                  className={`cursor-pointer hover:text-gray-600 transition-colors text-xl ${
-                    isCurrent ? 'font-bold' : ''
-                  }`}
-                  onClick={() => handleNavClick(item.id)}
-                >
-                  {t(item.labelKey)}
-                </li>
-              );
-            })}
-          </ul>
-
-          {/* Mobile Language Switcher */}
-          <div className="mt-auto pt-6 border-t border-gray-200">
-            <p className="text-sm text-gray-500 mb-3">Language</p>
-            <ul className="flex gap-4">
-              <li
-                className={`cursor-pointer hover:text-gray-600 transition-colors text-lg ${
-                  i18n.language === 'pl' ? 'font-bold' : ''
-                }`}
-                onClick={() => i18n.changeLanguage('pl')}
+        <DialogBackdrop className="fixed inset-0 bg-black/50" />
+        
+        <div className="fixed inset-0 flex items-start justify-end">
+          <DialogPanel className="h-full w-64 bg-white shadow-xl">
+            <div className="flex flex-col h-full p-6">
+              <button
+                className="self-end mb-8 p-2 hover:bg-gray-100 rounded"
+                onClick={() => setIsMobileMenuOpen(false)}
+                aria-label="Close menu"
               >
-                PL
-              </li>
-              <li
-                className={`cursor-pointer hover:text-gray-600 transition-colors text-lg ${
-                  i18n.language === 'en' ? 'font-bold' : ''
-                }`}
-                onClick={() => i18n.changeLanguage('en')}
-              >
-                EN
-              </li>
-            </ul>
-          </div>
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+
+              <ul className="flex flex-col gap-6">
+                {navItems.map((item) => (
+                  <li
+                    key={item.id}
+                    className={`cursor-pointer hover:text-gray-600 transition-colors text-xl ${
+                      currentSection === item.id ? 'font-bold' : ''
+                    }`}
+                    onClick={() => handleNavClick(item.id)}
+                  >
+                    {t(item.labelKey)}
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-auto pt-6 border-t border-gray-200">
+                <p className="text-sm text-gray-500 mb-3">Language</p>
+                <ul className="flex gap-4">
+                  <li
+                    className={`cursor-pointer hover:text-gray-600 transition-colors text-lg ${
+                      i18n.language === 'pl' ? 'font-bold' : ''
+                    }`}
+                    onClick={() => i18n.changeLanguage('pl')}
+                  >
+                    PL
+                  </li>
+                  <li
+                    className={`cursor-pointer hover:text-gray-600 transition-colors text-lg ${
+                      i18n.language === 'en' ? 'font-bold' : ''
+                    }`}
+                    onClick={() => i18n.changeLanguage('en')}
+                  >
+                    EN
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </DialogPanel>
         </div>
-      </div>
+      </Dialog>
     </>
   );
 };
