@@ -12,8 +12,11 @@
   },
   "about": {
     "title": "About",
-    "paragraph1": "A full-stack developer with 5+ years of modern frontend/backend experience and 20+ years in IT. I'm passionate about the entire software development lifecycle—from system architecture through implementation to production deployment. Leading cross-functional teams and delivering robust, scalable solutions gives me as much satisfaction as writing clean, maintainable code.",
-    "paragraph2": "Google Cloud Professional Architect (2024) | Professional Scrum Master | Built systems for millions of users at Onet.pl | Led telecommunications projects at TP.SA | Currently developing complex React applications and mentoring developers at EGZOTech."
+    "paragraph1": "Hello, my name is Rafał Łukawski. I'm a full-stack developer with over 5 years of modern frontend/backend experience and over 20 years in IT. I'm passionate about the entire software development lifecycle—from system architecture, through implementation, to production deployment.",
+
+    "paragraph2": "Google Cloud Professional Architect (2024) | Professional Scrum Master | Built systems for millions of users at Onet.pl | Led telecommunications projects at TP.SA | Currently developing complex React/Next.js applications and mentoring developers."
+
+
   },
   "experience": {
     "title": "Experience",
