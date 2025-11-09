@@ -12,8 +12,11 @@
   },
   "about": {
     "title": "O mnie",
-    "paragraph1": "Programista full-stack z ponad 5-letnim doświadczeniem w nowoczesnym frontendzie/backendzie i ponad 20-letnim doświadczeniem w IT. Pasjonuję się całym cyklem życia oprogramowania—od architektury systemu przez implementację po wdrożenie produkcyjne. Prowadzenie interdyscyplinarnych zespołów i dostarczanie solidnych, skalowalnych rozwiązań daje mi tyle samo satysfakcji co pisanie czystego, łatwego w utrzymaniu kodu.",
-    "paragraph2": "Google Cloud Professional Architect (2024) | Professional Scrum Master | Budowałem systemy dla milionów użytkowników w Onet.pl | Prowadziłem projekty telekomunikacyjne w TP.SA | Obecnie rozwijam złożone aplikacje React i mentoruję programistów w EGZOTech."
+    "paragraph1": "Witaj, nazywam się Rafał Łukawski. Jestem programistą full-stack z ponad 5-letnim doświadczeniem w nowoczesnym frontendzie/backendzie i ponad 20-letnim doświadczeniem w IT. Pasjonuję się całym cyklem życia oprogramowania – od architektury systemu, przez implementację, po wdrożenie produkcyjne.",
+
+    "paragraph2": "Google Cloud Professional Architect (2024) | Professional Scrum Master | Budowałem systemy dla milionów użytkowników w Onet.pl | Prowadziłem projekty telekomunikacyjne w TP.SA | Obecnie rozwijam złożone aplikacje React/Next.js i mentoruję programistów."
+
+
   },
   "experience": {
     "title": "Doświadczenie",
@@ -94,4 +97,3 @@
     "home": "Strona główna"
   }
 }
-
