@@ -84,6 +84,13 @@
     "error": "Error - Try Again",
     "successMessage": "Thank you! Your message has been sent.",
     "errorMessage": "There was an error sending your message. Please try again."
+  },
+  "footer": {
+    "cta": "Let's build",
+    "ctaHighlight": "something together!",
+    "startProject": "Start project",
+    "sitemap": "Sitemap",
+    "socials": "Socials"
   }
 }
 

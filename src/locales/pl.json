@@ -84,6 +84,13 @@
     "error": "Błąd - Spróbuj ponownie",
     "successMessage": "Dziękuję! Twoja wiadomość została wysłana.",
     "errorMessage": "Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie."
+  },
+  "footer": {
+    "cta": "Stwórzmy",
+    "ctaHighlight": "coś razem!",
+    "startProject": "Rozpocznij projekt",
+    "sitemap": "Mapa strony",
+    "socials": "Sociale"
   }
 }
 

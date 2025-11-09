@@ -1,24 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-
-const navItems = [
-  { labelKey: 'nav.about', id: 'about' },
-  { labelKey: 'nav.experience', id: 'experience' },
-  { labelKey: 'nav.skills', id: 'skills' },
-  { labelKey: 'nav.certificates', id: 'certificates' },
-  { labelKey: 'nav.contact', id: 'contact' },
-];
+import { navItems, scrollToSection } from '../utils/navigation';
 
 export const Navigation = () => {
   const { t, i18n } = useTranslation();
   const [currentSection, setCurrentSection] = useState<string>('home');
-
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
 
   useEffect(() => {
     const handleScroll = () => {
