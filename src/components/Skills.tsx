@@ -41,39 +41,39 @@ export const Skills = () => {
             
             return (
               <div
-                key={tech.name}
-                className="border border-gray-200 p-3 rounded-lg bg-white/50 backdrop-blur-sm hover:shadow-md transition-shadow"
-              >
-                <div className="flex items-center gap-4">
-                  <div className="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center overflow-hidden p-2">
-                    {tech.customIcon ? (
-                      <img src={tech.customIcon} alt={tech.name} className="w-full h-full object-contain" />
-                    ) : icon ? (
-                      <svg
-                        role="img"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="w-full h-full"
-                        fill={`#${icon.hex}`}
-                      >
-                        <title>{icon.title}</title>
-                        <path d={icon.path} />
-                      </svg>
-                    ) : (
-                      <span className="text-subtle body-extra-small">{tech.name.charAt(0)}</span>
-                    )}
+              key={tech.name}
+              className="border border-gray-200 p-3 rounded-lg bg-white/50 backdrop-blur-sm hover:shadow-md transition-shadow"
+            >
+              <div className="flex items-center gap-4">
+                <div className="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center overflow-hidden p-2">
+                  {tech.customIcon ? (
+                    <img src={tech.customIcon} alt={tech.name} className="w-full h-full object-contain" />
+                  ) : icon ? (
+                    <svg
+                      role="img"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-full h-full"
+                      fill={`#${icon.hex}`}
+                    >
+                      <title>{icon.title}</title>
+                      <path d={icon.path} />
+                    </svg>
+                  ) : (
+                    <span className="text-subtle body-extra-small">{tech.name.charAt(0)}</span>
+                  )}
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-baseline gap-2">
+                    <h3 className="card-title whitespace-nowrap body-small">{tech.name}</h3>
+                    <span className="text-xs font-semibold text-gray-700 bg-gray-100 px-2 py-0.5 rounded-full">
+                      {tech.years}
+                    </span>
                   </div>
-                  <div className="flex-1">
-                    <div className="flex items-baseline gap-2">
-                      <h3 className="card-title whitespace-nowrap">{tech.name}</h3>
-                      <span className="text-xs font-semibold text-gray-700 bg-gray-100 px-2 py-0.5 rounded-full">
-                        {tech.years}
-                      </span>
-                    </div>
-                    <p className="body-extra-small">{tech.description}</p>
-                  </div>
+                  <p className="body-extra-small">{tech.description}</p>
                 </div>
               </div>
+            </div>
             );
           })}
         </div>
