@@ -140,7 +140,7 @@ export const Navigation = () => {
         
         <div className="fixed inset-0 flex items-start justify-end">
           <DialogPanel className="h-full w-64 bg-white shadow-xl">
-            <div className="flex flex-col h-full p-6">
+            <div className="flex flex-col h-full p-6 overflow-y-auto">
               <button
                 className="self-end mb-8 p-2 hover:bg-gray-100 rounded"
                 onClick={() => setIsMobileMenuOpen(false)}
