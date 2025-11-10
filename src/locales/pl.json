@@ -13,10 +13,7 @@
   "about": {
     "title": "O mnie",
     "paragraph1": "Witaj, nazywam się Rafał Łukawski. Jestem programistą full-stack z ponad 5-letnim doświadczeniem w nowoczesnym frontendzie/backendzie i ponad 20-letnim doświadczeniem w IT. Pasjonuję się całym cyklem życia oprogramowania – od architektury systemu, przez implementację, po wdrożenie produkcyjne.",
-
     "paragraph2": "Google Cloud Professional Architect (2024) | Professional Scrum Master | Budowałem systemy dla milionów użytkowników w Onet.pl | Prowadziłem projekty telekomunikacyjne w TP.SA | Obecnie rozwijam złożone aplikacje React/Next.js i mentoruję programistów."
-
-
   },
   "experience": {
     "title": "Doświadczenie",
@@ -33,39 +30,45 @@
     "month_other": "mies.",
     "exp0": {
       "title": "Programista Frontend",
-      "desc0": "Rozwijałem oprogramowanie dla urządzeń medycznych oferowanych przez EGZOTech, gdzie opracowywałem architekturę systemu bazującą na React i .NET, programowałem nowe funkcjonalności i uczestniczyłem w pełnym cyklu wytwarzania oprogramowania i regularnych wydaniach produkcyjnych",
-      "desc1": "Rozwijałem aplikację online dla Stella BIO w technologii Angular i NestJS",
-      "project": "EGZOClinic (oprogramowanie) na wielu urządzeniach używanych przez EGZOTech:"
+      "desc0": "Rozwój oprogramowania dla urządzeń medycznych na platformie React i .NET",
+      "desc1": "Projektowanie architektury systemu i implementacja nowych funkcjonalności",
+      "desc2": "Udział w pełnym cyklu wytwarzania oprogramowania z regularnymi wydaniami produkcyjnymi",
+      "desc3": "Rozwój aplikacji online dla Stella BIO (Angular, NestJS)",
+      "project": "EGZOClinic (oprogramowanie) na urządzeniach: Stella BIO, Sidra LEG, Meissa OT"
     },
     "exp1": {
       "title": "Programista Full-Stack",
-      "desc0": "Pracowałem nad własnymi projektami wykorzystującymi głównie React i Next.js",
-      "desc1": "Rozwijałem projekty informatyczne dla klientów Upwork",
-      "project": "- generator memów dla popularnych programów telewizyjnych."
+      "desc0": "Rozwój projektów własnych z wykorzystaniem React i Next.js",
+      "desc1": "Realizacja projektów dla klientów Upwork",
+      "project": "- generator memów dla programów telewizyjnych"
     },
     "exp2": {
       "title": "Wolontariusz",
-      "desc0": "Tłumaczyłem anglojęzyczne materiały wideo fundacji Isha publikowane na polskim kanale YouTube, związane z dobrostanem i rozwojem osobistym"
+      "desc0": "Tłumaczenie materiałów wideo Fundacji Isha dotyczących dobrostanu i rozwoju osobistego dla polskiego kanału YouTube"
     },
     "exp3": {
       "title": "Kierownik Projektów / Programista",
-      "desc0": "Wraz z zespołem stworzyłem od zera platformę e-commerce multibenefit.pl - od architektury, przez implementację, aż po zarządzanie projektem"
+      "desc0": "Budowa platformy e-commerce multibenefit.pl od podstaw",
+      "desc1": "Architektura, implementacja i zarządzanie projektem"
     },
     "exp4": {
       "title": "Właściciel"
     },
     "exp5": {
       "title": "Kierownik Projektów",
-      "desc0": "Zarządzałem projektami telekomunikacyjnymi w TP.SA, w tym 3 edycjami rozwoju oprogramowania Order Management i BPM (wersje 8.3, 9.2) dla systemów wewnętrznych partnera"
+      "desc0": "Zarządzanie projektami telekomunikacyjnymi w TP.SA",
+      "desc1": "3 edycje rozwoju Order Management i BPM (wersje 8.3, 9.2) dla systemów wewnętrznych"
     },
     "exp6": {
       "title": "Techniczny Menedżer Produktu",
-      "desc0": "Jako techniczny kierownik produkty dla usług VoIP, odpowiedałem za rozwój i wdrożenie rozwiązania dla klientów w Polsce",
-      "project": "Rozwiązanie telefoniczne VoIP dla klientów online"
+      "desc0": "Zarządzanie produktem usług VoIP dla rynku polskiego",
+      "desc1": "Rozwój i wdrożenie rozwiązania telefonicznego dla klientów online",
+      "project": "Rozwiązanie VoIP dla klientów detalicznych"
     },
     "exp7": {
       "title": "Kierownik Projektów / Programista",
-      "desc0": "Jako programista i kierownikiem projektów internetowych, odpowiadałem za ich produkcję i wdrażanie w ramach portalu Onet.pl"
+      "desc0": "Zarządzanie projektami i development portali w ramach Onet.pl",
+      "desc1": "Projektowanie rozwiązań architektonicznych dla zespołów deweloperskich"
     }
   },
   "skills": {

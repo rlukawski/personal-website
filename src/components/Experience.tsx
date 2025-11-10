@@ -80,13 +80,10 @@ const getExperienceData = (): ExperienceItem[] => [
     descriptionKeys: [
       "experience.exp0.desc0",
       "experience.exp0.desc1",
+      "experience.exp0.desc2",
+      "experience.exp0.desc3",
     ],
-    projectComponent: (t) => (
-      <>
-        {t("experience.exp0.project")}{" "}
-        <b>Stella BIO</b>, <b>Sidra LEG</b>, <b>Meissa OT</b>
-      </>
-    ),
+    projectKey: "experience.exp0.project",
     technologies:
       "React, Redux, Signals, Typescript, Cypress, Websocket, REST, Docker, CI/CD, MySQL",
   },
@@ -127,7 +124,7 @@ const getExperienceData = (): ExperienceItem[] => [
     titleKey: "experience.exp3.title",
     company: "Nonstop sp. j.",
     customIcon: nonstopLogo,
-    descriptionKeys: ["experience.exp3.desc0"],
+    descriptionKeys: ["experience.exp3.desc0", "experience.exp3.desc1"],
     technologies: "PHP, CakePHP, MySQL, Percona Cluster, HTML/CSS, JS",
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     projectComponent: (_t) => (
@@ -169,7 +166,7 @@ const getExperienceData = (): ExperienceItem[] => [
     titleKey: "experience.exp5.title",
     company: "Infovide-Matrix",
     customIcon: infovideMatrixLogo,
-    descriptionKeys: ["experience.exp5.desc0"],
+    descriptionKeys: ["experience.exp5.desc0", "experience.exp5.desc1"],
   },
   {
     startDate: "2007.06",
@@ -177,7 +174,7 @@ const getExperienceData = (): ExperienceItem[] => [
     titleKey: "experience.exp6.title",
     company: "Air Bites Polska",
     customIcon: airBitesLogo,
-    descriptionKeys: ["experience.exp6.desc0"],
+    descriptionKeys: ["experience.exp6.desc0", "experience.exp6.desc1"],
     projectKey: "experience.exp6.project",
   },
   {
@@ -186,7 +183,7 @@ const getExperienceData = (): ExperienceItem[] => [
     titleKey: "experience.exp7.title",
     company: "Onet.pl",
     customIcon: onetLogo,
-    descriptionKeys: ["experience.exp7.desc0"],
+    descriptionKeys: ["experience.exp7.desc0", "experience.exp7.desc1"],
     technologies: "PHP, Perl, MySQL, HTML/CSS/JS",
   },
 ];
