@@ -42,7 +42,7 @@ body {
   }
 
   .container-body { 
-    @apply border border-gray-200 p-8 rounded-xl bg-transparent bg-white shadow-md hover:shadow-lg transition-shadow;
+    @apply border border-gray-200 p-4 md:p-8 rounded-xl bg-transparent bg-white shadow-md hover:shadow-lg transition-shadow;
   }
 
   /* Heading Styles */

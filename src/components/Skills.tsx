@@ -32,8 +32,8 @@ export const Skills = () => {
   const { t } = useTranslation();
   return (
     <section id="skills" className="mt-8 scroll-mt-24 container-width w-full">
-      <h2 className="heading-2">{t('skills.title')}</h2>
-      <h4 className="body-normal">{t('skills.subtitle')}</h4>
+      <h2 className="heading-2 ml-4">{t('skills.title')}</h2>
+      <h4 className="body-normal ml-4">{t('skills.subtitle')}</h4>
       <div className="container-body mt-2">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
           {technologies.map((tech) => {
