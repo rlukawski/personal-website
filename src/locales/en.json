@@ -37,9 +37,10 @@
     },
     "exp1": {
       "title": "Full-Stack Developer",
-      "desc0": "Development of personal projects using React and Next.js",
-      "desc1": "Implementation of projects for Upwork clients",
-      "project": "- meme generator for TV programs"
+      "desc0": "Architected and built full-stack applications from scratch with modern Next.js stack",
+      "desc1": "Designed database schemas using PostgreSQL and Prisma, implemented tRPC APIs, and deployed production-ready applications",
+      "desc2": "Delivered client projects on Upwork",
+      "project": "- Full-stack meme generator platform for Polish TV programs with custom image processing pipeline, PostgreSQL database, and Docker deployment. Features real-time preview, customizable templates, and optimized image generation"
     },
     "exp2": {
       "title": "Volunteer",

@@ -93,7 +93,7 @@ const getExperienceData = (): ExperienceItem[] => [
     titleKey: "experience.exp1.title",
     company: "Freelance",
     customIcon: PiBriefcaseLight,
-    descriptionKeys: ["experience.exp1.desc0", "experience.exp1.desc1"],
+    descriptionKeys: ["experience.exp1.desc0", "experience.exp1.desc1", "experience.exp1.desc2"],
     projectComponent: (t) => (
       <>
         <a
@@ -108,7 +108,7 @@ const getExperienceData = (): ExperienceItem[] => [
       </>
     ),
     technologies:
-      "React, Zustand, TS/JS, Next.js, SCSS, PostgreSQL, Trpc, REST, Docker",
+      "Next.js, React, TypeScript, Zustand, tRPC, PostgreSQL, Docker, SCSS",
   },
   {
     startDate: "2020.01",
