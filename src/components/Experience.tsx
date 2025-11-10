@@ -7,7 +7,6 @@ import infovideMatrixLogo from "../assets/infovide-matrix-logo.png";
 import airBitesLogo from "../assets/air-bites-logo.png";
 import onetLogo from "../assets/onet-logo.png";
 import { useTranslation } from "react-i18next";
-import type { i18n as I18nType } from "i18next";
 
 interface ExperienceItem {
   startDate: string;
@@ -56,38 +55,16 @@ const calculateDuration = (startDateStr: string, endDateStr?: string): { years: 
   return { years, months };
 };
 
-// Get the correct plural form key for Polish numbers
-const getPluralFormKey = (count: number, baseKey: string): string => {
-  if (count === 1) {
-    return `${baseKey}`;
-  } else if (count >= 2 && count <= 4) {
-    return `${baseKey}_2_4`;
-  } else {
-    return `${baseKey}_5_plus`;
-  }
-};
-
-// Format duration string for display
-const formatDuration = (years: number, months: number, t: (key: string) => string, i18n: I18nType): string => {
+// Format duration string for display using i18next's built-in pluralization
+const formatDuration = (years: number, months: number, t: (key: string, options?: { count: number }) => string): string => {
   const parts: string[] = [];
-  const currentLang = i18n.language;
   
   if (years > 0) {
-    if (currentLang === 'pl') {
-      const yearKey = getPluralFormKey(years, 'experience.year');
-      parts.push(`${years} ${t(yearKey)}`);
-    } else {
-      parts.push(`${years} ${years === 1 ? t('experience.year') : t('experience.years')}`);
-    }
+    parts.push(`${years} ${t('experience.year', { count: years })}`);
   }
   
   if (months > 0) {
-    if (currentLang === 'pl') {
-      const monthKey = getPluralFormKey(months, 'experience.month');
-      parts.push(`${months} ${t(monthKey)}`);
-    } else {
-      parts.push(`${months} ${months === 1 ? t('experience.month') : t('experience.months')}`);
-    }
+    parts.push(`${months} ${t('experience.month', { count: months })}`);
   }
   
   return parts.join(' ');
@@ -215,7 +192,7 @@ const getExperienceData = (): ExperienceItem[] => [
 ];
 
 export const Experience = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const experienceData = getExperienceData();
 
   return (
@@ -249,7 +226,7 @@ export const Experience = () => {
                       {exp.startDate} - {exp.endDateKey ? t(exp.endDateKey) : (exp.endDate || '')}
                       {(() => {
                         const duration = calculateDuration(exp.startDate, exp.endDate);
-                        const durationStr = formatDuration(duration.years, duration.months, t, i18n);
+                        const durationStr = formatDuration(duration.years, duration.months, t);
                         return durationStr ? ` · ${durationStr}` : '';
                       })()}
                     </span>
