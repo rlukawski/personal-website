@@ -39,9 +39,9 @@
     "exp1": {
       "title": "Programista Full-Stack",
       "desc0": "Zaprojektowanie i zbudowanie aplikacji full-stack od podstaw z wykorzystaniem nowoczesnego stosu Next.js",
-      "desc1": "Projektowanie schematów baz danych z wykorzystaniem PostgresSQL i Prisma, implementacja API tRPC i wdrażanie aplikacji produkcyjnych",
+      "desc1": "Projektowanie schematów baz danych z wykorzystaniem PostgresSQL i Prisma, implementacja API tRPC i wdrażanie aplikacji produkcyjnych bazujących na Dockerze i CI/CD",
       "desc2": "Realizacja projektów dla klientów Upwork",
-      "project": "- Platforma do generowania memów dla polskich programów TV z własnym pipelinenem przetwarzania obrazów, bazą danych PostgreSQL i wdrożeniem w Dockerze. Funkcje obejmują podgląd w czasie rzeczywistym, konfigurowalne szablony i zoptymalizowane generowanie obrazów"
+      "project": "- Platforma do generowania memów dla polskich programów TV."
     },
     "exp2": {
       "title": "Wolontariusz",

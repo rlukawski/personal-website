@@ -15,8 +15,6 @@
     "paragraph1": "Hello, my name is Rafał Łukawski. I'm a full-stack developer with over 5 years of modern frontend/backend experience and over 20 years in IT. I'm passionate about the entire software development lifecycle—from system architecture, through implementation, to production deployment.",
 
     "paragraph2": "Google Cloud Professional Architect (2024) | Professional Scrum Master | Built systems for millions of users at Onet.pl | Led telecommunications projects at TP.SA | Currently developing complex React/Next.js applications and mentoring developers."
-
-
   },
   "experience": {
     "title": "Experience",
@@ -38,9 +36,9 @@
     "exp1": {
       "title": "Full-Stack Developer",
       "desc0": "Architected and built full-stack applications from scratch with modern Next.js stack",
-      "desc1": "Designed database schemas using PostgreSQL and Prisma, implemented tRPC APIs, and deployed production-ready applications",
+      "desc1": "Designed database schemas using PostgreSQL and Prisma, implemented tRPC APIs, and deployed production-ready applications based on Docker and CI/CD",
       "desc2": "Delivered client projects on Upwork",
-      "project": "- Full-stack meme generator platform for Polish TV programs with custom image processing pipeline, PostgreSQL database, and Docker deployment. Features real-time preview, customizable templates, and optimized image generation"
+      "project": "- Meme generator platform for Polish TV programs."
     },
     "exp2": {
       "title": "Volunteer",
@@ -103,4 +101,3 @@
     "home": "Home"
   }
 }
-
