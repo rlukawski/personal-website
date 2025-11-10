@@ -31,10 +31,6 @@ const getExperienceData = (): ExperienceItem[] => [
     descriptionKeys: [
       "experience.exp0.desc0",
       "experience.exp0.desc1",
-      "experience.exp0.desc2",
-      "experience.exp0.desc3",
-      "experience.exp0.desc4",
-      "experience.exp0.desc5",
     ],
     projectComponent: (t) => (
       <>
@@ -82,7 +78,7 @@ const getExperienceData = (): ExperienceItem[] => [
     titleKey: "experience.exp3.title",
     company: "Nonstop sp. j.",
     customIcon: nonstopLogo,
-    descriptionKeys: ["experience.exp3.desc0", "experience.exp3.desc1"],
+    descriptionKeys: ["experience.exp3.desc0"],
     technologies: "PHP, CakePHP, MySQL, Percona Cluster, HTML/CSS, JS",
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     projectComponent: (_t) => (
@@ -141,40 +137,10 @@ const getExperienceData = (): ExperienceItem[] => [
     titleKey: "experience.exp7.title",
     company: "Onet.pl",
     customIcon: onetLogo,
-    descriptionKeys: ["experience.exp7.desc0", "experience.exp7.desc1"],
+    descriptionKeys: ["experience.exp7.desc0"],
     technologies: "PHP, Perl, MySQL, HTML/CSS/JS",
   },
 ];
-// 1. EGZOTech
-// Rozwijałem oprogramowanie dla urządzeń medycznych oferowanych przez EGZOTech:
-// - Opracowywałem architekturę EGZOClinic Offline bazującą na React i .NET
-// - Programowałem nowe funkcjonalności
-// - Uczestniczyłem w pełnym cyklu wytwarzania oprogramowania i regularnych wydaniach produkcyjnych
-// 
-// Rozwijałem aplikację online dla Stella BIO w technologii Angular i NestJS
-
-// 2. Freelance
-// Pracowałem nad własnymi projektami wykorzystującymi głównie React i Next.js
-// Rozwijałem projekty informatyczne dla klientów Upwork.
-
-// 3. Isha Foundation (wolontariat)
-// Tłumaczyłem anglojęzyczne materiały wideo fundacji Isha publikowane na polskim kanale YouTube, 
-// związane z dobrostanem i rozwojem osobistym
-
-// 4. Nonstop sp. j.
-// Wraz z zespołem stworzyłem od zera platformę e-commerce multibenefit.pl - od architektury, 
-// przez implementację, aż po zarządzanie projektem
-
-// 5. Infovide-Matrix
-// Zarządzałem projektami telekomunikacyjnymi w TP.SA, w tym 3 edycjami rozwoju 
-// oprogramowania Order Management i BPM (wersje 8.3, 9.2) dla systemów wewnętrznych partnera
-
-// 6. Air Bites Polska
-// Byłem technicznym menedżerem produktu dla usług VoIP, odpowiedzialnym za rozwój 
-// i wdrożenie rozwiązania dla klientów w Polsce
-
-// 7. Onet.pl
-// Byłem programistą i kierownikiem wielu projektów internetowych wdrożonych w ramach portalu Onet.pl
 
 export const Experience = () => {
   const { t } = useTranslation();

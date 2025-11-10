@@ -25,45 +25,39 @@
     "technologies": "Technologies",
     "exp0": {
       "title": "Frontend Developer",
-      "desc0": "Conduct code reviews and mentor junior developers",
-      "desc1": "Develop React components with Chakra-UI and Styled Components",
-      "desc2": "Conduct integration testing with Cypress",
-      "desc3": "Create and maintain TypeScript libraries controlling complex processes and performing logical operations",
-      "desc4": "Manage CI/CD environment based on GitHub Actions",
-      "desc5": "Enhance existing Angular + NestJS application",
+      "desc0": "I developed software for medical devices offered by EGZOTech, where I designed the system architecture based on React and .NET, programmed new features, and participated in the full software development lifecycle and regular production releases",
+      "desc1": "I developed the online application for Stella BIO using Angular and NestJS technology",
       "project": "EGZOClinic (software) on multiple devices used by EGZOTech:"
     },
     "exp1": {
       "title": "Full-Stack Developer",
-      "desc0": "Development of web projects mainly based on React framework for Upwork clients.",
-      "desc1": "Working on my own project using React and Next.js framework",
+      "desc0": "I worked on my own projects using mainly React and Next.js",
+      "desc1": "I developed IT projects for Upwork clients",
       "project": "- a meme generator for popular TV programs."
     },
     "exp2": {
       "title": "Volunteer",
-      "desc0": "Translation volunteer supporting wellbeing and personal development content for the Isha Foundation's global community."
+      "desc0": "I translated English video materials from the Isha Foundation published on the Polish YouTube channel, related to wellbeing and personal development"
     },
     "exp3": {
       "title": "Project Manager / Software Developer",
-      "desc0": "Architect, Projekct Manager, and Software Developer for the multibenefit.pl project",
-      "desc1": "Analyst at ING Bank Śląski"
+      "desc0": "Together with the team, I built the multibenefit.pl e-commerce platform from scratch - from architecture, through implementation, to project management"
     },
     "exp4": {
       "title": "Owner"
     },
     "exp5": {
       "title": "Project Manager",
-      "desc0": "Managing telecommunications projects at TP.SA. Successfully completed 3 editions of software development for Order Management and BPM - 8.3 - 9.2 - for the internal systems of the partner"
+      "desc0": "I managed telecommunications projects at TP.SA, including 3 editions of software development for Order Management and BPM (versions 8.3, 9.2) for the partner's internal systems"
     },
     "exp6": {
       "title": "Technical Product Manager",
-      "desc0": "Technical Product Manager for VoIP services in Poland",
+      "desc0": "As a technical product manager for VoIP services, I was responsible for the development and implementation of a solution for customers in Poland",
       "project": "VoIP telephony solution for online customers"
     },
     "exp7": {
       "title": "Project Manager / Software Developer",
-      "desc0": "Project manager and developer in portal projects",
-      "desc1": "Design and implementation of architectural solutions used by other development teams"
+      "desc0": "As a developer and project manager for web projects, I was responsible for their production and deployment within the Onet.pl portal"
     }
   },
   "skills": {
