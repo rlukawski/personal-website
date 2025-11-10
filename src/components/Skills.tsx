@@ -7,7 +7,7 @@ const technologies = [
   { name: 'Typescript', description: 'Language', iconSlug: 'typescript', years: '5+' },
   { name: 'Next.js', description: 'Full-stack Framework', iconSlug: 'nextdotjs', years: '3+' },
   { name: 'React.js', description: 'Frontend library', iconSlug: 'react', years: '5+' },
-  { name: 'Docker + Swarm', description: 'Containers', iconSlug: 'docker', years: '2+' },
+  { name: 'Docker', description: 'Containers', iconSlug: 'docker', years: '2+' },
   { name: 'TRPC', description: 'API', iconSlug: 'trpc', years: '2+' },
   { name: 'React Query', description: 'API', iconSlug: 'reactquery', years: '2+' },
   { name: 'MySQL', description: 'Database', iconSlug: 'mysql', years: '10+' },
@@ -46,7 +46,7 @@ export const Skills = () => {
                 className="border border-gray-200 p-3 rounded-lg bg-white/50 backdrop-blur-sm hover:shadow-md transition-shadow"
               >
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-gray-100 flex items-center justify-center overflow-hidden p-2">
+                  <div className="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center overflow-hidden p-2">
                     {tech.customIcon ? (
                       <img src={tech.customIcon} alt={tech.name} className="w-full h-full object-contain" />
                     ) : icon ? (
@@ -66,12 +66,12 @@ export const Skills = () => {
                   </div>
                   <div className="flex-1">
                     <div className="flex items-baseline gap-2">
-                      <h3 className="card-title">{tech.name}</h3>
+                      <h3 className="card-title whitespace-nowrap">{tech.name}</h3>
                       <span className="text-xs font-semibold text-gray-700 bg-gray-100 px-2 py-0.5 rounded-full">
                         {tech.years}
                       </span>
                     </div>
-                    <p className="body-small">{tech.description}</p>
+                    <p className="body-extra-small">{tech.description}</p>
                   </div>
                 </div>
               </div>
