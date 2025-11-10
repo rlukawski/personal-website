@@ -23,6 +23,10 @@
     "present": "present",
     "project": "Project",
     "technologies": "Technologies",
+    "year": "yr",
+    "years": "yrs",
+    "month": "mo",
+    "months": "mos",
     "exp0": {
       "title": "Frontend Developer",
       "desc0": "I developed software for medical devices offered by EGZOTech, where I designed the system architecture based on React and .NET, programmed new features, and participated in the full software development lifecycle and regular production releases",

@@ -23,6 +23,12 @@
     "present": "obecnie",
     "project": "Projekt",
     "technologies": "Technologie",
+    "year": "rok",
+    "year_2_4": "lata",
+    "year_5_plus": "lat",
+    "month": "mies.",
+    "month_2_4": "mies.",
+    "month_5_plus": "mies.",
     "exp0": {
       "title": "Programista Frontend",
       "desc0": "Rozwijałem oprogramowanie dla urządzeń medycznych oferowanych przez EGZOTech, gdzie opracowywałem architekturę systemu bazującą na React i .NET, programowałem nowe funkcjonalności i uczestniczyłem w pełnym cyklu wytwarzania oprogramowania i regularnych wydaniach produkcyjnych",

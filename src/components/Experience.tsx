@@ -7,6 +7,7 @@ import infovideMatrixLogo from "../assets/infovide-matrix-logo.png";
 import airBitesLogo from "../assets/air-bites-logo.png";
 import onetLogo from "../assets/onet-logo.png";
 import { useTranslation } from "react-i18next";
+import type { i18n as I18nType } from "i18next";
 
 interface ExperienceItem {
   startDate: string;
@@ -20,6 +21,77 @@ interface ExperienceItem {
   projectKey?: string;
   projectComponent?: (t: (key: string) => string) => React.ReactNode;
 }
+
+// Calculate duration between two dates in years and months
+const calculateDuration = (startDateStr: string, endDateStr?: string): { years: number; months: number } => {
+  const [startYear, startMonth] = startDateStr.split('.').map(Number);
+  const startDate = new Date(startYear, startMonth - 1);
+  
+  let endDate: Date;
+  if (!endDateStr) {
+    // If no end date, use current date
+    endDate = new Date();
+  } else {
+    const [endYear, endMonth] = endDateStr.split('.').map(Number);
+    endDate = new Date(endYear, endMonth - 1);
+  }
+  
+  let years = endDate.getFullYear() - startDate.getFullYear();
+  let months = endDate.getMonth() - startDate.getMonth();
+  
+  if (months < 0) {
+    years--;
+    months += 12;
+  }
+  
+  // Add 1 to months since we're counting the current month
+  months++;
+  
+  // If months equals 12, convert to years
+  if (months === 12) {
+    years++;
+    months = 0;
+  }
+  
+  return { years, months };
+};
+
+// Get the correct plural form key for Polish numbers
+const getPluralFormKey = (count: number, baseKey: string): string => {
+  if (count === 1) {
+    return `${baseKey}`;
+  } else if (count >= 2 && count <= 4) {
+    return `${baseKey}_2_4`;
+  } else {
+    return `${baseKey}_5_plus`;
+  }
+};
+
+// Format duration string for display
+const formatDuration = (years: number, months: number, t: (key: string) => string, i18n: I18nType): string => {
+  const parts: string[] = [];
+  const currentLang = i18n.language;
+  
+  if (years > 0) {
+    if (currentLang === 'pl') {
+      const yearKey = getPluralFormKey(years, 'experience.year');
+      parts.push(`${years} ${t(yearKey)}`);
+    } else {
+      parts.push(`${years} ${years === 1 ? t('experience.year') : t('experience.years')}`);
+    }
+  }
+  
+  if (months > 0) {
+    if (currentLang === 'pl') {
+      const monthKey = getPluralFormKey(months, 'experience.month');
+      parts.push(`${months} ${t(monthKey)}`);
+    } else {
+      parts.push(`${months} ${months === 1 ? t('experience.month') : t('experience.months')}`);
+    }
+  }
+  
+  return parts.join(' ');
+};
 
 const getExperienceData = (): ExperienceItem[] => [
   {
@@ -143,7 +215,7 @@ const getExperienceData = (): ExperienceItem[] => [
 ];
 
 export const Experience = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const experienceData = getExperienceData();
 
   return (
@@ -175,6 +247,11 @@ export const Experience = () => {
                     {exp.company} <br />
                     <span className="text-muted">
                       {exp.startDate} - {exp.endDateKey ? t(exp.endDateKey) : (exp.endDate || '')}
+                      {(() => {
+                        const duration = calculateDuration(exp.startDate, exp.endDate);
+                        const durationStr = formatDuration(duration.years, duration.months, t, i18n);
+                        return durationStr ? ` · ${durationStr}` : '';
+                      })()}
                     </span>
                   </p>
                 </div>
