@@ -29,7 +29,7 @@
       "title": "Frontend Developer",
       "desc0": "Development of medical device software on React and .NET platform",
       "desc1": "System architecture design and implementation of new features",
-      "desc2": "Participation in full software development lifecycle with regular production releases",
+      "desc2": "Participation in full software development lifecycle with regular production releases based on Docker and CI/CD",
       "desc3": "Development of online application for Stella BIO (Angular, NestJS)",
       "project": "EGZOClinic (software) on devices: Stella BIO, Sidra LEG, Meissa OT"
     },

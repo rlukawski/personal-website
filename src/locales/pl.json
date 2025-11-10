@@ -32,7 +32,7 @@
       "title": "Programista Frontend",
       "desc0": "Rozwój oprogramowania dla urządzeń medycznych na platformie React i .NET",
       "desc1": "Projektowanie architektury systemu i implementacja nowych funkcjonalności",
-      "desc2": "Udział w pełnym cyklu wytwarzania oprogramowania z regularnymi wydaniami produkcyjnymi",
+      "desc2": "Udział w pełnym cyklu wytwarzania oprogramowania z regularnymi wydaniami produkcyjnymi bazujących na Dockerze i CI/CD",
       "desc3": "Rozwój aplikacji online dla Stella BIO (Angular, NestJS)",
       "project": "EGZOClinic (oprogramowanie) na urządzeniach: Stella BIO, Sidra LEG, Meissa OT"
     },
