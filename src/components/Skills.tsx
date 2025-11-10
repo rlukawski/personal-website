@@ -1,6 +1,5 @@
 import * as simpleIcons from 'simple-icons';
 import zustandIcon from '../assets/zustand.svg';
-import gorseIcon from '../assets/gorse-logo.png';
 import { useTranslation } from 'react-i18next';
 
 const technologies = [
@@ -13,8 +12,8 @@ const technologies = [
   { name: 'MySQL', description: 'Database', iconSlug: 'mysql', years: '10+' },
   { name: 'PostgreSQL', description: 'Database', iconSlug: 'postgresql', years: '2+' },
   { name: 'Node.js', description: 'Backend runtime', iconSlug: 'nodedotjs', years: '3+' },
+  { name: 'Prisma', description: 'ORM', iconSlug: 'prisma', years: '2+' },
   { name: 'Github Actions', description: 'CI / CD', iconSlug: 'githubactions', years: '3+' },
-  { name: 'Gorse', description: 'Recommendation system', customIcon: gorseIcon, years: '1+' },
   { name: 'Signals', description: 'State management', iconSlug: 'preact', years: '2+' },
   { name: 'Zustand', description: 'State management', customIcon: zustandIcon, years: '2+' },
   { name: 'Redux', description: 'State management', iconSlug: 'redux', years: '3+' },
