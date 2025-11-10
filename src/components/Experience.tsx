@@ -7,6 +7,7 @@ import infovideMatrixLogo from "../assets/infovide-matrix-logo.png";
 import airBitesLogo from "../assets/air-bites-logo.png";
 import onetLogo from "../assets/onet-logo.png";
 import { useTranslation } from "react-i18next";
+import { TbHealthRecognition } from "react-icons/tb";
 
 interface ExperienceItem {
   startDate: string;
@@ -88,7 +89,7 @@ const getExperienceData = (): ExperienceItem[] => [
       "React, Redux, Signals, Typescript, Cypress, Websocket, REST, Docker, CI/CD, MySQL",
   },
   {
-    startDate: "2020.09",
+    startDate: "2020.01",
     endDateKey: "experience.present",
     titleKey: "experience.exp1.title",
     company: "Freelance",
@@ -117,6 +118,14 @@ const getExperienceData = (): ExperienceItem[] => [
     company: "Isha Foundation",
     customIcon: ishaFoundationLogo,
     descriptionKeys: ["experience.exp2.desc0"],
+  },
+  {
+    startDate: "2016.11",
+    endDate: "2019.12",
+    titleKey: "experience.exp8.title",
+    company: "Health and Wellbeing",
+    customIcon: TbHealthRecognition,
+    descriptionKeys: ["experience.exp8.desc0"],
   },
   {
     startDate: "2013.01",
