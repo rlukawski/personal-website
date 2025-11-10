@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --content-max-width: 1280px;
+  --content-max-width: 960px;
 }
 
 html {
