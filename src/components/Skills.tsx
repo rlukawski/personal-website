@@ -16,7 +16,7 @@ const technologies = [
   { name: 'Github Actions', description: 'CI / CD', iconSlug: 'githubactions', years: '3+' },
   { name: 'Signals', description: 'State management', iconSlug: 'preact', years: '2+' },
   { name: 'Zustand', description: 'State management', customIcon: zustandIcon, years: '2+' },
-  { name: 'Redux', description: 'State management', iconSlug: 'redux', years: '3+' },
+  { name: 'Redux', description: 'State management', iconSlug: 'redux', years: '4+' },
   { name: 'Cypress', description: 'Testing', iconSlug: 'cypress', years: '3+' },
   { name: 'PHP', description: 'Language', iconSlug: 'php', years: '10+' },
 ];
