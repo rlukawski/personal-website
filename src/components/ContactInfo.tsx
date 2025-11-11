@@ -1,40 +1,53 @@
-import { FaEnvelope, FaPhone, FaLinkedin } from "react-icons/fa";
+import { FaEnvelope, FaPhone, FaLinkedin, FaGithub } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 
 export const ContactInfo = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="container-body">
-      <h3 className="heading-3 mb-4">{t('contact.getInTouch')}</h3>
-      <div className="space-y-4">
-        <div className="flex items-center gap-3">
-          <FaEnvelope className="w-5 h-5 text-gray-600 flex-shrink-0" />
+    <section className="scroll-mt-24">
+      <h2 className="heading-2 ml-4">{t('contact.getInTouch')}</h2>
+      <div className="container-body mt-2">
+        <div className="space-y-2">
           <a
             href="mailto:rs.lukawski@gmail.com"
-            className="link-primary text-sm break-all"
+            className="flex items-center gap-2 py-1 px-2 hover:bg-gray-50 rounded-lg transition-all duration-200 group"
           >
-            rs.lukawski@gmail.com
+            <FaEnvelope className="w-4 h-4 text-gray-600 flex-shrink-0 group-hover:text-gray-800" />
+            <span className="text-xs text-gray-700 group-hover:text-gray-900 truncate">
+              rs.lukawski@gmail.com
+            </span>
           </a>
-        </div>
-        <div className="flex items-center gap-3">
-          <FaPhone className="w-5 h-5 text-gray-600 flex-shrink-0" />
           <a
             href="tel:+48737340926"
-            className="link-primary text-sm"
+            className="flex items-center gap-2 py-1 px-2 hover:bg-gray-50 rounded-lg transition-all duration-200 group"
           >
-            +48 737 340 926
+            <FaPhone className="w-4 h-4 text-gray-600 flex-shrink-0 group-hover:text-gray-800" />
+            <span className="text-xs text-gray-700 group-hover:text-gray-900">
+              +48 737 340 926
+            </span>
           </a>
-        </div>
-        <div className="flex items-center gap-3">
-          <FaLinkedin className="w-5 h-5 text-gray-600 flex-shrink-0" />
           <a
             href="https://www.linkedin.com/in/rafal-lukawski/"
             target="_blank"
             rel="noopener noreferrer"
-            className="link-primary text-sm"
+            className="flex items-center gap-2 py-1 px-2 hover:bg-gray-50 rounded-lg transition-all duration-200 group"
           >
-            {t('contact.linkedinProfile')}
+            <FaLinkedin className="w-4 h-4 text-gray-600 flex-shrink-0 group-hover:text-gray-800" />
+            <span className="text-xs text-gray-700 group-hover:text-gray-900">
+              {t('contact.linkedinProfile')}
+            </span>
+          </a>
+          <a
+            href="https://github.com/rlukawski"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 py-1 px-2 hover:bg-gray-50 rounded-lg transition-all duration-200 group"
+          >
+            <FaGithub className="w-4 h-4 text-gray-600 flex-shrink-0 group-hover:text-gray-800" />
+            <span className="text-xs text-gray-700 group-hover:text-gray-900">
+              GitHub
+            </span>
           </a>
         </div>
       </div>

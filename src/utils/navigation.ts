@@ -2,7 +2,6 @@ export const navItems = [
   { labelKey: 'nav.about', id: 'about' },
   { labelKey: 'nav.experience', id: 'experience' },
   { labelKey: 'nav.projects', id: 'projects' },
-  { labelKey: 'nav.skills', id: 'skills' },
   { labelKey: 'nav.certificates', id: 'certificates' },
   { labelKey: 'nav.contact', id: 'contact' },
 ];

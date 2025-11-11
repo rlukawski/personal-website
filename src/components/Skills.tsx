@@ -39,21 +39,19 @@ export const Skills = () => {
   });
   
   return (
-    <section id="skills" className="mt-8 scroll-mt-24 container-width w-full">
+    <section id="skills" className="scroll-mt-24">
       <h2 className="heading-2 ml-4">{t('skills.title')}</h2>
-      <h4 className="body-normal ml-4">{t('skills.subtitle')}</h4>
       <div className="container-body mt-2">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+        <div className="flex flex-col gap-2">
           {sortedTechnologies.map((tech) => {
             const icon = tech.customIcon ? null : getIcon(tech.iconSlug || '');
             
             return (
               <div
-              key={tech.name}
-              className="border border-gray-200 p-3 rounded-lg bg-white/50 backdrop-blur-sm hover:shadow-md transition-shadow"
-            >
-              <div className="flex items-center gap-4">
-                <div className="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center overflow-hidden p-2">
+                key={tech.name}
+                className="flex items-center gap-3 px-4 py-2 rounded-xl border border-gray-200 bg-white/50 backdrop-blur-sm hover:border-gray-300 hover:shadow-sm transition-all duration-200 group"
+              >
+                <div className="w-8 h-8 flex-shrink-0 rounded-lg bg-gray-100 flex items-center justify-center overflow-hidden p-1.5">
                   {tech.customIcon ? (
                     <img src={tech.customIcon} alt={tech.name} className="w-full h-full object-contain" />
                   ) : icon ? (
@@ -68,20 +66,21 @@ export const Skills = () => {
                       <path d={icon.path} />
                     </svg>
                   ) : (
-                    <span className="text-subtle body-extra-small">{tech.name.charAt(0)}</span>
+                    <span className="text-subtle body-extra-small font-bold">{tech.name.charAt(0)}</span>
                   )}
                 </div>
-                <div className="flex-1">
-                  <div className="flex items-baseline gap-2">
-                    <h3 className="card-title whitespace-nowrap body-small">{tech.name}</h3>
-                    <span className="text-xs font-semibold text-gray-700 bg-gray-100 px-2 py-0.5 rounded-full">
-                      {tech.years}
-                    </span>
-                  </div>
-                  <p className="body-extra-small">{tech.description}</p>
+                <div className="flex flex-col flex-1 min-w-0">
+                  <span className="body-small font-medium text-gray-800 group-hover:text-gray-900">
+                    {tech.name}
+                  </span>
+                  <span className="text-xs text-gray-500 group-hover:text-gray-600">
+                    {tech.description}
+                  </span>
                 </div>
+                <span className="text-xs font-bold text-gray-500 group-hover:text-gray-700 tabular-nums flex-shrink-0">
+                  {tech.years}
+                </span>
               </div>
-            </div>
             );
           })}
         </div>
