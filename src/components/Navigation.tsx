@@ -188,23 +188,46 @@ export const Navigation = () => {
         </h1>
         
         {/* Desktop Navigation */}
-        <ul className={`${classes.navHidden} gap-4 text-lg`}>
-          {navItems.map((item) => (
-            <li
-              key={item.id}
-              className="cursor-pointer hover:text-gray-600 transition-colors relative inline-block"
-              onClick={() => scrollToSection(item.id)}
-            >
-              <span className="invisible font-bold whitespace-nowrap" aria-hidden="true">
-                {t(item.labelKey)}
-              </span>
-              <span className={`absolute left-0 top-0 whitespace-nowrap ${
-                currentSection === item.id ? 'font-bold' : ''
-              }`}>
-                {t(item.labelKey)}
-              </span>
-            </li>
-          ))}
+        <ul className={`${classes.navHidden} gap-4 text-lg items-center`}>
+          {navItems.map((item) => {
+            const isContact = item.id === 'contact';
+            const isActive = currentSection === item.id;
+            return (
+              <li
+                key={item.id}
+                className={`cursor-pointer transition-all duration-200 relative inline-block ${
+                  isContact
+                    ? 'bg-gray-100 rounded-md px-3 py-1.5 hover:bg-gray-200 hover:shadow-sm'
+                    : 'hover:text-gray-600'
+                }`}
+                onClick={() => scrollToSection(item.id)}
+              >
+                {isContact ? (
+                  <>
+                    <span className="invisible font-bold whitespace-nowrap" aria-hidden="true">
+                      {t(item.labelKey)}
+                    </span>
+                    <span className={`absolute inset-0 flex items-center justify-center whitespace-nowrap ${
+                      isActive ? 'font-bold' : ''
+                    }`}>
+                      {t(item.labelKey)}
+                    </span>
+                  </>
+                ) : (
+                  <>
+                    <span className="invisible font-bold whitespace-nowrap" aria-hidden="true">
+                      {t(item.labelKey)}
+                    </span>
+                    <span className={`absolute left-0 top-0 whitespace-nowrap ${
+                      isActive ? 'font-bold' : ''
+                    }`}>
+                      {t(item.labelKey)}
+                    </span>
+                  </>
+                )}
+              </li>
+            );
+          })}
         </ul>
 
         <LanguageSwitcher className={classes.navHidden} />
@@ -225,17 +248,30 @@ export const Navigation = () => {
               <CloseButton onClick={handleMobileMenuClose} />
 
               <ul className="flex flex-col gap-6">
-                {navItems.map((item) => (
-                  <li
-                    key={item.id}
-                    className={`cursor-pointer hover:text-gray-600 transition-colors text-xl ${
-                      currentSection === item.id ? 'font-bold' : ''
-                    }`}
-                    onClick={() => handleNavClick(item.id)}
-                  >
-                    {t(item.labelKey)}
-                  </li>
-                ))}
+                {navItems.map((item) => {
+                  const isContact = item.id === 'contact';
+                  const isActive = currentSection === item.id;
+                  return (
+                    <li
+                      key={item.id}
+                      className={`cursor-pointer transition-all duration-200 text-xl relative ${
+                        isContact
+                          ? 'bg-gray-100 rounded-md px-4 py-2 text-center hover:bg-gray-200 hover:shadow-sm'
+                          : 'hover:text-gray-600'
+                      }`}
+                      onClick={() => handleNavClick(item.id)}
+                    >
+                      <span className="invisible font-bold" aria-hidden="true">
+                        {t(item.labelKey)}
+                      </span>
+                      <span className={`absolute left-0 top-0 w-full ${isContact ? 'text-center py-2' : ''} ${
+                        isActive ? 'font-bold' : ''
+                      }`}>
+                        {t(item.labelKey)}
+                      </span>
+                    </li>
+                  );
+                })}
               </ul>
 
               <div className="mt-auto pt-6 border-t border-gray-200">
