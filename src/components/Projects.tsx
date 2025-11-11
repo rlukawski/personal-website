@@ -6,6 +6,8 @@ import clinic1 from "../assets/egzoclinic-1.png";
 import clinic2 from "../assets/egzoclinic-2.png";
 import generator1 from "../assets/generator-1.png";
 import generator2 from "../assets/generator-2.png";
+import multi1 from "../assets/multi-1.png";
+import multi2 from "../assets/multi-2.png";
 
 interface Screenshot {
   id: string;
@@ -49,11 +51,30 @@ export const Projects = () => {
           id: "screen1",
           src: generator1,
           alt: "Generator Pasków Screen 1",
+          sourceUrl: "generator-paskow.pl",
         },
         {
           id: "screen2",
           src: generator2,
           alt: "Generator Pasków Screen 2",
+          sourceUrl: "generator-paskow.pl",
+        },
+      ],
+    },
+    {
+      id: "multibenefit",
+      screenshots: [
+        {
+          id: "screen1",
+          src: multi1,
+          alt: "Multibenefit.pl Screen 1",
+          sourceUrl: "web.archive.org",
+        },
+        {
+          id: "screen2",
+          src: multi2,
+          alt: "Multibenefit.pl Screen 2",
+          sourceUrl: "web.archive.org",
         },
       ],
     },
@@ -123,6 +144,7 @@ export const Projects = () => {
   return (
     <section id="projects" className="mt-8 scroll-mt-24 container-width w-full">
       <h2 className="heading-2 ml-4">{t('projects.title')}</h2>
+      <h4 className="body-normal ml-4">{t('projects.subtitle')}</h4>
       <div className="container-body mt-2 space-y-8">
         {projects.map((project) => (
           <div key={project.id} className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 md:gap-8">
@@ -204,7 +226,7 @@ export const Projects = () => {
                 {selectedScreenshot.sourceUrl && (
                   <div className="mt-4 text-right">
                     <span className="text-sm text-gray-600">
-                      Source: {selectedScreenshot.sourceUrl}
+                      {t('projects.source')}: {selectedScreenshot.sourceUrl}
                     </span>
                   </div>
                 )}

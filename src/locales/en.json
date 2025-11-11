@@ -78,16 +78,23 @@
   },
   "projects": {
     "title": "Projects",
+    "subtitle": "Selected projects",
     "workInProgress": "Work in progress...",
+    "source": "Source",
     "egzoclinic": {
       "title": "EGZOClinic",
       "dateRange": "January 2022 - present",
-      "description": "Comprehensive software platform for physiotherapy and neurorehabilitation. The application runs on robotic medical devices including Stella BIO, Sidra LEG, and Meissa OT, facilitating rehabilitation for conditions like strokes and spinal cord injuries. Features include progressive continuous passive motion (CPM) therapy, graphical interface for EMS parameter configuration, comprehensive reporting with EMG data analysis, and multilingual support."
+      "description": "Comprehensive software platform for physiotherapy and neurorehabilitation. The application runs on robotic medical devices including Stella BIO, Sidra LEG, and Meissa OT, facilitating rehabilitation for conditions like strokes and spinal cord injuries. Features include progressive continuous passive motion (CPM) therapy, computer-assisted movement (CAM) exercises including CAM Isokinetic and CAM Torque, graphical interface for EMS parameter configuration, comprehensive reporting with EMG data analysis, spasticity protection, electrode placement guidance, rehabilitation games, and multilingual support."
     },
     "generator": {
       "title": "Generator Pasków",
       "dateRange": "December 2024 - present",
       "description": "Full-stack meme generator platform for Polish TV programs. Built from scratch using modern Next.js stack with PostgreSQL database, Prisma ORM, and tRPC APIs. The platform enables users to create and share memes based on popular Polish television content. Features include image upload and manipulation, template management, user-generated content sharing, and responsive design. Deployed with Docker and CI/CD pipeline for production-ready reliability."
+    },
+    "multibenefit": {
+      "title": "Multibenefit",
+      "dateRange": "2013 - 2016",
+      "description": "E-commerce platform designed to provide employees with access to a variety of non-wage benefits. The platform enabled employees to select from a range of perks including MultiSport cards, gift vouchers, and tickets to cultural events. Built from scratch with full-stack architecture, implementation, and project management. The platform aimed to enhance employee satisfaction and well-being by offering personalized benefits tailored to individual preferences, while providing employers with efficient tools to manage and distribute these benefits."
     }
   },
   "skills": {
