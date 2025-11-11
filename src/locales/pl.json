@@ -81,7 +81,11 @@
   },
   "projects": {
     "title": "Projekty",
-    "workInProgress": "W trakcie realizacji..."
+    "workInProgress": "W trakcie realizacji...",
+    "egzoclinic": {
+      "title": "EGZOClinic",
+      "description": "Oprogramowanie dla urządzeń medycznych do badania elektrogastrografii (EGG). Rozwinięte na platformie React i .NET, aplikacja działa na urządzeniach medycznych w tym Stella BIO, Sidra LEG i Meissa OT. System obejmuje zarządzanie pacjentami, przepływy pracy badań, wizualizację danych w czasie rzeczywistym oraz kompleksowe możliwości raportowania."
+    }
   },
   "skills": {
     "title": "Umiejętności",
