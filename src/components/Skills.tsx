@@ -3,22 +3,22 @@ import zustandIcon from '../assets/zustand.svg';
 import { useTranslation } from 'react-i18next';
 
 const technologies = [
+  { name: 'MySQL', description: 'Database', iconSlug: 'mysql', years: '10+' },
+  { name: 'PHP', description: 'Language', iconSlug: 'php', years: '10+' },
   { name: 'Typescript', description: 'Language', iconSlug: 'typescript', years: '5+' },
-  { name: 'Next.js', description: 'Full-stack Framework', iconSlug: 'nextdotjs', years: '3+' },
   { name: 'React.js', description: 'Frontend library', iconSlug: 'react', years: '5+' },
+  { name: 'Redux', description: 'State management', iconSlug: 'redux', years: '4+' },
+  { name: 'Next.js', description: 'Full-stack Framework', iconSlug: 'nextdotjs', years: '3+' },
+  { name: 'Node.js', description: 'Backend runtime', iconSlug: 'nodedotjs', years: '3+' },
+  { name: 'Github Actions', description: 'CI / CD', iconSlug: 'githubactions', years: '3+' },
+  { name: 'Cypress', description: 'Testing', iconSlug: 'cypress', years: '3+' },
   { name: 'Docker', description: 'Containers', iconSlug: 'docker', years: '2+' },
   { name: 'TRPC', description: 'API', iconSlug: 'trpc', years: '2+' },
   { name: 'React Query', description: 'API', iconSlug: 'reactquery', years: '2+' },
-  { name: 'MySQL', description: 'Database', iconSlug: 'mysql', years: '10+' },
   { name: 'PostgreSQL', description: 'Database', iconSlug: 'postgresql', years: '2+' },
-  { name: 'Node.js', description: 'Backend runtime', iconSlug: 'nodedotjs', years: '3+' },
   { name: 'Prisma', description: 'ORM', iconSlug: 'prisma', years: '2+' },
-  { name: 'Github Actions', description: 'CI / CD', iconSlug: 'githubactions', years: '3+' },
   { name: 'Signals', description: 'State management', iconSlug: 'preact', years: '2+' },
   { name: 'Zustand', description: 'State management', customIcon: zustandIcon, years: '2+' },
-  { name: 'Redux', description: 'State management', iconSlug: 'redux', years: '4+' },
-  { name: 'Cypress', description: 'Testing', iconSlug: 'cypress', years: '3+' },
-  { name: 'PHP', description: 'Language', iconSlug: 'php', years: '10+' },
 ];
 
 const getIcon = (slug: string) => {
@@ -30,13 +30,21 @@ const getIcon = (slug: string) => {
 
 export const Skills = () => {
   const { t } = useTranslation();
+  
+  // Sort technologies by years of experience (descending)
+  const sortedTechnologies = [...technologies].sort((a, b) => {
+    const yearsA = parseInt(a.years);
+    const yearsB = parseInt(b.years);
+    return yearsB - yearsA;
+  });
+  
   return (
     <section id="skills" className="mt-8 scroll-mt-24 container-width w-full">
       <h2 className="heading-2 ml-4">{t('skills.title')}</h2>
       <h4 className="body-normal ml-4">{t('skills.subtitle')}</h4>
       <div className="container-body mt-2">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-          {technologies.map((tech) => {
+          {sortedTechnologies.map((tech) => {
             const icon = tech.customIcon ? null : getIcon(tech.iconSlug || '');
             
             return (
