@@ -81,7 +81,8 @@
     "workInProgress": "Work in progress...",
     "egzoclinic": {
       "title": "EGZOClinic",
-      "description": "Medical device software for electrogastrography (EGG) examination. Developed on React and .NET platform, the application runs on medical devices including Stella BIO, Sidra LEG, and Meissa OT. The system includes patient management, examination workflows, real-time data visualization, and comprehensive reporting capabilities."
+      "dateRange": "January 2022 - present",
+      "description": "Comprehensive software platform for physiotherapy and neurorehabilitation. The application runs on robotic medical devices including Stella BIO, Sidra LEG, and Meissa OT, facilitating rehabilitation for conditions like strokes and spinal cord injuries. Features include progressive continuous passive motion (CPM) therapy, graphical interface for EMS parameter configuration, comprehensive reporting with EMG data analysis, and multilingual support."
     }
   },
   "skills": {
