@@ -86,6 +86,11 @@
       "title": "EGZOClinic",
       "dateRange": "Styczeń 2022 - obecnie",
       "description": "Kompleksowa platforma oprogramowania do fizjoterapii i neurorehabilitacji. Aplikacja działa na robotycznych urządzeniach medycznych w tym Stella BIO, Sidra LEG i Meissa OT, ułatwiając rehabilitację w przypadku schorzeń takich jak udary i urazy rdzenia kręgowego. Funkcje obejmują progresywną terapię ciągłego biernego ruchu (CPM), graficzny interfejs do konfiguracji parametrów EMS, kompleksowe raportowanie z analizą danych EMG oraz wsparcie wielojęzyczne."
+    },
+    "generator": {
+      "title": "Generator Pasków",
+      "dateRange": "Grudzień 2024 - obecnie",
+      "description": "Platforma full-stack do generowania memów dla polskich programów TV. Zbudowana od podstaw z wykorzystaniem nowoczesnego stosu Next.js z bazą danych PostgreSQL, Prisma ORM i API tRPC. Platforma umożliwia użytkownikom tworzenie i udostępnianie memów opartych na popularnych treściach polskiej telewizji. Funkcje obejmują przesyłanie i manipulację obrazów, zarządzanie szablonami, udostępnianie treści generowanych przez użytkowników oraz responsywny design. Wdrożona z Dockerem i pipeline'em CI/CD dla niezawodności produkcyjnej."
     }
   },
   "skills": {
