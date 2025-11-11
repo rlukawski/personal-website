@@ -1,7 +1,6 @@
 import type React from "react";
 
 import { About, Home, Navigation, Contact, Certificates, Projects, Footer } from "./components";
-import { Experience } from "./components/Experience";
 
 export default function Example(): React.ReactElement {
   return (
@@ -10,7 +9,6 @@ export default function Example(): React.ReactElement {
       <div className="flex flex-col gap-2 md:px-12 items-stretch">
         <Home />
         <About />
-        <Experience />
         <Projects />
         <Certificates />
       </div>
