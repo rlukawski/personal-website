@@ -2,6 +2,7 @@
   "nav": {
     "about": "O mnie",
     "experience": "Doświadczenie",
+    "projects": "Projekty",
     "skills": "Umiejętności",
     "certificates": "Certyfikaty",
     "contact": "Kontakt"
@@ -77,6 +78,10 @@
       "desc0": "Zarządzanie projektami i development portali w ramach Onet.pl",
       "desc1": "Projektowanie rozwiązań architektonicznych dla zespołów deweloperskich"
     }
+  },
+  "projects": {
+    "title": "Projekty",
+    "workInProgress": "W trakcie realizacji..."
   },
   "skills": {
     "title": "Umiejętności",

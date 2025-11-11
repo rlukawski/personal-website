@@ -2,6 +2,7 @@
   "nav": {
     "about": "About",
     "experience": "Experience",
+    "projects": "Projects",
     "skills": "Skills",
     "certificates": "Certificates",
     "contact": "Contact"
@@ -74,6 +75,10 @@
       "desc0": "Project management and development of portals within Onet.pl",
       "desc1": "Designing architectural solutions for development teams"
     }
+  },
+  "projects": {
+    "title": "Projects",
+    "workInProgress": "Work in progress..."
   },
   "skills": {
     "title": "Skills",
