@@ -1,0 +1,112 @@
+{
+  "nav": {
+    "about": "O mnie",
+    "experience": "Doświadczenie",
+    "skills": "Umiejętności",
+    "certificates": "Certyfikaty",
+    "contact": "Kontakt"
+  },
+  "home": {
+    "subtitle": "Programista full-stack i Kierownik Projektów IT",
+    "tagline": "Budujmy produkty, które mają znaczenie!",
+    "downloadCV": "Pobierz CV"
+  },
+  "about": {
+    "title": "O mnie",
+    "paragraph1": "Witaj, nazywam się Rafał Łukawski. Jestem programistą full-stack z ponad 5-letnim doświadczeniem w nowoczesnym frontendzie/backendzie i ponad 20-letnim doświadczeniem w IT. Pasjonuję się całym cyklem życia oprogramowania – od architektury systemu, przez implementację, po wdrożenie produkcyjne.",
+    "paragraph2": "Google Cloud Professional Architect (2024) | Professional Scrum Master | Budowałem systemy dla milionów użytkowników w Onet.pl | Prowadziłem projekty telekomunikacyjne w TP.SA | Obecnie rozwijam złożone aplikacje React/Next.js i mentoruję programistów."
+  },
+  "experience": {
+    "title": "Doświadczenie",
+    "present": "obecnie",
+    "project": "Wybrany projekt",
+    "technologies": "Technologie",
+    "year_one": "rok",
+    "year_few": "lata",
+    "year_many": "lat",
+    "year_other": "roku",
+    "month_one": "mies.",
+    "month_few": "mies.",
+    "month_many": "mies.",
+    "month_other": "mies.",
+    "exp0": {
+      "title": "Programista Frontend",
+      "desc0": "Rozwój oprogramowania dla urządzeń medycznych na platformie React i .NET",
+      "desc1": "Projektowanie architektury systemu i implementacja nowych funkcjonalności",
+      "desc2": "Udział w pełnym cyklu wytwarzania oprogramowania z regularnymi wydaniami produkcyjnymi bazujących na Dockerze i CI/CD",
+      "desc3": "Rozwój aplikacji online dla Stella BIO (Angular, NestJS)",
+      "project": "EGZOClinic (oprogramowanie) na urządzeniach: Stella BIO, Sidra LEG, Meissa OT"
+    },
+    "exp1": {
+      "title": "Programista Full-Stack",
+      "desc0": "Zaprojektowanie i zbudowanie aplikacji full-stack od podstaw z wykorzystaniem nowoczesnego stosu Next.js",
+      "desc1": "Projektowanie schematów baz danych z wykorzystaniem PostgresSQL i Prisma, implementacja API tRPC i wdrażanie aplikacji produkcyjnych bazujących na Dockerze i CI/CD",
+      "desc2": "Realizacja projektów dla klientów Upwork",
+      "project": "- Platforma do generowania memów dla polskich programów TV."
+    },
+    "exp2": {
+      "title": "Wolontariusz",
+      "desc0": "Tłumaczenie materiałów wideo Fundacji Isha dotyczących dobrostanu i rozwoju osobistego dla polskiego kanału YouTube"
+    },
+    "exp3": {
+      "title": "Kierownik Projektów / Programista",
+      "desc0": "Budowa platformy e-commerce multibenefit.pl od podstaw - architektura, implementacja i zarządzanie projektem",
+      "desc1": "Analityk w ING Bank Śląski (kilka projektów m.in. System wiadomości dla ING Bank Online, Inwestycje Online dla ING Bank Online)"
+    },
+    "exp4": {
+      "title": "Kierownik Projektów",
+      "desc0": "Odpowiedzialność za cały cykl projektu włącznie z budżetami. Metodyka Agile/Scrum",
+      "desc1": "Projekt: Systemy dla agentów ubezpieczeniowych. Klient: PZU S.A"
+    },
+    "exp5": {
+      "title": "Właściciel"
+    },
+    "exp6": {
+      "title": "Kierownik Projektów",
+      "desc0": "Zarządzanie projektami telekomunikacyjnymi w TP.SA",
+      "desc1": "3 edycje rozwoju Order Management i BPM (wersje 8.3, 9.2) dla systemów wewnętrznych"
+    },
+    "exp7": {
+      "title": "Techniczny Menedżer Produktu",
+      "desc0": "Zarządzanie produktem usług VoIP dla rynku polskiego",
+      "desc1": "Rozwój i wdrożenie rozwiązania telefonicznego dla klientów online",
+      "project": "Rozwiązanie VoIP dla klientów detalicznych"
+    },
+    "exp8": {
+      "title": "Kierownik Projektów / Programista",
+      "desc0": "Zarządzanie projektami i development portali w ramach Onet.pl",
+      "desc1": "Projektowanie rozwiązań architektonicznych dla zespołów deweloperskich"
+    }
+  },
+  "skills": {
+    "title": "Umiejętności",
+    "subtitle": "Niezbędne narzędzia, których używam"
+  },
+  "certificates": {
+    "title": "Certyfikaty",
+    "showCredentials": "Pokaż poświadczenia"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "getInTouch": "Skontaktuj się",
+    "linkedinProfile": "Profil LinkedIn",
+    "sendMessage": "Wyślij wiadomość",
+    "name": "Imię",
+    "email": "Email",
+    "message": "Wiadomość",
+    "send": "Wyślij wiadomość",
+    "sending": "Wysyłanie...",
+    "sent": "Wiadomość wysłana!",
+    "error": "Błąd - Spróbuj ponownie",
+    "successMessage": "Dziękuję! Twoja wiadomość została wysłana.",
+    "errorMessage": "Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie."
+  },
+  "footer": {
+    "cta": "Stwórzmy",
+    "ctaHighlight": "coś razem!",
+    "startProject": "Rozpocznij projekt",
+    "sitemap": "Mapa strony",
+    "socials": "Sociale",
+    "home": "Strona główna"
+  }
+}

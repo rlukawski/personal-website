@@ -1,0 +1,109 @@
+{
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "skills": "Skills",
+    "certificates": "Certificates",
+    "contact": "Contact"
+  },
+  "home": {
+    "subtitle": "A full-stack developer and IT Project Manager",
+    "tagline": "Let's build products that matter!",
+    "downloadCV": "Download CV"
+  },
+  "about": {
+    "title": "About",
+    "paragraph1": "Hello, my name is Rafał Łukawski. I'm a full-stack developer with over 5 years of modern frontend/backend experience and over 20 years in IT. I'm passionate about the entire software development lifecycle—from system architecture, through implementation, to production deployment.",
+
+    "paragraph2": "Google Cloud Professional Architect (2024) | Professional Scrum Master | Built systems for millions of users at Onet.pl | Led telecommunications projects at TP.SA | Currently developing complex React/Next.js applications and mentoring developers."
+  },
+  "experience": {
+    "title": "Experience",
+    "present": "present",
+    "project": "Selected project",
+    "technologies": "Technologies",
+    "year_one": "yr",
+    "year_other": "yrs",
+    "month_one": "mo",
+    "month_other": "mos",
+    "exp0": {
+      "title": "Frontend Developer",
+      "desc0": "Development of medical device software on React and .NET platform",
+      "desc1": "System architecture design and implementation of new features",
+      "desc2": "Participation in the full software development lifecycle with regular production releases based on Docker and CI/CD",
+      "desc3": "Development of an online application for Stella BIO (Angular, NestJS)",
+      "project": "EGZOClinic (software) on devices: Stella BIO, Sidra LEG, Meissa OT"
+    },
+    "exp1": {
+      "title": "Full-Stack Developer",
+      "desc0": "Architected and built full-stack applications from scratch with modern Next.js stack",
+      "desc1": "Designed database schemas using PostgreSQL and Prisma, implemented tRPC APIs, and deployed production-ready applications based on Docker and CI/CD",
+      "desc2": "Delivered client projects on Upwork",
+      "project": "- Meme generator platform for Polish TV programs."
+    },
+    "exp2": {
+      "title": "Volunteer",
+      "desc0": "Translation of Isha Foundation video materials on wellbeing and personal development for Polish YouTube channel"
+    },
+    "exp3": {
+      "title": "Project Manager / Software Developer",
+      "desc0": "Building multibenefit.pl e-commerce platform from scratch - architecture, implementation and project management",
+      "desc1": "Analyst at ING Bank Śląski (several projects e.g. Messaging system for ING Bank Online, Online Investment for ING Bank Online)"
+    },
+    "exp4": {
+      "title": "Project Manager",
+      "desc0": "Responsible for whole project cycle including budgets. Agile/Scrum methodology",
+      "desc1": "Project: Systems for insurance agents. Customer: PZU S.A"
+    },
+    "exp5": {
+      "title": "Owner"
+    },
+    "exp6": {
+      "title": "Project Manager",
+      "desc0": "Management of telecommunications projects at TP.SA",
+      "desc1": "3 editions of Order Management and BPM development (versions 8.3, 9.2) for internal systems"
+    },
+    "exp7": {
+      "title": "Technical Product Manager",
+      "desc0": "VoIP services product management for Polish market",
+      "desc1": "Development and implementation of telephony solution for online customers",
+      "project": "VoIP solution for retail customers"
+    },
+    "exp8": {
+      "title": "Project Manager / Software Developer",
+      "desc0": "Project management and development of portals within Onet.pl",
+      "desc1": "Designing architectural solutions for development teams"
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "subtitle": "Essential Tools I use"
+  },
+  "certificates": {
+    "title": "Certificates",
+    "showCredentials": "Show credentials"
+  },
+  "contact": {
+    "title": "Contact",
+    "getInTouch": "Get in Touch",
+    "linkedinProfile": "LinkedIn Profile",
+    "sendMessage": "Send a Message",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "sent": "Message Sent!",
+    "error": "Error - Try Again",
+    "successMessage": "Thank you! Your message has been sent.",
+    "errorMessage": "There was an error sending your message. Please try again."
+  },
+  "footer": {
+    "cta": "Let's build",
+    "ctaHighlight": "something together!",
+    "startProject": "Start project",
+    "sitemap": "Sitemap",
+    "socials": "Socials",
+    "home": "Home"
+  }
+}

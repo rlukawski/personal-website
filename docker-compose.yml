@@ -1,0 +1,29 @@
+services:
+  web:
+    image: ghcr.io/rlukawski/personal-website:latest
+    init: true
+    restart: always
+    build: .
+    networks:
+      - proxy-network
+    deploy:
+      replicas: 1
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.personal-website-secure.rule=Host(`lukawski.eu`)'
+      - 'traefik.http.routers.personal-website-secure.entrypoints=websecure'
+      - 'traefik.http.routers.personal-website-secure.tls.certresolver=myresolver'
+      - 'traefik.http.services.personal-website-secure.loadbalancer.server.port=3000'
+
+      - 'traefik.http.routers.www-personal-website-secure.rule=Host(`www.lukawski.eu`)'
+      - 'traefik.http.routers.www-personal-website-secure.entrypoints=websecure'
+      - 'traefik.http.routers.www-personal-website-secure.tls.certresolver=myresolver'
+      - 'traefik.http.routers.www-personal-website-secure.middlewares=www-personal-website-redirect'
+
+      - 'traefik.http.middlewares.www-personal-website-redirect.redirectregex.regex=^https://www\.lukawski\.eu/(.*)'
+      - 'traefik.http.middlewares.www-personal-website-redirect.redirectregex.replacement=https://lukawski.eu/$${1}'
+      - 'traefik.http.middlewares.www-personal-website-redirect.redirectregex.permanent=true'
+
+networks:
+  proxy-network:
+    external: true
