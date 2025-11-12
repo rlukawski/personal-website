@@ -20,10 +20,10 @@ export const ContactInfo = () => {
         <div className="flex items-center gap-3">
           <FaPhone className="w-5 h-5 text-gray-600 flex-shrink-0" />
           <a
-            href="tel:+48737340926"
+            href="tel:+48570116416"
             className="link-primary text-sm"
           >
-            +48 737 340 926
+            +48 570 116 416
           </a>
         </div>
         <div className="flex items-center gap-3">
