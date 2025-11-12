@@ -98,6 +98,11 @@
       "title": "Multibenefit",
       "dateRange": "2013 - 2016",
       "description": "Platforma e-commerce zaprojektowana do zapewnienia pracownikom dostępu do różnorodnych świadczeń pozapłacowych. Platforma umożliwiała pracownikom wybór z szerokiej gamy benefitów, w tym kart MultiSport, bonów podarunkowych i biletów na wydarzenia kulturalne. Zbudowana od podstaw z pełną architekturą full-stack, implementacją i zarządzaniem projektem. Platforma miała na celu zwiększenie satysfakcji i dobrostanu pracowników poprzez oferowanie spersonalizowanych benefitów dostosowanych do indywidualnych preferencji, jednocześnie zapewniając pracodawcom wydajne narzędzia do zarządzania i dystrybucji tych benefitów."
+    },
+    "stella": {
+      "title": "Stella BIO App",
+      "dateRange": "Marzec 2019 - Kwiecień 2024",
+      "description": "Aplikacja internetowa do zarządzania i konfiguracji przenośnego urządzenia medycznego Stella BIO, które zapewnia zaawansowane możliwości elektromiografii (EMG) i funkcjonalnej stymulacji elektrycznej (FES). Aplikacja umożliwia pracownikom służby zdrowia i pacjentom zdalną konfigurację programów terapeutycznych, monitorowanie pomiarów EMG oraz zarządzanie protokołami leczenia. Zbudowana z frontendem Angular i backendem NestJS, platforma wspiera rehabilitację zarówno kliniczną, jak i domową w przypadku schorzeń neurologicznych, ortopedycznych, onkologicznych, zarządzania bólem, sportowych oraz problemów z dnem miednicy. Funkcje obejmują uwierzytelnianie użytkowników, konfigurację programów EMG, zarządzanie sesjami terapeutycznymi oraz kompleksowe raportowanie."
     }
   },
   "skills": {

@@ -95,6 +95,11 @@
       "title": "Multibenefit",
       "dateRange": "2013 - 2016",
       "description": "E-commerce platform designed to provide employees with access to a variety of non-wage benefits. The platform enabled employees to select from a range of perks including MultiSport cards, gift vouchers, and tickets to cultural events. Built from scratch with full-stack architecture, implementation, and project management. The platform aimed to enhance employee satisfaction and well-being by offering personalized benefits tailored to individual preferences, while providing employers with efficient tools to manage and distribute these benefits."
+    },
+    "stella": {
+      "title": "Stella BIO App",
+      "dateRange": "March 2019 - April 2024",
+      "description": "Online web application for managing and configuring the Stella BIO portable medical device, which provides advanced electromyography (EMG) and functional electrical stimulation (FES) capabilities. The application enables healthcare professionals and patients to remotely configure therapy programs, monitor EMG measurements, and manage treatment protocols. Built with Angular frontend and NestJS backend, the platform supports both clinical and home-based rehabilitation for neurological, orthopedic, oncological, pain management, sports, and pelvic floor conditions. Features include user authentication, EMG program configuration, therapy session management, and comprehensive reporting."
     }
   },
   "skills": {
