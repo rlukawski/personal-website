@@ -136,11 +136,6 @@
   "headers": {
     "title": "Rafał Łukawski - Personal Website",
     "description": "Software Developer & IT Project Manager | React & Next.js | Google Cloud Architect and Scrum Master building scalable web applications.",
-    "author": "Rafał Łukawski",
-    "ogTitle": "Rafał Łukawski - Personal Website",
-    "ogDescription": "Software Developer & IT Project Manager | React & Next.js | Google Cloud Architect and Scrum Master building scalable web applications.",
-    "ogImage": "https://lukawski.eu/author.jpg",
-    "ogUrl": "https://lukawski.eu",
-    "ogType": "website"
+    "author": "Rafał Łukawski"
   }
 }

@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { useLocation } from "react-router-dom";
 
 function setMetaTag(name: string, content: string): void {
   let meta = document.querySelector<HTMLMetaElement>(`meta[name="${name}"]`);
@@ -14,35 +13,53 @@ function setMetaTag(name: string, content: string): void {
   meta.content = content;
 }
 
-function setOpenGraphTag(property: string, content: string): void {
-  let meta = document.querySelector<HTMLMetaElement>(`meta[property="${property}"]`);
-
-  if (!meta) {
-    meta = document.createElement("meta");
-    meta.setAttribute("property", property);
-    document.head.appendChild(meta);
+function setPersonSchema(): void {
+  // Remove existing schema if present
+  const existingSchema = document.querySelector('script[type="application/ld+json"][data-schema="person"]');
+  if (existingSchema) {
+    existingSchema.remove();
   }
 
-  meta.content = content;
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Rafał Łukawski",
+    "url": "https://lukawski.eu",
+    "image": "https://lukawski.eu/author.jpg",
+    "email": "rs.lukawski@gmail.com",
+    "telephone": "+48-737-340-926",
+    "jobTitle": "Software Developer & IT Project Manager",
+    "description": "Software Developer & IT Project Manager | React & Next.js | Google Cloud Architect and Scrum Master building scalable web applications.",
+    "sameAs": [
+      "https://www.linkedin.com/in/rafal-lukawski/",
+      "https://github.com/rlukawski"
+    ],
+    "knowsAbout": [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "JavaScript",
+      "Google Cloud",
+      "Software Development",
+      "Project Management",
+      "Scrum"
+    ]
+  };
+
+  const script = document.createElement("script");
+  script.type = "application/ld+json";
+  script.setAttribute("data-schema", "person");
+  script.textContent = JSON.stringify(personSchema);
+  document.head.appendChild(script);
 }
 
 export function useDocumentHeaders(): void {
   const { t } = useTranslation();
-  const location = useLocation();
   
   useEffect(() => {
     const title = t("headers.title");
     const description = t("headers.description");
     const author = t("headers.author");
-    const ogTitle = t("headers.ogTitle");
-    const ogDescription = t("headers.ogDescription");
-    const ogImage = t("headers.ogImage");
-    const ogUrl = t("headers.ogUrl");
-    const ogType = t("headers.ogType");
-
-    // Get current URL - use the base URL from translations or construct from current location
-    const baseUrl = ogUrl || "https://lukawski.eu";
-    const currentUrl = `${baseUrl}${location.pathname}`;
 
     if (title) {
       document.title = title;
@@ -56,25 +73,7 @@ export function useDocumentHeaders(): void {
       setMetaTag("author", author);
     }
 
-    // Open Graph meta tags
-    if (ogTitle) {
-      setOpenGraphTag("og:title", ogTitle);
-    }
-
-    if (ogDescription) {
-      setOpenGraphTag("og:description", ogDescription);
-    }
-
-    if (ogImage) {
-      setOpenGraphTag("og:image", ogImage);
-    }
-
-    if (currentUrl) {
-      setOpenGraphTag("og:url", currentUrl);
-    }
-
-    if (ogType) {
-      setOpenGraphTag("og:type", ogType);
-    }
-  }, [t, location.pathname]);
+    // Add Person schema
+    setPersonSchema();
+  }, [t]);
 }
