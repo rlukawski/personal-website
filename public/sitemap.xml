@@ -3,6 +3,11 @@
   <url>
     <loc>https://lukawski.eu/</loc>
     <changefreq>daily</changefreq>
-    <priority>1.0</priority>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://lukawski.eu/pl</loc>
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
   </url>
 </urlset>
