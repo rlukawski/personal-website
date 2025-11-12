@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaEnvelope, FaPhone, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 
 export const Contact = () => {
@@ -49,15 +49,6 @@ export const Contact = () => {
                   className="link-primary"
                 >
                   rs.lukawski@gmail.com
-                </a>
-              </div>
-              <div className="flex items-center gap-3">
-                <FaPhone className="w-6 h-6 text-gray-600 flex-shrink-0" />
-                <a
-                  href="tel:+48570116416"
-                  className="link-primary"
-                >
-                  +48 570 116 416
                 </a>
               </div>
               <div className="flex items-center gap-3">
