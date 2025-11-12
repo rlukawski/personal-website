@@ -3,7 +3,14 @@ import { initReactI18next } from 'react-i18next';
 import enTranslations from './locales/en.json';
 import plTranslations from './locales/pl.json';
 
-const savedLanguage = localStorage.getItem('language') || 'en';
+// Get language from URL path or default to 'en'
+const getLanguageFromPath = (): string => {
+  const path = window.location.pathname;
+  const match = path.match(/^\/(en|pl)(\/|$)/);
+  return match ? match[1] : 'en';
+};
+
+const initialLanguage = getLanguageFromPath();
 
 i18n
   .use(initReactI18next)
@@ -16,17 +23,12 @@ i18n
         translation: plTranslations,
       },
     },
-    lng: savedLanguage,
+    lng: initialLanguage,
     fallbackLng: 'en',
     interpolation: {
       escapeValue: false,
     },
   });
-
-// Sync language changes to localStorage
-i18n.on('languageChanged', (lng) => {
-  localStorage.setItem('language', lng);
-});
 
 export default i18n;
 

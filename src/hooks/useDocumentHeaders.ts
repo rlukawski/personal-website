@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 function setMetaTag(name: string, content: string): void {
   let meta = document.querySelector<HTMLMetaElement>(`meta[name="${name}"]`);
@@ -12,14 +13,14 @@ function setMetaTag(name: string, content: string): void {
   meta.content = content;
 }
 
-export function useDocumentHeaders(props: {
-  title?: string;
-  description?: string;
-  author?: string;
-}): void {
-  const { title, description, author } = props;
+export function useDocumentHeaders(): void {
+  const { t } = useTranslation();
   
   useEffect(() => {
+    const title = t("headers.title");
+    const description = t("headers.description");
+    const author = t("headers.author");
+
     if (title) {
       document.title = title;
     }
@@ -31,5 +32,5 @@ export function useDocumentHeaders(props: {
     if (author) {
       setMetaTag("author", author);
     }
-  }, [title, description, author]);
+  }, [t]);
 }

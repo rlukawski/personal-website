@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate, useParams } from 'react-router-dom';
 import { Dialog, DialogPanel, DialogBackdrop } from '@headlessui/react';
 import { navItems, scrollToSection } from '../utils/navigation';
 
@@ -115,11 +116,16 @@ const useActiveSection = () => {
 
 // Language Switcher Component
 const LanguageSwitcher = ({ className = '' }: { className?: string }) => {
+  const navigate = useNavigate();
+  const { lang: currentLang } = useParams<{ lang: string }>();
   const { i18n } = useTranslation();
   
   const switchLanguage = useCallback((lang: string) => {
-    i18n.changeLanguage(lang);
-  }, [i18n]);
+    const hash = window.location.hash;
+    navigate(`/${lang}${hash}`, { replace: true });
+  }, [navigate]);
+
+  const activeLang = currentLang || i18n.language;
 
   return (
     <ul className={`gap-2 ${className}`}>
@@ -127,7 +133,7 @@ const LanguageSwitcher = ({ className = '' }: { className?: string }) => {
         <li
           key={lang}
           className={`cursor-pointer hover:text-gray-600 transition-colors ${
-            i18n.language === lang ? 'font-bold' : ''
+            activeLang === lang ? 'font-bold' : ''
           }`}
           onClick={() => switchLanguage(lang)}
         >
