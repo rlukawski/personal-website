@@ -1,28 +1,36 @@
 // useDocumentHeaders.ts
 import { useEffect } from "react";
 
+function setMetaTag(name: string, content: string): void {
+  let meta = document.querySelector<HTMLMetaElement>(`meta[name="${name}"]`);
+
+  if (!meta) {
+    meta = document.createElement("meta");
+    meta.name = name;
+    document.head.appendChild(meta);
+  }
+
+  meta.content = content;
+}
+
 export function useDocumentHeaders(props: {
   title?: string;
   description?: string;
+  author?: string;
 }): void {
-  const { title, description } = props;
+  const { title, description, author } = props;
+  
   useEffect(() => {
     if (title) {
       document.title = title;
     }
 
     if (description) {
-      let meta = document.querySelector<HTMLMetaElement>(
-        'meta[name="description"]'
-      );
-
-      if (!meta) {
-        meta = document.createElement("meta");
-        meta.name = "description";
-        document.head.appendChild(meta);
-      }
-
-      meta.content = description;
+      setMetaTag("description", description);
     }
-  }, [title, description]);
+
+    if (author) {
+      setMetaTag("author", author);
+    }
+  }, [title, description, author]);
 }

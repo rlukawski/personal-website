@@ -6,7 +6,8 @@ import { useDocumentHeaders } from "./hooks/useDocumentHeaders";
 export default function Example(): React.ReactElement {
   useDocumentHeaders({
     title: 'Rafał Łukawski - Personal Website',
-    description: 'Software Developer & IT Project Manager | React & Next.js | Google Cloud Architect and Scrum Master building scalable web applications digital platforms.'
+    description: 'Software Developer & IT Project Manager | React & Next.js | Google Cloud Architect and Scrum Master building scalable web applications digital platforms.',
+    author: 'Rafał Łukawski'
   });
   return (
     <div className="min-h-screen">
