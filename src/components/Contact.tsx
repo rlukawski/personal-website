@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaEnvelope, FaPhone, FaLinkedin } from "react-icons/fa";
+import { FaEnvelope, FaPhone, FaLinkedin, FaGithub } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 
 export const Contact = () => {
@@ -69,6 +69,17 @@ export const Contact = () => {
                   className="link-primary"
                 >
                   {t('contact.linkedinProfile')}
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <FaGithub className="w-6 h-6 text-gray-600 flex-shrink-0" />
+                <a
+                  href="https://github.com/rlukawski"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link-primary"
+                >
+                  {t('contact.githubProfile')}
                 </a>
               </div>
             </div>

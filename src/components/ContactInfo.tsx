@@ -1,4 +1,4 @@
-import { FaEnvelope, FaPhone, FaLinkedin } from "react-icons/fa";
+import { FaEnvelope, FaPhone, FaLinkedin, FaGithub } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 
 export const ContactInfo = () => {
@@ -35,6 +35,17 @@ export const ContactInfo = () => {
             className="link-primary text-sm"
           >
             {t('contact.linkedinProfile')}
+          </a>
+        </div>
+        <div className="flex items-center gap-3">
+          <FaGithub className="w-5 h-5 text-gray-600 flex-shrink-0" />
+          <a
+            href="https://github.com/rlukawski"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link-primary text-sm"
+          >
+            {t('contact.githubProfile')}
           </a>
         </div>
       </div>
