@@ -8,6 +8,8 @@ import generator1 from "../assets/generator-1.png";
 import generator2 from "../assets/generator-2.png";
 import multi1 from "../assets/multi-1.png";
 import multi2 from "../assets/multi-2.png";
+import stellaLogin from "../assets/stella-app_login-page.png";
+import stellaEmg from "../assets/stella-app_emg-program.png";
 
 interface Screenshot {
   id: string;
@@ -58,6 +60,23 @@ export const Projects = () => {
           src: generator2,
           alt: "Generator Pasków Screen 2",
           sourceUrl: "generator-paskow.pl",
+        },
+      ],
+    },
+    {
+      id: "stella",
+      screenshots: [
+        {
+          id: "screen1",
+          src: stellaLogin,
+          alt: "Stella BIO App Login Page",
+          sourceUrl: "egzotech.com",
+        },
+        {
+          id: "screen2",
+          src: stellaEmg,
+          alt: "Stella BIO App EMG Program",
+          sourceUrl: "egzotech.com",
         },
       ],
     },
