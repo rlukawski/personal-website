@@ -1,8 +1,13 @@
 import type React from "react";
 
 import { About, Home, Navigation, Contact, Certificates, Projects, Footer } from "./components";
+import { useDocumentHeaders } from "./hooks/useDocumentHeaders";
 
 export default function Example(): React.ReactElement {
+  useDocumentHeaders({
+    title: 'Rafał Łukawski - Personal Website',
+    description: 'Software Developer & IT Project Manager | React & Next.js | Google Cloud Architect and Scrum Master building scalable web applications digital platforms.'
+  });
   return (
     <div className="min-h-screen">
       <Navigation />
