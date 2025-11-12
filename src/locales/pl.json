@@ -130,5 +130,10 @@
     "sitemap": "Mapa strony",
     "socials": "Sociale",
     "home": "Strona główna"
+  },
+  "headers": {
+    "title": "Rafał Łukawski - Strona osobista",
+    "description": "Programista & Kierownik Projektów IT | React & Next.js | Google Cloud Architect i Scrum Master budujący skalowalne aplikacje webowe.",
+    "author": "Rafał Łukawski"
   }
 }
