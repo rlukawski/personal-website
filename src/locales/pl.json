@@ -101,7 +101,7 @@
     },
     "stella": {
       "title": "Stella BIO App",
-      "dateRange": "2022 - obecnie",
+      "dateRange": "Marzec 2019 - Kwiecień 2024",
       "description": "Aplikacja internetowa do zarządzania i konfiguracji przenośnego urządzenia medycznego Stella BIO, które zapewnia zaawansowane możliwości elektromiografii (EMG) i funkcjonalnej stymulacji elektrycznej (FES). Aplikacja umożliwia pracownikom służby zdrowia i pacjentom zdalną konfigurację programów terapeutycznych, monitorowanie pomiarów EMG oraz zarządzanie protokołami leczenia. Zbudowana z frontendem Angular i backendem NestJS, platforma wspiera rehabilitację zarówno kliniczną, jak i domową w przypadku schorzeń neurologicznych, ortopedycznych, onkologicznych, zarządzania bólem, sportowych oraz problemów z dnem miednicy. Funkcje obejmują uwierzytelnianie użytkowników, konfigurację programów EMG, zarządzanie sesjami terapeutycznymi oraz kompleksowe raportowanie."
     }
   },

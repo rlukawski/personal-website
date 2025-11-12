@@ -98,7 +98,7 @@
     },
     "stella": {
       "title": "Stella BIO App",
-      "dateRange": "2022 - present",
+      "dateRange": "March 2019 - April 2024",
       "description": "Online web application for managing and configuring the Stella BIO portable medical device, which provides advanced electromyography (EMG) and functional electrical stimulation (FES) capabilities. The application enables healthcare professionals and patients to remotely configure therapy programs, monitor EMG measurements, and manage treatment protocols. Built with Angular frontend and NestJS backend, the platform supports both clinical and home-based rehabilitation for neurological, orthopedic, oncological, pain management, sports, and pelvic floor conditions. Features include user authentication, EMG program configuration, therapy session management, and comprehensive reporting."
     }
   },
