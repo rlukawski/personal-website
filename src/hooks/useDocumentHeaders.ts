@@ -1,4 +1,3 @@
-// useDocumentHeaders.ts
 import { useEffect } from "react";
 
 function setMetaTag(name: string, content: string): void {
