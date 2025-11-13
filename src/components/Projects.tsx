@@ -21,6 +21,7 @@ interface Screenshot {
 interface Project {
   id: string;
   screenshots: Screenshot[];
+  recipient?: string | { display: string; url: string };
 }
 
 export const Projects = () => {
@@ -31,6 +32,7 @@ export const Projects = () => {
   const projects: Project[] = useMemo(() => [
     {
       id: "egzoclinic",
+      recipient: { display: "EGZOTech.com", url: "https://egzotech.com" },
       screenshots: [
         {
           id: "screen1",
@@ -48,6 +50,7 @@ export const Projects = () => {
     },
     {
       id: "generator",
+      recipient: "Rafał Łukawski",
       screenshots: [
         {
           id: "screen1",
@@ -65,6 +68,7 @@ export const Projects = () => {
     },
     {
       id: "stella",
+      recipient: { display: "EGZOTech.com", url: "https://egzotech.com" },
       screenshots: [
         {
           id: "screen1",
@@ -82,6 +86,7 @@ export const Projects = () => {
     },
     {
       id: "multibenefit",
+      recipient: { display: "Benefit Systems", url: "https://www.benefitsystems.pl/" },
       screenshots: [
         {
           id: "screen1",
@@ -170,7 +175,33 @@ export const Projects = () => {
             {/* Left side: Project name and description */}
             <div className="flex flex-col">
               <h3 className="heading-3 mb-0">{t(`projects.${project.id}.title`)}</h3>
-              <p className="text-sm text-gray-500 mb-2">{t(`projects.${project.id}.dateRange`)}</p>
+              <p className="text-sm text-gray-500 mb-0.5">{t(`projects.${project.id}.dateRange`)}</p>
+              {project.recipient && (
+                <p className="text-sm text-gray-600 mb-2">
+                  <span className="font-medium">{t('projects.customer')}: </span>
+                  {typeof project.recipient === 'object' ? (
+                    <a 
+                      href={project.recipient.url} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 underline"
+                    >
+                      {project.recipient.display}
+                    </a>
+                  ) : typeof project.recipient === 'string' && project.recipient.startsWith('http') ? (
+                    <a 
+                      href={project.recipient} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 underline"
+                    >
+                      {project.recipient}
+                    </a>
+                  ) : (
+                    <span>{project.recipient}</span>
+                  )}
+                </p>
+              )}
               <p className="text-sm text-muted">{t(`projects.${project.id}.description`)}</p>
             </div>
 
