@@ -1,6 +1,9 @@
 import React from "react";
 import googleCloudArchitectLogo from "../assets/google-cloud-architect.png";
 import scrumMasterLogo from "../assets/scrum-master-psm1.png";
+import prince2Logo from "../assets/prince2-logo.svg";
+// @ts-expect-error - PDF file import
+import prince2Pdf from "../assets/Cert_Prince2.PDF";
 import { useTranslation } from "react-i18next";
 
 const certificatesData = [
@@ -17,6 +20,13 @@ const certificatesData = [
     issuer: "Scrum.org",
     customIcon: scrumMasterLogo,
     validationLink: "https://www.scrum.org/user/233933",
+  },
+  {
+    date: "2009.07",
+    name: "PRINCE2 Foundation Training",
+    issuer: "Infovide Matrix",
+    customIcon: prince2Logo,
+    validationLink: prince2Pdf,
   },
 ];
 
