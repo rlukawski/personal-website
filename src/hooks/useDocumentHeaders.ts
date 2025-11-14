@@ -22,27 +22,30 @@ function setPersonSchema(): void {
 
   const personSchema = {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Rafał Łukawski",
-    "url": "https://lukawski.eu",
-    "image": "https://lukawski.eu/author.jpg",
-    "email": "rs.lukawski@gmail.com",
-    "jobTitle": "Software Developer & IT Project Manager",
-    "description": "Software Developer & IT Project Manager | React & Next.js | Google Cloud Architect and Scrum Master building scalable web applications.",
-    "sameAs": [
-      "https://www.linkedin.com/in/rafal-lukawski/",
-      "https://github.com/rlukawski"
-    ],
-    "knowsAbout": [
-      "React",
-      "Next.js",
-      "TypeScript",
-      "JavaScript",
-      "Google Cloud",
-      "Software Development",
-      "Project Management",
-      "Scrum"
-    ]
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Rafał Łukawski",
+      "url": "https://lukawski.eu",
+      "image": "https://lukawski.eu/author.jpg",
+      "email": "rs.lukawski@gmail.com",
+      "jobTitle": "Software Developer & IT Project Manager",
+      "description": "Software Developer & IT Project Manager | React & Next.js | Google Cloud Architect and Scrum Master building scalable web applications.",
+      "sameAs": [
+        "https://www.linkedin.com/in/rafal-lukawski/",
+        "https://github.com/rlukawski"
+      ],
+      "knowsAbout": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "JavaScript",
+        "Google Cloud",
+        "Software Development",
+        "Project Management",
+        "Scrum"
+      ]
+    }
   };
 
   const script = document.createElement("script");
