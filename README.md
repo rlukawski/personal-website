@@ -1,73 +1,124 @@
-# React + TypeScript + Vite
+# Rafał Łukawski - Personal Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Modern portfolio website showcasing professional experience, technical skills, certifications, and projects. Built with cutting-edge web technologies and internationalization support.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🌍 **Bilingual Support** - English and Polish languages via i18next
+- 📱 **Fully Responsive** - Modern, mobile-first design
+- 🎨 **Beautiful UI** - Built with Tailwind CSS 4 and Headless UI
+- 🏢 **Professional Sections**:
+  - About - Introduction and background
+  - Experience - Career history with detailed descriptions
+  - Skills - Technical stack visualization
+  - Certificates - Professional certifications
+  - Contact - Get in touch section
+- 🐳 **Docker Ready** - Containerized deployment configuration
+- ⚡ **Fast Performance** - Built with Vite for optimal speed
 
-## React Compiler
+## 🛠 Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend Framework**: React 19 + TypeScript
+- **Build Tool**: Vite 7
+- **Styling**: Tailwind CSS 4
+- **UI Components**: Headless UI, React Icons
+- **Internationalization**: i18next, react-i18next
+- **Containerization**: Docker & Docker Compose
+- **Code Quality**: ESLint, TypeScript ESLint
 
-## Expanding the ESLint configuration
+## 📋 Prerequisites
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Node.js 20+ 
+- npm or yarn
+- Docker (optional, for containerized deployment)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Installation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Run the development server:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+The site will be available at `http://localhost:5173`
+
+### Build
+
+Build for production:
+
+```bash
+npm run build
+```
+
+Preview the production build:
+
+```bash
+npm run preview
+```
+
+### Code Quality
+
+Run ESLint:
+
+```bash
+npm run lint
+```
+
+## 🐳 Docker Deployment
+
+Build and run with Docker Compose:
+
+```bash
+docker-compose up -d
+```
+
+Or build the Docker image manually:
+
+```bash
+docker build -t personal-website .
+docker run -p 80:80 personal-website
+```
+
+## 📁 Project Structure
+
+```
+src/
+├── components/      # React components
+│   ├── About.tsx
+│   ├── Experience.tsx
+│   ├── Skills.tsx
+│   ├── Certificates.tsx
+│   ├── Contact.tsx
+│   ├── Navigation.tsx
+│   ├── Footer.tsx
+│   └── ...
+├── locales/         # i18n translations
+│   ├── en.json
+│   └── pl.json
+├── assets/          # Static assets (images, PDFs)
+├── contexts/        # React contexts
+├── utils/           # Utility functions
+├── i18n.ts          # i18next configuration
+├── App.tsx          # Main app component
+└── main.tsx         # Entry point
+```
+
+## 🌐 Internationalization
+
+The website supports multiple languages using i18next:
+- English (en)
+- Polish (pl)
+
+Translation files are located in `src/locales/`.
+
+## 📝 License
+
+MIT

@@ -1,0 +1,91 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # 🔥 write access to a branch (bump version)
+    steps:
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.OWNER_PAT }}
+
+      - name: Check out repo
+        uses: actions/checkout@v2
+
+      # - name: Bump patch version
+      #   uses: phips28/gh-action-bump-version@v11.0.7
+      #   with:
+      #     default: patch
+      #     tag-prefix: "v"
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build web
+        run: |
+          docker compose build web
+          docker compose push web
+
+      - name: Cache build files
+        uses: actions/cache@v4
+        with:
+          path: |
+            docker-compose.yml
+          key: build-files-${{ github.run_id }}
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Restore build files
+        uses: actions/cache@v4
+        with:
+          path: |
+            docker-compose.yml
+          key: build-files-${{ github.run_id }}
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.OWNER_PAT }}
+
+      - name: Copy docker-compose file
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: "docker-compose.yml"
+          target: "./personal-website"
+
+      - name: Deploy
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            set -e
+            cd ./personal-website
+            echo "${{ secrets.OWNER_PAT }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+            docker stack deploy --compose-file=docker-compose.yml personal-website --resolve-image always --with-registry-auth
+            docker system prune -f
+
+      - name: Wait for services to stabilize
+        run: |
+          echo "Waiting for services to stabilize..."
+          npx -y wait-on --timeout 120000 https://lukawski.eu

@@ -1,7 +1,7 @@
 {
-  "name": "business-card",
+  "name": "personal-website",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.6",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,10 +11,14 @@
   },
   "dependencies": {
     "@headlessui/react": "^2.2.9",
-    "@heroicons/react": "^2.2.0",
     "@tailwindcss/vite": "^4.1.16",
+    "i18next": "^25.6.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-i18next": "^16.2.4",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^7.9.5",
+    "simple-icons": "^15.19.0",
     "tailwindcss": "^4.1.16"
   },
   "devDependencies": {
@@ -27,6 +31,8 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.22",
     "globals": "^16.4.0",
+    "prettier": "3.6.2",
+    "prettier-plugin-xml": "^0.1.0",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.45.0",
     "vite": "^7.1.7"

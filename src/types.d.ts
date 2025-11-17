@@ -9,6 +9,11 @@ declare module 'react' {
   }
 }
 
+declare module '*.PDF' {
+  const src: string;
+  export default src;
+}
+
 declare global {
   namespace JSX {
     interface IntrinsicElements {
