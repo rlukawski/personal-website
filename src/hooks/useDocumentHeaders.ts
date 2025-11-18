@@ -1,5 +1,8 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { useLocation } from "react-router-dom";
+
+const BASE_URL = "https://lukawski.eu";
 
 function setMetaTag(name: string, content: string): void {
   let meta = document.querySelector<HTMLMetaElement>(`meta[name="${name}"]`);
@@ -11,6 +14,18 @@ function setMetaTag(name: string, content: string): void {
   }
 
   meta.content = content;
+}
+
+function setCanonicalLink(url: string): void {
+  let link = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+
+  if (!link) {
+    link = document.createElement("link");
+    link.rel = "canonical";
+    document.head.appendChild(link);
+  }
+
+  link.href = url;
 }
 
 function setPersonSchema(): void {
@@ -57,6 +72,7 @@ function setPersonSchema(): void {
 
 export function useDocumentHeaders(): void {
   const { t } = useTranslation();
+  const location = useLocation();
   
   useEffect(() => {
     const title = t("headers.title");
@@ -75,7 +91,11 @@ export function useDocumentHeaders(): void {
       setMetaTag("author", author);
     }
 
+    // Set canonical URL
+    const canonicalUrl = `${BASE_URL}${location.pathname}`;
+    setCanonicalLink(canonicalUrl);
+
     // Add Person schema
     setPersonSchema();
-  }, [t]);
+  }, [t, location.pathname]);
 }
