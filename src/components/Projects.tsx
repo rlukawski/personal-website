@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Dialog, DialogPanel, DialogBackdrop } from "@headlessui/react";
-import { FaTimes, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaTimes, FaChevronLeft, FaChevronRight, FaExternalLinkAlt } from "react-icons/fa";
 import clinic1 from "../assets/egzoclinic-1.png";
 import clinic2 from "../assets/egzoclinic-2.png";
 import generator1 from "../assets/generator-1.png";
@@ -22,6 +22,7 @@ interface Project {
   id: string;
   screenshots: Screenshot[];
   recipient?: string | { display: string; url: string };
+  url?: string;
 }
 
 export const Projects = () => {
@@ -51,6 +52,7 @@ export const Projects = () => {
     {
       id: "generator",
       recipient: "Rafał Łukawski",
+      url: "https://generator-paskow.pl",
       screenshots: [
         {
           id: "screen1",
@@ -69,6 +71,7 @@ export const Projects = () => {
     {
       id: "stella",
       recipient: { display: "EGZOTech.com", url: "https://egzotech.com" },
+      url: "https://app.egzotech.com",
       screenshots: [
         {
           id: "screen1",
@@ -174,7 +177,20 @@ export const Projects = () => {
           <div key={project.id} className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 md:gap-8">
             {/* Left side: Project name and description */}
             <div className="flex flex-col">
-              <h3 className="heading-3 mb-0">{t(`projects.${project.id}.title`)}</h3>
+              <h3 className="heading-3 mb-0 flex items-center gap-2">
+                {t(`projects.${project.id}.title`)}
+                {project.url && (
+                  <a 
+                    href={project.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-800 transition-colors"
+                    aria-label={`Visit ${t(`projects.${project.id}.title`)}`}
+                  >
+                    <FaExternalLinkAlt className="w-4 h-4" />
+                  </a>
+                )}
+              </h3>
               <p className="text-sm text-gray-500 mb-0.5">{t(`projects.${project.id}.dateRange`)}</p>
               {project.recipient && (
                 <p className="text-sm text-gray-600 mb-2">
