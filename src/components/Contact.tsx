@@ -4,7 +4,9 @@ import { useTranslation } from "react-i18next";
 
 export const Contact = () => {
   const { t } = useTranslation();
-  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [status, setStatus] = useState<
+    "idle" | "submitting" | "success" | "error"
+  >("idle");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -35,22 +37,13 @@ export const Contact = () => {
 
   return (
     <section id="contact" className="mt-8 scroll-mt-24 container-width w-full">
-      <h2 className="heading-2 ml-4">{t('contact.title')}</h2>
+      <h2 className="heading-2 ml-4">{t("contact.title")}</h2>
       <div className="container-body mt-2">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Contact Information */}
           <div>
-            <h3 className="heading-3 mb-4">{t('contact.getInTouch')}</h3>
+            <h3 className="heading-3 mb-4">{t("contact.getInTouch")}</h3>
             <div className="space-y-4">
-              <div className="flex items-center gap-3">
-                <FaEnvelope className="w-6 h-6 text-gray-600 flex-shrink-0" />
-                <a
-                  href="mailto:rs.lukawski@gmail.com"
-                  className="link-primary"
-                >
-                  rs.lukawski@gmail.com
-                </a>
-              </div>
               <div className="flex items-center gap-3">
                 <FaLinkedin className="w-6 h-6 text-gray-600 flex-shrink-0" />
                 <a
@@ -59,7 +52,7 @@ export const Contact = () => {
                   rel="noopener noreferrer"
                   className="link-primary"
                 >
-                  {t('contact.linkedinProfile')}
+                  {t("contact.linkedinProfile")}
                 </a>
               </div>
               <div className="flex items-center gap-3">
@@ -70,7 +63,13 @@ export const Contact = () => {
                   rel="noopener noreferrer"
                   className="link-primary"
                 >
-                  {t('contact.githubProfile')}
+                  {t("contact.githubProfile")}
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <FaEnvelope className="w-6 h-6 text-gray-600 flex-shrink-0" />
+                <a href="mailto:rs.lukawski@gmail.com" className="link-primary">
+                  rs.lukawski@gmail.com
                 </a>
               </div>
             </div>
@@ -78,11 +77,11 @@ export const Contact = () => {
 
           {/* Contact Form */}
           <div>
-            <h3 className="heading-3 mb-4">{t('contact.sendMessage')}</h3>
+            <h3 className="heading-3 mb-4">{t("contact.sendMessage")}</h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label htmlFor="name" className="label mb-1">
-                  {t('contact.name')}
+                  {t("contact.name")}
                 </label>
                 <input
                   type="text"
@@ -94,7 +93,7 @@ export const Contact = () => {
               </div>
               <div>
                 <label htmlFor="email" className="label mb-1">
-                  {t('contact.email')}
+                  {t("contact.email")}
                 </label>
                 <input
                   type="email"
@@ -106,7 +105,7 @@ export const Contact = () => {
               </div>
               <div>
                 <label htmlFor="message" className="label mb-1">
-                  {t('contact.message')}
+                  {t("contact.message")}
                 </label>
                 <textarea
                   id="message"
@@ -122,20 +121,18 @@ export const Contact = () => {
                 className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {status === "submitting"
-                  ? t('contact.sending')
+                  ? t("contact.sending")
                   : status === "success"
-                  ? t('contact.sent')
-                  : status === "error"
-                  ? t('contact.error')
-                  : t('contact.send')}
+                    ? t("contact.sent")
+                    : status === "error"
+                      ? t("contact.error")
+                      : t("contact.send")}
               </button>
               {status === "success" && (
-                <p className="text-success">{t('contact.successMessage')}</p>
+                <p className="text-success">{t("contact.successMessage")}</p>
               )}
               {status === "error" && (
-                <p className="text-error">
-                  {t('contact.errorMessage')}
-                </p>
+                <p className="text-error">{t("contact.errorMessage")}</p>
               )}
             </form>
           </div>
