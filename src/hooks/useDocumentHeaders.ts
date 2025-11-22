@@ -43,7 +43,7 @@ function setPersonSchema(): void {
       "name": "Rafał Łukawski",
       "url": "https://lukawski.eu",
       "image": "https://lukawski.eu/author.jpg",
-      "email": "rs.lukawski@gmail.com",
+      "email": "rafal@lukawski.eu",
       "jobTitle": "Software Developer & IT Project Manager",
       "description": "Software Developer & IT Project Manager | React & Next.js | Google Cloud Architect and Scrum Master building scalable web applications.",
       "sameAs": [

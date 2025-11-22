@@ -68,8 +68,8 @@ export const Contact = () => {
               </div>
               <div className="flex items-center gap-3">
                 <FaEnvelope className="w-6 h-6 text-gray-600 flex-shrink-0" />
-                <a href="mailto:rs.lukawski@gmail.com" className="link-primary">
-                  rs.lukawski@gmail.com
+                <a href="mailto:rafal@lukawski.eu" className="link-primary">
+                  rafal@lukawski.eu
                 </a>
               </div>
             </div>

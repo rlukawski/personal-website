@@ -14,7 +14,7 @@ const socialLinks = [
   },
   {
     name: "Email",
-    url: "mailto:rs.lukawski@gmail.com",
+    url: "mailto:rafal@lukawski.eu",
     icon: FaEnvelope,
   },
 ];
