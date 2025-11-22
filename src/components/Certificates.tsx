@@ -16,7 +16,7 @@ const certificatesData = [
     name: "Professional Scrum Master",
     issuer: "Scrum.org",
     customIcon: scrumMasterLogo,
-    validationLink: "https://www.scrum.org/user/233933",
+    validationLink: "https://www.credly.com/badges/44c1cea7-7e2a-4a44-88ee-03c189587963",
   },
 ];
 
